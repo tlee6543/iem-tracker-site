@@ -172,13 +172,13 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </div>
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
-    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 77/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 8/15, source diversity 5/10, price consistency 7/10. Current inputs: 21 included priced sample(s), 1 in the last 90 days, 3 in the last 180 days, latest sample 32d ago, 1 source type(s), price CV 0.21." aria-label="Liquidity/confidence score: 77/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 8/15, source diversity 5/10, price consistency 7/10. Current inputs: 21 included priced sample(s), 1 in the last 90 days, 3 in the last 180 days, latest sample 32d ago, 1 source type(s), price CV 0.21." tabindex="0">High (77/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">21 included sample(s), latest 32d ago.</span></div>
+    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 77/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 8/15, source diversity 5/10, price consistency 7/10. Current inputs: 21 included priced sample(s), 1 in the last 90 days, 3 in the last 180 days, latest sample 33d ago, 1 source type(s), price CV 0.21." aria-label="Liquidity/confidence score: 77/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 8/15, source diversity 5/10, price consistency 7/10. Current inputs: 21 included priced sample(s), 1 in the last 90 days, 3 in the last 180 days, latest sample 33d ago, 1 source type(s), price CV 0.21." tabindex="0">High (77/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">21 included sample(s), latest 33d ago.</span></div>
     
     <div class="stat"><b>Average</b><br><span id="stat-average">$N/A</span></div>
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>22</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>23</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -202,8 +202,23 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-06</td>
+<td>$725</td>
+<td><span class="pill">active</span></td>
+<td>like new, excellent</td>
+<td>1</td>
+<td>headfi</td>
+<td>gwompki</td>
+<td>0</td>
+<td>0</td>
+<td>Great Deal (25.5% below market)</td>
+<td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-with-monarch-cable.110263/" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2026-05-16</td>
 <td>$750</td>
 <td><span class="pill">active</span></td>
@@ -217,7 +232,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.109122/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="excluded">
+<tr id="row-2" class="excluded">
 <td></td>
 <td>2026-04-04</td>
 <td></td>
@@ -232,8 +247,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.106772/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
+<tr id="row-3" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
 <td>2026-03-18</td>
 <td>$975</td>
 <td><span class="pill">closed</span></td>
@@ -247,8 +262,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.105658/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-3" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
+<tr id="row-4" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="4" checked></td>
 <td>2026-01-28</td>
 <td>$1,300</td>
 <td><span class="pill">closed</span></td>
@@ -262,7 +277,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-fe.102793/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-4" class="excluded">
+<tr id="row-5" class="excluded">
 <td></td>
 <td>2026-01-13</td>
 <td></td>
@@ -277,8 +292,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton.101920/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-5" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
+<tr id="row-6" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="6" checked></td>
 <td>2025-11-08</td>
 <td>$950</td>
 <td><span class="pill">closed</span></td>
@@ -292,8 +307,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-iem.98138/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-6" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="6" checked></td>
+<tr id="row-7" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="7" checked></td>
 <td>2025-10-21</td>
 <td>$1,100</td>
 <td><span class="pill">closed</span></td>
@@ -307,8 +322,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/sold-empire-ears-triton-launch-edition.97169/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-7" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="7" checked></td>
+<tr id="row-8" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="8" checked></td>
 <td>2025-10-08</td>
 <td>$1,099</td>
 <td><span class="pill">closed</span></td>
@@ -322,8 +337,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton.96456/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-8" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="8" checked></td>
+<tr id="row-9" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="9" checked></td>
 <td>2025-09-22</td>
 <td>$1,400</td>
 <td><span class="pill">closed</span></td>
@@ -337,8 +352,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.95548/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-9" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="9" checked></td>
+<tr id="row-10" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="10" checked></td>
 <td>2025-09-12</td>
 <td>$800</td>
 <td><span class="pill">closed</span></td>
@@ -352,7 +367,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-le-no-cable.94930/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-10" class="excluded">
+<tr id="row-11" class="excluded">
 <td></td>
 <td>2025-09-04</td>
 <td></td>
@@ -367,7 +382,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-vortex-alida-cable.94443/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-11" class="excluded">
+<tr id="row-12" class="excluded">
 <td></td>
 <td>2025-08-22</td>
 <td></td>
@@ -382,8 +397,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-no-cable.93753/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-12" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="12" checked></td>
+<tr id="row-13" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="13" checked></td>
 <td>2025-07-13</td>
 <td>$895</td>
 <td><span class="pill">closed</span></td>
@@ -397,8 +412,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.91645/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-13" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="13" checked></td>
+<tr id="row-14" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="14" checked></td>
 <td>2025-05-30</td>
 <td>$950</td>
 <td><span class="pill">closed</span></td>
@@ -412,8 +427,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/sold-empire-ears-triton.89258/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-14" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="14" checked></td>
+<tr id="row-15" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="15" checked></td>
 <td>2025-04-23</td>
 <td>$950</td>
 <td><span class="pill">closed</span></td>
@@ -427,8 +442,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.87117/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-15" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="15" checked></td>
+<tr id="row-16" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="16" checked></td>
 <td>2025-04-07</td>
 <td>$1,100</td>
 <td><span class="pill">closed</span></td>
@@ -442,8 +457,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-mint.86212/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-16" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="16" checked></td>
+<tr id="row-17" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="17" checked></td>
 <td>2025-04-05</td>
 <td>$830</td>
 <td><span class="pill">closed</span></td>
@@ -457,8 +472,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton.86131/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-17" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="17" checked></td>
+<tr id="row-18" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="18" checked></td>
 <td>2025-03-30</td>
 <td>$1,100</td>
 <td><span class="pill">closed</span></td>
@@ -472,8 +487,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.85838/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-18" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="18" checked></td>
+<tr id="row-19" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="19" checked></td>
 <td>2025-03-24</td>
 <td>$1,150</td>
 <td><span class="pill">closed</span></td>
@@ -487,8 +502,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/like-new-empire-ears-triton-launch-edition-w-warranty.85475/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-19" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="19" checked></td>
+<tr id="row-20" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="20" checked></td>
 <td>2025-03-11</td>
 <td>$900</td>
 <td><span class="pill">closed</span></td>
@@ -502,8 +517,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.84710/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-20" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="20" checked></td>
+<tr id="row-21" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="21" checked></td>
 <td>2025-02-20</td>
 <td>$1,300</td>
 <td><span class="pill">closed</span></td>
@@ -517,8 +532,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.83605/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-21" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="21" checked></td>
+<tr id="row-22" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="22" checked></td>
 <td>2025-01-28</td>
 <td>$1,250</td>
 <td><span class="pill">closed</span></td>
@@ -532,8 +547,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-sold.82349/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-22" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="22" checked></td>
+<tr id="row-23" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="23" checked></td>
 <td>2025-01-03</td>
 <td>$1,425</td>
 <td><span class="pill">closed</span></td>
@@ -547,8 +562,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-open-box.80881/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-23" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="23" ></td>
+<tr id="row-24" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="24" ></td>
 <td>2024-12-25</td>
 <td>$1,495</td>
 <td><span class="pill">closed</span></td>
@@ -562,8 +577,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-open-box.80375/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-24" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="24" checked></td>
+<tr id="row-25" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="25" checked></td>
 <td>2024-12-19</td>
 <td>$1,450</td>
 <td><span class="pill">closed</span></td>
@@ -577,8 +592,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.80079/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-25" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="25" checked></td>
+<tr id="row-26" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="26" checked></td>
 <td>2024-11-13</td>
 <td>$1,650</td>
 <td><span class="pill">closed</span></td>
@@ -594,7 +609,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.109122/", "price_num": 750.0, "date_ms": 1778889600000, "listing_status": "active", "condition_text": "used", "platform": "headfi"}, {"row_id": 1, "title": "Sold: Empire Ears Triton (Launch Edition)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.106772/", "price_num": null, "date_ms": 1775260800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 2, "title": "Sold: Empire Ears Triton launch edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.105658/", "price_num": 975.0, "date_ms": 1773792000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 3, "title": "Sold: Empire Ears Triton FE", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-fe.102793/", "price_num": 1300.0, "date_ms": 1769558400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 4, "title": "Closed: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.101920/", "price_num": null, "date_ms": 1768262400000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 5, "title": "Sold: Empire ears Triton iem", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-iem.98138/", "price_num": 950.0, "date_ms": 1762560000000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 6, "title": "Sold: SOLD!: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/sold-empire-ears-triton-launch-edition.97169/", "price_num": 1100.0, "date_ms": 1761004800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 7, "title": "Sold: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.96456/", "price_num": 1099.0, "date_ms": 1759881600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 8, "title": "Closed: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.95548/", "price_num": 1400.0, "date_ms": 1758499200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 9, "title": "Sold: Empire Ears Triton LE (no cable)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-le-no-cable.94930/", "price_num": 800.0, "date_ms": 1757635200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 10, "title": "Traded: Empire Ears Triton + Vortex Alida cable", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-vortex-alida-cable.94443/", "price_num": null, "date_ms": 1756944000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 11, "title": "Sold: Empire Ears Triton - no cable", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-no-cable.93753/", "price_num": null, "date_ms": 1755820800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 12, "title": "Sold: Empire Ears Triton: Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.91645/", "price_num": 895.0, "date_ms": 1752364800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 13, "title": "Sold: SOLD | Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/sold-empire-ears-triton.89258/", "price_num": 950.0, "date_ms": 1748563200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 14, "title": "Closed: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.87117/", "price_num": 950.0, "date_ms": 1745366400000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 15, "title": "Sold: Empire Ears Triton Launch Edition *MINT*", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-mint.86212/", "price_num": 1100.0, "date_ms": 1743984000000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 16, "title": "Sold: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.86131/", "price_num": 830.0, "date_ms": 1743811200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 17, "title": "Sold: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.85838/", "price_num": 1100.0, "date_ms": 1743292800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 18, "title": "Sold: Like New Empire Ears Triton Launch Edition w/warranty", "url": "https://www.head-fi.org/classifieds/like-new-empire-ears-triton-launch-edition-w-warranty.85475/", "price_num": 1150.0, "date_ms": 1742774400000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 19, "title": "Sold: Empire Ears Triton launch edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.84710/", "price_num": 900.0, "date_ms": 1741651200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 20, "title": "Sold: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.83605/", "price_num": 1300.0, "date_ms": 1740009600000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 21, "title": "Sold: Empire Ears Triton ( Launch Edition) SOLD", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-sold.82349/", "price_num": 1250.0, "date_ms": 1738022400000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 22, "title": "Sold: Empire Ears Triton Launch Edition (open box)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-open-box.80881/", "price_num": 1425.0, "date_ms": 1735862400000, "listing_status": "closed", "condition_text": "open box, new in box", "platform": "headfi"}, {"row_id": 23, "title": "Closed: Empire Ears Triton Launch Edition (open box)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-open-box.80375/", "price_num": 1495.0, "date_ms": 1735084800000, "listing_status": "closed", "condition_text": "open box, new in box", "platform": "headfi"}, {"row_id": 24, "title": "Sold: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.80079/", "price_num": 1450.0, "date_ms": 1734566400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 25, "title": "Closed: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.78091/", "price_num": 1650.0, "date_ms": 1731456000000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Empire Ears Triton Launch Edition with Monarch Cable", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-with-monarch-cable.110263/", "price_num": 725.0, "date_ms": 1780704000000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 1, "title": "Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.109122/", "price_num": 750.0, "date_ms": 1778889600000, "listing_status": "active", "condition_text": "used", "platform": "headfi"}, {"row_id": 2, "title": "Sold: Empire Ears Triton (Launch Edition)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.106772/", "price_num": null, "date_ms": 1775260800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 3, "title": "Sold: Empire Ears Triton launch edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.105658/", "price_num": 975.0, "date_ms": 1773792000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 4, "title": "Sold: Empire Ears Triton FE", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-fe.102793/", "price_num": 1300.0, "date_ms": 1769558400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 5, "title": "Closed: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.101920/", "price_num": null, "date_ms": 1768262400000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 6, "title": "Sold: Empire ears Triton iem", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-iem.98138/", "price_num": 950.0, "date_ms": 1762560000000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 7, "title": "Sold: SOLD!: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/sold-empire-ears-triton-launch-edition.97169/", "price_num": 1100.0, "date_ms": 1761004800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 8, "title": "Sold: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.96456/", "price_num": 1099.0, "date_ms": 1759881600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 9, "title": "Closed: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.95548/", "price_num": 1400.0, "date_ms": 1758499200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 10, "title": "Sold: Empire Ears Triton LE (no cable)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-le-no-cable.94930/", "price_num": 800.0, "date_ms": 1757635200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 11, "title": "Traded: Empire Ears Triton + Vortex Alida cable", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-vortex-alida-cable.94443/", "price_num": null, "date_ms": 1756944000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 12, "title": "Sold: Empire Ears Triton - no cable", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-no-cable.93753/", "price_num": null, "date_ms": 1755820800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 13, "title": "Sold: Empire Ears Triton: Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.91645/", "price_num": 895.0, "date_ms": 1752364800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 14, "title": "Sold: SOLD | Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/sold-empire-ears-triton.89258/", "price_num": 950.0, "date_ms": 1748563200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 15, "title": "Closed: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.87117/", "price_num": 950.0, "date_ms": 1745366400000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 16, "title": "Sold: Empire Ears Triton Launch Edition *MINT*", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-mint.86212/", "price_num": 1100.0, "date_ms": 1743984000000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 17, "title": "Sold: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.86131/", "price_num": 830.0, "date_ms": 1743811200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 18, "title": "Sold: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.85838/", "price_num": 1100.0, "date_ms": 1743292800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 19, "title": "Sold: Like New Empire Ears Triton Launch Edition w/warranty", "url": "https://www.head-fi.org/classifieds/like-new-empire-ears-triton-launch-edition-w-warranty.85475/", "price_num": 1150.0, "date_ms": 1742774400000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 20, "title": "Sold: Empire Ears Triton launch edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.84710/", "price_num": 900.0, "date_ms": 1741651200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 21, "title": "Sold: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.83605/", "price_num": 1300.0, "date_ms": 1740009600000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 22, "title": "Sold: Empire Ears Triton ( Launch Edition) SOLD", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-sold.82349/", "price_num": 1250.0, "date_ms": 1738022400000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 23, "title": "Sold: Empire Ears Triton Launch Edition (open box)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-open-box.80881/", "price_num": 1425.0, "date_ms": 1735862400000, "listing_status": "closed", "condition_text": "open box, new in box", "platform": "headfi"}, {"row_id": 24, "title": "Closed: Empire Ears Triton Launch Edition (open box)", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition-open-box.80375/", "price_num": 1495.0, "date_ms": 1735084800000, "listing_status": "closed", "condition_text": "open box, new in box", "platform": "headfi"}, {"row_id": 25, "title": "Sold: Empire Ears Triton Launch Edition", "url": "https://www.head-fi.org/classifieds/empire-ears-triton-launch-edition.80079/", "price_num": 1450.0, "date_ms": 1734566400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 26, "title": "Closed: Empire Ears Triton", "url": "https://www.head-fi.org/classifieds/empire-ears-triton.78091/", "price_num": 1650.0, "date_ms": 1731456000000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
