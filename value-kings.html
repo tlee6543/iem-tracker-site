@@ -47,6 +47,14 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .metric-card { background: white; border: 1px solid #ddd; padding: 16px; min-width: 190px; }
 .metric-card .metric-value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+.how-to-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+.how-to-card { border: 1px solid #eee; background: #fafafa; padding: 12px; border-radius: 8px; }
+.how-to-card h3 { margin: 0 0 6px 0; font-size: 16px; }
+.caveat-list { margin: 10px 0 0 18px; padding: 0; color: #555; }
+.caveat-list li { margin-bottom: 6px; }
+.notice-card { border-left: 4px solid #111; }
+.confidence-mini { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.confidence-mini span { display: inline-block; }
 
 .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 .filter-btn { padding: 9px 12px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; }
@@ -168,7 +176,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <div class="metric-card">
         <div class="product-label">Average Retention</div>
         <div class="metric-value">62.8%</div>
-        <div class="small">Across 67 IEMs with MSRP data.</div>
+        <div class="small">Across 68 IEMs with MSRP data.</div>
     </div>
     <div class="metric-card">
         <div class="product-label">Highest Retention</div>
@@ -509,6 +517,17 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 <tr>
     <td class="rank-col">30</td>
+    <td class="iem-col"><a href="brise-audio-fugaku.html">Brise Audio Fugaku</a></td>
+    <td><a href="brand-brise-audio.html">Brise Audio</a></td>
+    <td>$11,447.83</td>
+    <td>$17,900</td>
+    <td><b>64.0%</b></td>
+    <td>4</td>
+    <td class="small">recency-weighted 365d, 4 samples, 90d half-life</td>
+</tr>
+
+<tr>
+    <td class="rank-col">31</td>
     <td class="iem-col"><a href="softears-volume-s.html">Softears Volume S</a></td>
     <td><a href="brand-softears.html">Softears</a></td>
     <td>$203</td>
@@ -519,7 +538,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">31</td>
+    <td class="rank-col">32</td>
     <td class="iem-col"><a href="elysian-diva.html">Elysian Diva</a></td>
     <td><a href="brand-elysian.html">Elysian</a></td>
     <td>$936.61</td>
@@ -530,7 +549,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">32</td>
+    <td class="rank-col">33</td>
     <td class="iem-col"><a href="thieaudio-monarch-mkiii.html">ThieAudio Monarch MKIII</a></td>
     <td><a href="brand-thieaudio.html">ThieAudio</a></td>
     <td>$613.57</td>
@@ -541,7 +560,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">33</td>
+    <td class="rank-col">34</td>
     <td class="iem-col"><a href="hisenior-mega-5-est.html">HiSenior Mega 5 EST</a></td>
     <td><a href="brand-hisenior.html">HiSenior</a></td>
     <td>$330</td>
@@ -552,7 +571,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">34</td>
+    <td class="rank-col">35</td>
     <td class="iem-col"><a href="64-audio-u4s.html">64 Audio U4s</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$707.5</td>
@@ -563,7 +582,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">35</td>
+    <td class="rank-col">36</td>
     <td class="iem-col"><a href="moondrop-variations.html">Moondrop Variations</a></td>
     <td><a href="brand-moondrop.html">Moondrop</a></td>
     <td>$304.05</td>
@@ -574,7 +593,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">36</td>
+    <td class="rank-col">37</td>
     <td class="iem-col"><a href="campfire-andromeda-2020.html">Campfire Andromeda 2020</a></td>
     <td><a href="brand-campfire-audio.html">Campfire Audio</a></td>
     <td>$642.42</td>
@@ -585,7 +604,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">37</td>
+    <td class="rank-col">38</td>
     <td class="iem-col"><a href="thieaudio-monarch-mkii.html">ThieAudio Monarch MKII</a></td>
     <td><a href="brand-thieaudio.html">ThieAudio</a></td>
     <td>$574.29</td>
@@ -596,7 +615,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">38</td>
+    <td class="rank-col">39</td>
     <td class="iem-col"><a href="unique-melody-mest.html">Unique Melody MEST</a></td>
     <td><a href="brand-unique-melody.html">Unique Melody</a></td>
     <td>$800</td>
@@ -607,7 +626,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">39</td>
+    <td class="rank-col">40</td>
     <td class="iem-col"><a href="sennheiser-ie200.html">Sennheiser IE200</a></td>
     <td><a href="brand-sennheiser.html">Sennheiser</a></td>
     <td>$85.11</td>
@@ -618,7 +637,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">40</td>
+    <td class="rank-col">41</td>
     <td class="iem-col"><a href="64-audio-solo.html">64 Audio Solo</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$790.57</td>
@@ -629,7 +648,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">41</td>
+    <td class="rank-col">42</td>
     <td class="iem-col"><a href="64-audio-volur.html">64 Audio Volur</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,381.98</td>
@@ -640,7 +659,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">42</td>
+    <td class="rank-col">43</td>
     <td class="iem-col"><a href="symphonium-helios-se.html">Symphonium Helios SE</a></td>
     <td><a href="brand-symphonium.html">Symphonium</a></td>
     <td>$630.82</td>
@@ -651,7 +670,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">43</td>
+    <td class="rank-col">44</td>
     <td class="iem-col"><a href="moondrop-blessing-2-dusk.html">Moondrop Blessing 2 Dusk</a></td>
     <td><a href="brand-moondrop.html">Moondrop</a></td>
     <td>$173.33</td>
@@ -662,7 +681,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">44</td>
+    <td class="rank-col">45</td>
     <td class="iem-col"><a href="moondrop-blessing-2.html">Moondrop Blessing 2</a></td>
     <td><a href="brand-moondrop.html">Moondrop</a></td>
     <td>$167.85</td>
@@ -673,7 +692,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">45</td>
+    <td class="rank-col">46</td>
     <td class="iem-col"><a href="sony-ier-m9.html">Sony IER-M9</a></td>
     <td><a href="brand-sony.html">Sony</a></td>
     <td>$520.95</td>
@@ -684,7 +703,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">46</td>
+    <td class="rank-col">47</td>
     <td class="iem-col"><a href="aroma-audio-fei-wan.html">Aroma Audio Fei Wan</a></td>
     <td><a href="brand-aroma-audio.html">Aroma Audio</a></td>
     <td>$2,425</td>
@@ -695,7 +714,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">47</td>
+    <td class="rank-col">48</td>
     <td class="iem-col"><a href="64-audio-u12t.html">64 Audio U12t</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,010</td>
@@ -706,7 +725,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">48</td>
+    <td class="rank-col">49</td>
     <td class="iem-col"><a href="sony-ier-z1r.html">Sony IER-Z1R</a></td>
     <td><a href="brand-sony.html">Sony</a></td>
     <td>$987.13</td>
@@ -717,7 +736,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">49</td>
+    <td class="rank-col">50</td>
     <td class="iem-col"><a href="64-audio-nio.html">64 Audio Nio</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$836.94</td>
@@ -728,7 +747,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">50</td>
+    <td class="rank-col">51</td>
     <td class="iem-col"><a href="sennheiser-ie600.html">Sennheiser IE600</a></td>
     <td><a href="brand-sennheiser.html">Sennheiser</a></td>
     <td>$343.83</td>
@@ -739,7 +758,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">51</td>
+    <td class="rank-col">52</td>
     <td class="iem-col"><a href="64-audio-u6t.html">64 Audio U6t</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$635.88</td>
@@ -750,7 +769,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">52</td>
+    <td class="rank-col">53</td>
     <td class="iem-col"><a href="sennheiser-ie900.html">Sennheiser IE900</a></td>
     <td><a href="brand-sennheiser.html">Sennheiser</a></td>
     <td>$723.46</td>
@@ -761,7 +780,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">53</td>
+    <td class="rank-col">54</td>
     <td class="iem-col"><a href="thieaudio-monarch-mki.html">ThieAudio Monarch MKI</a></td>
     <td><a href="brand-thieaudio.html">ThieAudio</a></td>
     <td>$348.24</td>
@@ -772,7 +791,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">54</td>
+    <td class="rank-col">55</td>
     <td class="iem-col"><a href="64-audio-tia-trio.html">64 Audio Tia Trio</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,073.1</td>
@@ -783,7 +802,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">55</td>
+    <td class="rank-col">56</td>
     <td class="iem-col"><a href="oriolus-traillii-jp.html">Oriolus Traillii JP</a></td>
     <td><a href="brand-oriolus.html">Oriolus</a></td>
     <td>$2,998.97</td>
@@ -794,7 +813,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">56</td>
+    <td class="rank-col">57</td>
     <td class="iem-col"><a href="moondrop-s8.html">Moondrop S8</a></td>
     <td><a href="brand-moondrop.html">Moondrop</a></td>
     <td>$310.16</td>
@@ -805,7 +824,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">57</td>
+    <td class="rank-col">58</td>
     <td class="iem-col"><a href="64-audio-fourte-blanc.html">64 Audio Fourte Blanc</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,637.5</td>
@@ -816,7 +835,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">58</td>
+    <td class="rank-col">59</td>
     <td class="iem-col"><a href="symphonium-helios.html">Symphonium Helios</a></td>
     <td><a href="brand-symphonium.html">Symphonium</a></td>
     <td>$469.25</td>
@@ -827,7 +846,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">59</td>
+    <td class="rank-col">60</td>
     <td class="iem-col"><a href="unique-melody-mest-mk2.html">Unique Melody MEST MK2</a></td>
     <td><a href="brand-unique-melody.html">Unique Melody</a></td>
     <td>$637.46</td>
@@ -838,7 +857,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">60</td>
+    <td class="rank-col">61</td>
     <td class="iem-col"><a href="aroma-audio-jewel.html">Aroma Audio Jewel</a></td>
     <td><a href="brand-aroma-audio.html">Aroma Audio</a></td>
     <td>$2,171.59</td>
@@ -849,7 +868,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">61</td>
+    <td class="rank-col">62</td>
     <td class="iem-col"><a href="unique-melody-mest-mk3.html">Unique Melody MEST MK3</a></td>
     <td><a href="brand-unique-melody.html">Unique Melody</a></td>
     <td>$769.73</td>
@@ -860,7 +879,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">62</td>
+    <td class="rank-col">63</td>
     <td class="iem-col"><a href="64-audio-u18t.html">64 Audio U18t</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,115.34</td>
@@ -871,7 +890,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">63</td>
+    <td class="rank-col">64</td>
     <td class="iem-col"><a href="64-audio-tia-fourte.html">64 Audio Tia Fourte</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,275.11</td>
@@ -882,7 +901,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">64</td>
+    <td class="rank-col">65</td>
     <td class="iem-col"><a href="vision-ears-ve8.html">Vision Ears VE8</a></td>
     <td><a href="brand-vision-ears.html">Vision Ears</a></td>
     <td>$921.06</td>
@@ -893,7 +912,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">65</td>
+    <td class="rank-col">66</td>
     <td class="iem-col"><a href="64-audio-u18s.html">64 Audio U18s</a></td>
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td>$1,037.45</td>
@@ -904,7 +923,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">66</td>
+    <td class="rank-col">67</td>
     <td class="iem-col"><a href="qdc-anole-v14.html">qdc Anole V14</a></td>
     <td><a href="brand-qdc.html">qdc</a></td>
     <td>$967.96</td>
@@ -915,7 +934,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr>
-    <td class="rank-col">67</td>
+    <td class="rank-col">68</td>
     <td class="iem-col"><a href="qdc-anole-vx.html">qdc Anole VX</a></td>
     <td><a href="brand-qdc.html">qdc</a></td>
     <td>$769.15</td>

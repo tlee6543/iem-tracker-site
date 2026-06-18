@@ -47,6 +47,14 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .metric-card { background: white; border: 1px solid #ddd; padding: 16px; min-width: 190px; }
 .metric-card .metric-value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+.how-to-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+.how-to-card { border: 1px solid #eee; background: #fafafa; padding: 12px; border-radius: 8px; }
+.how-to-card h3 { margin: 0 0 6px 0; font-size: 16px; }
+.caveat-list { margin: 10px 0 0 18px; padding: 0; color: #555; }
+.caveat-list li { margin-bottom: 6px; }
+.notice-card { border-left: 4px solid #111; }
+.confidence-mini { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.confidence-mini span { display: inline-block; }
 
 .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 .filter-btn { padding: 9px 12px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; }
@@ -183,7 +191,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <div class="card">
     <h2>Price Over Time</h2>
     <p class="muted">Checked rows are included in chart and market-value metrics. Click a dot to open the source listing.</p>
-    <div class="controls"><button onclick="setAllCheckboxes(true)">Select all priced rows</button><button onclick="setAllCheckboxes(false)">Clear all</button><span class="small">This does not permanently edit the CSV.</span></div>
+    <div class="controls"><button onclick="setAllCheckboxes(true)">Select all priced rows</button><button onclick="setAllCheckboxes(false)">Clear all</button></div>
     <p class="small chart-hint">Scroll horizontally to view the MSRP-retention chart.</p>
     <div class="chart-scroll">
         <div class="chart-panel">
@@ -202,8 +210,23 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td></td>
+<td>2026-06-18</td>
+<td></td>
+<td><span class="pill">active</span></td>
+<td></td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>aydensnake</td>
+<td>0</td>
+<td>0</td>
+<td>N/A</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1u9fak8/wts_usami_h_iem_lot_zs10_pro_2_kiwie_ears_dolce/#item-1" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2026-03-22</td>
 <td>$20</td>
 <td><span class="pill">closed</span></td>
@@ -217,8 +240,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1s0acav/wts_usmd_h_hifiman_he1000se_fiio_ft1_noble_fokus/#item-10" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2026-01-15</td>
 <td>$35</td>
 <td><span class="pill">closed</span></td>
@@ -234,7 +257,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "KZ Castor Pro/Castor/ZS10 Pro 2", "url": "https://old.reddit.com/r/AVexchange/comments/1s0acav/wts_usmd_h_hifiman_he1000se_fiio_ft1_noble_fokus/#item-10", "price_num": 20.0, "date_ms": 1774147560000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "KZ ZS10 Pro", "url": "https://old.reddit.com/r/AVexchange/comments/1qd6n14/wts_usaca_h_assortment_of_iems_w_paypal/#item-1", "price_num": 35.0, "date_ms": 1768442432000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
+const allRows = [{"row_id": 0, "title": "IEM lot (ZS10 Pro 2, Kiwie Ears Dolce, Tripowin Piccolo, Wan'er SG, TRN Orca, Juzear Clear, TM-01), Openheart cable", "url": "https://old.reddit.com/r/AVexchange/comments/1u9fak8/wts_usami_h_iem_lot_zs10_pro_2_kiwie_ears_dolce/#item-1", "price_num": null, "date_ms": 1781809566000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "KZ Castor Pro/Castor/ZS10 Pro 2", "url": "https://old.reddit.com/r/AVexchange/comments/1s0acav/wts_usmd_h_hifiman_he1000se_fiio_ft1_noble_fokus/#item-10", "price_num": 20.0, "date_ms": 1774147560000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "KZ ZS10 Pro", "url": "https://old.reddit.com/r/AVexchange/comments/1qd6n14/wts_usaca_h_assortment_of_iems_w_paypal/#item-1", "price_num": 35.0, "date_ms": 1768442432000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

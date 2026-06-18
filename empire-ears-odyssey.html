@@ -47,6 +47,14 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .metric-card { background: white; border: 1px solid #ddd; padding: 16px; min-width: 190px; }
 .metric-card .metric-value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+.how-to-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+.how-to-card { border: 1px solid #eee; background: #fafafa; padding: 12px; border-radius: 8px; }
+.how-to-card h3 { margin: 0 0 6px 0; font-size: 16px; }
+.caveat-list { margin: 10px 0 0 18px; padding: 0; color: #555; }
+.caveat-list li { margin-bottom: 6px; }
+.notice-card { border-left: 4px solid #111; }
+.confidence-mini { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.confidence-mini span { display: inline-block; }
 
 .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 .filter-btn { padding: 9px 12px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; }
@@ -183,7 +191,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <div class="card">
     <h2>Price Over Time</h2>
     <p class="muted">Checked rows are included in chart and market-value metrics. Click a dot to open the source listing.</p>
-    <div class="controls"><button onclick="setAllCheckboxes(true)">Select all priced rows</button><button onclick="setAllCheckboxes(false)">Clear all</button><span class="small">This does not permanently edit the CSV.</span></div>
+    <div class="controls"><button onclick="setAllCheckboxes(true)">Select all priced rows</button><button onclick="setAllCheckboxes(false)">Clear all</button></div>
     <p class="small chart-hint">Scroll horizontally to view the MSRP-retention chart.</p>
     <div class="chart-scroll">
         <div class="chart-panel">

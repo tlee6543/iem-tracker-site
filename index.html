@@ -47,6 +47,14 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .metric-card { background: white; border: 1px solid #ddd; padding: 16px; min-width: 190px; }
 .metric-card .metric-value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+.how-to-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+.how-to-card { border: 1px solid #eee; background: #fafafa; padding: 12px; border-radius: 8px; }
+.how-to-card h3 { margin: 0 0 6px 0; font-size: 16px; }
+.caveat-list { margin: 10px 0 0 18px; padding: 0; color: #555; }
+.caveat-list li { margin-bottom: 6px; }
+.notice-card { border-left: 4px solid #111; }
+.confidence-mini { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.confidence-mini span { display: inline-block; }
 
 .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 .filter-btn { padding: 9px 12px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; }
@@ -157,8 +165,35 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     </div>
     
 <h1>IEM Market Tracker V1</h1>
-<div class="card">
-    <p class="muted">Market Value uses a 90-day average when there are at least 3 clean samples. If recent data is sparse, it uses a recency-weighted fallback so newer listings count more than older listings.</p>
+<div class="card notice-card">
+    <h2>How to use this tracker</h2>
+    <p class="muted">
+        Use the tracker as a secondary-market reference for IEM pricing. Search for an IEM, check its estimated Market Value,
+        then click into the individual page to inspect the underlying listings and decide whether the estimate looks trustworthy.
+    </p>
+    <div class="how-to-grid">
+        <div class="how-to-card">
+            <h3>Market Value</h3>
+            <p class="small">Uses a 90-day average when there are at least 3 clean samples. If recent data is sparse, it uses a recency-weighted fallback so newer listings count more than older listings.</p>
+        </div>
+        <div class="how-to-card">
+            <h3>Confidence</h3>
+            <p class="small">High confidence means the market read is supported by better sample depth and/or recent listings. In practice, this is closer to a “safer buy” signal because the estimate is less likely to be based on a stale or one-off listing.</p>
+            <div class="confidence-mini">
+                <span class="badge badge-high">High</span>
+                <span class="badge badge-medium">Medium</span>
+                <span class="badge badge-low">Low</span>
+            </div>
+        </div>
+        <div class="how-to-card">
+            <h3>Deal indicators</h3>
+            <p class="small">Deal labels compare a listing price against the current market value. Treat them as leads to inspect, not automatic buying advice.</p>
+        </div>
+    </div>
+    <ul class="caveat-list">
+        <li>This tool is still in development, so matching errors, missed bundles, stale statuses, and pricing mistakes can happen.</li>
+        <li>Always click through to the source listing and verify condition, accessories, seller history, currency, and whether the item is actually still available.</li>
+    </ul>
     <div class="quick-links">
         <a class="quick-link" href="value-kings.html">Value Kings →</a>
         <a class="quick-link" href="recent-listings.html">Recently Added Listings →</a>
@@ -227,7 +262,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="64 Audio Duo 64 Audio   Reddit: 1 / Head-Fi: 14"
     data-has-msrp="0"
     data-samples="15"
-    data-last-seen-days="0.0"
+    data-last-seen-days="1.0"
     data-confidence="Medium"
     data-has-reddit="1"
     data-has-headfi="1"
@@ -236,7 +271,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-64-audio.html">64 Audio</a></td>
     <td title="recency-weighted 365d, 3 samples, 90d half-life">$499.88</td>
     <td><span class="badge badge-medium" title="15 included samples with usable recent history.">Medium</span></td>
-    <td class="nowrap" title="0d ago">2026-06-17</td>
+    <td class="nowrap" title="1d ago">2026-06-17</td>
     <td class="source-breakdown">Reddit: 1 / Head-Fi: 14</td>
     <td><span class="badge badge-stale">No active listing</span></td>
     <td>$650.2</td>
@@ -950,8 +985,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </tr>
 
 <tr class="iem-row"
-    data-search="Brise Audio Fugaku Brise Audio   Head-Fi: 4"
-    data-has-msrp="0"
+    data-search="Brise Audio Fugaku Brise Audio 2DD/5BA/1MEMS 2025 Head-Fi: 4"
+    data-has-msrp="1"
     data-samples="4"
     data-last-seen-days="65.0"
     data-confidence="Medium"
@@ -1459,7 +1494,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="Dunu Kima Dunu   Reddit: 1"
     data-has-msrp="0"
     data-samples="0"
-    data-last-seen-days="0.0"
+    data-last-seen-days="1.0"
     data-confidence="Low"
     data-has-reddit="1"
     data-has-headfi="0"
@@ -1468,7 +1503,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-dunu.html">Dunu</a></td>
     <td title="no clean samples">N/A</td>
     <td><span class="badge badge-low" title="No included clean samples.">Low</span></td>
-    <td class="nowrap" title="0d ago">2026-06-17</td>
+    <td class="nowrap" title="1d ago">2026-06-17</td>
     <td class="source-breakdown">Reddit: 1</td>
     <td><span class="badge badge-stale">N/A</span></td>
     <td>N/A</td>
@@ -2537,7 +2572,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="Juzear Defiant Juzear   Reddit: 1"
     data-has-msrp="0"
     data-samples="1"
-    data-last-seen-days="0.0"
+    data-last-seen-days="1.0"
     data-confidence="Medium"
     data-has-reddit="1"
     data-has-headfi="0"
@@ -2546,7 +2581,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-juzear.html">Juzear</a></td>
     <td title="single clean sample">$50</td>
     <td><span class="badge badge-medium" title="Single recent included sample.">Medium</span></td>
-    <td class="nowrap" title="0d ago">2026-06-17</td>
+    <td class="nowrap" title="1d ago">2026-06-17</td>
     <td class="source-breakdown">Reddit: 1</td>
     <td><span class="badge badge-stale">No active listing</span></td>
     <td>$50</td>
@@ -2845,7 +2880,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="Letshuoer S15 Letshuoer   Reddit: 4"
     data-has-msrp="0"
     data-samples="2"
-    data-last-seen-days="0.0"
+    data-last-seen-days="1.0"
     data-confidence="Medium"
     data-has-reddit="1"
     data-has-headfi="0"
@@ -2854,7 +2889,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-letshuoer.html">Letshuoer</a></td>
     <td title="recency-weighted 365d, 2 samples, 90d half-life">$66.37</td>
     <td><span class="badge badge-medium" title="Sparse but recent: 2 included samples, latest 68 days ago.">Medium</span></td>
-    <td class="nowrap" title="0d ago">2026-06-17</td>
+    <td class="nowrap" title="1d ago">2026-06-17</td>
     <td class="source-breakdown">Reddit: 4</td>
     <td><span class="badge badge-stale">Fair (2.1% below market)</span></td>
     <td>$67.5</td>
@@ -2867,7 +2902,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="Letshuoer x Gizaudio Galileo Letshuoer   Reddit: 1"
     data-has-msrp="0"
     data-samples="1"
-    data-last-seen-days="147.0"
+    data-last-seen-days="148.0"
     data-confidence="Low"
     data-has-reddit="1"
     data-has-headfi="0"
@@ -2876,7 +2911,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-letshuoer.html">Letshuoer</a></td>
     <td title="single clean sample">$65</td>
     <td><span class="badge badge-low" title="Sparse or stale data: 1 included sample(s).">Low</span></td>
-    <td class="nowrap" title="147d ago">2026-01-21</td>
+    <td class="nowrap" title="148d ago">2026-01-21</td>
     <td class="source-breakdown">Reddit: 1</td>
     <td><span class="badge badge-stale">No active listing</span></td>
     <td>$65</td>
@@ -3725,7 +3760,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="Simgot EM6L Simgot   Reddit: 3 / Head-Fi: 5"
     data-has-msrp="0"
     data-samples="7"
-    data-last-seen-days="0.0"
+    data-last-seen-days="1.0"
     data-confidence="High"
     data-has-reddit="1"
     data-has-headfi="1"
@@ -3734,7 +3769,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-simgot.html">Simgot</a></td>
     <td title="90d avg, 3 samples">$58.33</td>
     <td><span class="badge badge-high" title="7 included samples, 3 in last 90 days.">High</span></td>
-    <td class="nowrap" title="0d ago">2026-06-17</td>
+    <td class="nowrap" title="1d ago">2026-06-17</td>
     <td class="source-breakdown">Reddit: 3 / Head-Fi: 5</td>
     <td><span class="badge badge-stale">Fair (2.9% above market)</span></td>
     <td>$59.29</td>
@@ -3769,7 +3804,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     data-search="Simgot EW300 Simgot   Reddit: 2 / Head-Fi: 1"
     data-has-msrp="0"
     data-samples="3"
-    data-last-seen-days="29.0"
+    data-last-seen-days="30.0"
     data-confidence="Medium"
     data-has-reddit="1"
     data-has-headfi="1"
@@ -3778,7 +3813,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <td><a href="brand-simgot.html">Simgot</a></td>
     <td title="recency-weighted 365d, 3 samples, 90d half-life">$58.7</td>
     <td><span class="badge badge-medium" title="3 included samples with usable recent history.">Medium</span></td>
-    <td class="nowrap" title="29d ago">2026-05-19</td>
+    <td class="nowrap" title="30d ago">2026-05-19</td>
     <td class="source-breakdown">Reddit: 2 / Head-Fi: 1</td>
     <td><span class="badge badge-stale">Fair (2.2% above market)</span></td>
     <td>$55</td>
