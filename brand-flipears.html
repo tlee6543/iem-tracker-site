@@ -1,0 +1,177 @@
+
+<html>
+<head><title>Flipears - IEM Market Tracker</title><style>
+body { font-family: Arial; margin: 40px; background: #f7f7f7; color: #111; }
+table { width: 100%; border-collapse: collapse; background: white; font-size: 14px; }
+.main-table .iem-col { width: 28%; max-width: 320px; }
+.main-table td:first-child { max-width: 320px; }
+th, td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+th { background: #111; color: white; }
+.card { background: white; padding: 20px; border: 1px solid #ddd; margin-bottom: 20px; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #666; }
+.small { font-size: 13px; color: #666; }
+.top-credit { background: white; border: 1px solid #ddd; padding: 10px 14px; margin-bottom: 20px; font-size: 14px; color: #555; }
+.top-credit a { font-weight: bold; color: #0066cc; }
+.site-topbar { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-bottom: 12px; }
+.support-tool-link { display: inline-block; background: #111; color: #fff; border: 1px solid #111; border-radius: 999px; padding: 9px 14px; font-size: 14px; font-weight: bold; }
+.support-tool-link:hover { color: #fff; text-decoration: none; }
+.site-footer { margin-top: 34px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 14px; color: #555; }
+.site-footer a { font-weight: bold; color: #0066cc; }
+.stats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.stat { background: white; border: 1px solid #ddd; padding: 16px; min-width: 150px; }
+.excluded { background: #f3f3f3; color: #666; }
+.included { background: #fff; }
+.pill { display: inline-block; padding: 2px 6px; border: 1px solid #ccc; border-radius: 10px; font-size: 12px; }
+.controls { margin: 10px 0 20px 0; display: flex; gap: 10px; align-items: center; }
+button { padding: 8px 12px; cursor: pointer; }
+input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
+.search-box { width: 100%; max-width: 520px; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; margin-top: 8px; }
+.search-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.clear-btn { padding: 10px 12px; cursor: pointer; border: 1px solid #ccc; background: white; border-radius: 6px; }
+.hidden-row { display: none; }
+.result-count { margin-top: 10px; color: #666; font-size: 13px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.product-field { border: 1px solid #eee; padding: 10px; background: #fafafa; }
+.product-label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: .02em; }
+.product-value { margin-top: 4px; font-weight: bold; }
+.chart-scroll { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; }
+.chart-panel { flex: 0 0 min(100%, 960px); scroll-snap-align: start; border: 1px solid #eee; background: #fff; padding: 14px; box-sizing: border-box; }
+.chart-panel h3 { margin-top: 0; }
+.chart-panel canvas { width: 100% !important; min-height: 360px; }
+.chart-hint { margin-top: 8px; }
+.quick-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.quick-link { display: inline-block; padding: 10px 14px; border: 1px solid #ddd; background: #fafafa; border-radius: 6px; font-weight: bold; }
+.rank-col { width: 64px; text-align: right; }
+.metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.metric-card { background: white; border: 1px solid #ddd; padding: 16px; min-width: 190px; }
+.metric-card .metric-value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+
+.filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.filter-btn { padding: 9px 12px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; }
+.filter-btn.active { background: #111; color: #fff; border-color: #111; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 999px; border: 1px solid #ccc; background: #fafafa; font-size: 12px; white-space: nowrap; }
+.badge-high { background: #ecfdf3; border-color: #b7e4c7; }
+.badge-medium { background: #fff8e1; border-color: #ead88a; }
+.badge-low { background: #f5f5f5; border-color: #ccc; }
+.badge-deal { background: #ecfdf3; border-color: #b7e4c7; font-weight: bold; }
+.badge-score { font-weight: bold; cursor: help; position: relative; }
+.badge-score[data-tooltip]:hover::after, .badge-score[data-tooltip]:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 130%;
+    width: min(520px, 78vw);
+    white-space: normal;
+    line-height: 1.35;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: normal;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.badge-score[data-tooltip]:hover::before, .badge-score[data-tooltip]:focus::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 108%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+    z-index: 10000;
+}
+.badge-stale { background: #f3f3f3; color: #666; }
+.source-breakdown { font-size: 12px; color: #555; }
+.nowrap { white-space: nowrap; }
+.compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.compare-select { width: 100%; padding: 10px; font-size: 14px; }
+.deal-positive { font-weight: bold; }
+.sponsor-shell { display: grid; grid-template-columns: minmax(260px, 1.6fr) minmax(240px, 1fr); gap: 14px; margin-bottom: 20px; }
+.sponsor-card, .supporter-card { background: white; border: 1px solid #ddd; padding: 14px 16px; border-radius: 8px; }
+.sponsor-label, .supporter-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #777; margin-bottom: 6px; font-weight: bold; }
+.sponsor-body { display: flex; align-items: center; gap: 12px; }
+.sponsor-logo { width: 56px; height: 56px; object-fit: contain; border: 1px solid #eee; border-radius: 8px; background: #fafafa; }
+.sponsor-name { font-size: 18px; font-weight: bold; margin-bottom: 3px; }
+.sponsor-tagline { color: #555; font-size: 13px; }
+.sponsor-cta { font-size: 13px; color: #666; }
+.supporter-list { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.supporter-chip { display: inline-block; border: 1px solid #ddd; background: #fafafa; border-radius: 999px; padding: 4px 9px; font-size: 12px; color: #333; }
+.supporter-chip a { color: #333; }
+.dev-badge { display: inline-block; margin-left: 6px; padding: 2px 6px; border-radius: 999px; border: 1px solid #ead88a; background: #fff8e1; color: #111; font-size: 11px; font-weight: bold; line-height: 1.2; cursor: help; position: relative; vertical-align: middle; }
+.dev-badge[data-tooltip]:hover::after, .dev-badge[data-tooltip]:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 0;
+    top: 135%;
+    width: min(440px, 78vw);
+    white-space: normal;
+    line-height: 1.35;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.dev-badge[data-tooltip]:hover::before, .dev-badge[data-tooltip]:focus::before {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 112%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+    z-index: 10000;
+}
+@media (max-width: 760px) { .sponsor-shell { grid-template-columns: 1fr; } }
+
+</style></head>
+<body>
+
+    <div class="site-topbar">
+        <a class="support-tool-link" href="https://www.patreon.com/c/precogvision/membership" target="_blank" rel="noopener">Support the tracker + get shouted out</a>
+    </div>
+    
+    <div class="sponsor-shell">
+        
+        <div class="sponsor-card">
+            <div class="sponsor-label">Sponsor</div>
+            <div class="sponsor-name">Sponsor this space</div>
+            <div class="sponsor-cta">Top banner placement available. Contact <a href="https://www.youtube.com/@Precogvision" target="_blank">Precogvision</a> to support the tracker.</div>
+        </div>
+        
+        <div class="supporter-card">
+            <div class="supporter-label">Supporters</div>
+            <div class="small">Thanks to the people helping keep this tool alive.</div>
+            <div class="supporter-list"><span class="supporter-chip">Supporter shoutouts coming soon</span></div>
+        </div>
+    </div>
+    
+<p><a href="index.html">← Back</a></p>
+<h1>Flipears</h1>
+<div class="card"><p>All tracked IEMs for this brand.</p></div>
+<table class="main-table">
+<tr><th class="iem-col">IEM</th><th>Market Value</th><th>Avg</th><th>Low</th><th>High</th><th>Samples</th></tr>
+
+<tr>
+    <td class="iem-col"><a href="flipears-arion.html">Flipears Arion</a></td>
+    <td title="single clean sample">$1,799</td>
+    <td>$1,799</td>
+    <td>$1,799</td>
+    <td>$1,799</td>
+    <td>1</td>
+</tr>
+
+</table>
+<div class="site-footer">Developed by <a href="https://www.youtube.com/@Precogvision" target="_blank">Precogvision</a></div>
+</body>
+</html>
