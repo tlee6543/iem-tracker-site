@@ -162,9 +162,9 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <div class="card">
 <h2>Product Info</h2>
 <div class="product-grid">
-    <div class="product-field"><div class="product-label">Original MSRP</div><div class="product-value">N/A</div></div>
-    <div class="product-field"><div class="product-label">Release Year</div><div class="product-value">Unknown</div></div>
-    <div class="product-field"><div class="product-label">Driver Config</div><div class="product-value">Unknown</div></div>
+    <div class="product-field"><div class="product-label">Original MSRP</div><div class="product-value">$350</div></div>
+    <div class="product-field"><div class="product-label">Release Year</div><div class="product-value">2026</div></div>
+    <div class="product-field"><div class="product-label">Driver Config</div><div class="product-value">2DD/3BA</div></div>
     <div class="product-field"><div class="product-label">Status</div><div class="product-value">Unknown</div></div>
 </div>
 
@@ -173,6 +173,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
     <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 89/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 15/15, source diversity 8/10, price consistency 4/10. Current inputs: 11 included priced sample(s), 7 in the last 90 days, 7 in the last 180 days, latest sample 15d ago, 2 source type(s), price CV 0.30." aria-label="Liquidity/confidence score: 89/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 15/15, source diversity 8/10, price consistency 4/10. Current inputs: 11 included priced sample(s), 7 in the last 90 days, 7 in the last 180 days, latest sample 15d ago, 2 source type(s), price CV 0.30." tabindex="0">High (89/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">11 included sample(s), latest 15d ago.</span></div>
+    
+    <div class="stat"><b>Market vs MSRP</b><br><span id="stat-market-vs-msrp">N/A</span><br><span id="stat-market-vs-msrp-detail" class="small"></span></div>
     
     <div class="stat"><b>Average</b><br><span id="stat-average">$N/A</span></div>
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
@@ -193,7 +195,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
         <div class="chart-panel">
             <h3>Secondary Value vs Original MSRP</h3>
             
-            <p class="muted">Original MSRP is not available for this IEM yet, so MSRP-retention cannot be calculated.</p>
+            <p class="muted">Dots show individual listings. The line is a smoothed retention curve based on available samples. Hover over the line to see the secondary value as a percentage above or below original MSRP at that time.</p>
+            <canvas id="msrpChart"></canvas>
             
         </div>
     </div>
@@ -415,7 +418,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </table>
 <script>
 const allRows = [{"row_id": 0, "title": "CrinEar Reference", "url": "https://old.reddit.com/r/AVexchange/comments/1tvt59t/wtsusatnh_crinear_reference_w_paypal/#item-1", "price_num": 290.0, "date_ms": 1780501236000, "listing_status": "active", "condition_text": "like new", "platform": "reddit_rss"}, {"row_id": 1, "title": "Crinear Reference", "url": "https://old.reddit.com/r/AVexchange/comments/1tu6ka5/wts_usanyc_h_crinear_reference_w_285_shipped_ff/#item-1", "price_num": 285.0, "date_ms": 1780349626000, "listing_status": "active", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 2, "title": "Crinear Reference, last PD before I just return it!!", "url": "https://www.head-fi.org/classifieds/crinear-reference-last-pd-before-i-just-return-it.109835/", "price_num": 315.0, "date_ms": 1780012800000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi"}, {"row_id": 3, "title": "Crinear Reference", "url": "https://old.reddit.com/r/AVexchange/comments/1tolejf/wts_usaca_h_crinear_reference_w_285_paypal_ff/#item-1", "price_num": 285.0, "date_ms": 1779832060000, "listing_status": "closed", "condition_text": "open box", "platform": "reddit_rss"}, {"row_id": 4, "title": "Crinear reference- excellent neutral set with an excellent soundstage/clarity for the price has all stock accessories.", "url": "https://old.reddit.com/r/AVexchange/comments/1taf2bb/wtsusacahcrinear_reference_symphonium_giant/#item-1", "price_num": 270.0, "date_ms": 1778530547000, "listing_status": "closed", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 5, "title": "Reference has sold silver flash + giant for", "url": "https://old.reddit.com/r/AVexchange/comments/1taf2bb/wtsusacahcrinear_reference_symphonium_giant/#item-3", "price_num": 400.0, "date_ms": 1778530547000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 6, "title": "Crinear Reference", "url": "https://old.reddit.com/r/AVexchange/comments/1taeh2r/wts_usaga_h_crinear_reference_w_paypal/#item-1", "price_num": null, "date_ms": 1778529318000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 7, "title": "Sold: Crinear Reference", "url": "https://www.head-fi.org/classifieds/crinear-reference.108675/", "price_num": null, "date_ms": 1778112000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 8, "title": "Xenn Mangrid Tea Pro, CrinEar Reference", "url": "https://old.reddit.com/r/AVexchange/comments/1t3y4wp/wts_usut_h_xenn_mangrid_tea_pro_crinear_reference/#item-1", "price_num": 270.0, "date_ms": 1777936687000, "listing_status": "closed", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 9, "title": "crinear reference & I/O Cielo", "url": "https://old.reddit.com/r/AVexchange/comments/1t3vkke/wts_usfl_h_crinear_reference_io_cielo_w_paypal/#item-1", "price_num": 285.0, "date_ms": 1777930627000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 10, "title": "Closed: Etymotic 'Studio Reference' ER4SR --- very low hours", "url": "https://www.head-fi.org/classifieds/etymotic-studio-reference-er4sr-very-low-hours.97060/", "price_num": 128.0, "date_ms": 1760832000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 11, "title": "Sold: Etymotic Research ER4SR Studio Reference Earphones", "url": "https://www.head-fi.org/classifieds/etymotic-research-er4sr-studio-reference-earphones.84135/", "price_num": 99.0, "date_ms": 1740787200000, "listing_status": "closed", "condition_text": "excellent", "platform": "headfi"}, {"row_id": 12, "title": "Crinear Reference", "url": "https://www.head-fi.org/classifieds/crinear-reference.109835/", "price_num": 320.0, "date_ms": null, "listing_status": "active", "condition_text": "new in box", "platform": "headfi"}, {"row_id": 13, "title": "CrinEar Reference For Sale / Trade 310.00 USD Condition Excellent/Like New Negotiability Or Best Offer Ships To Anywhere", "url": "https://www.head-fi.org/classifieds/crinear-reference.110745/", "price_num": 310.0, "date_ms": null, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi"}];
-const originalMsrpUsd = null;
+const originalMsrpUsd = 350.0;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
 function moneyRound(value) { return money(value); }

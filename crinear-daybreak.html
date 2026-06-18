@@ -162,9 +162,9 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <div class="card">
 <h2>Product Info</h2>
 <div class="product-grid">
-    <div class="product-field"><div class="product-label">Original MSRP</div><div class="product-value">N/A</div></div>
-    <div class="product-field"><div class="product-label">Release Year</div><div class="product-value">Unknown</div></div>
-    <div class="product-field"><div class="product-label">Driver Config</div><div class="product-value">Unknown</div></div>
+    <div class="product-field"><div class="product-label">Original MSRP</div><div class="product-value">$170</div></div>
+    <div class="product-field"><div class="product-label">Release Year</div><div class="product-value">2025</div></div>
+    <div class="product-field"><div class="product-label">Driver Config</div><div class="product-value">1DD/2BA/2MP</div></div>
     <div class="product-field"><div class="product-label">Status</div><div class="product-value">Unknown</div></div>
 </div>
 
@@ -173,6 +173,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
     <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 84/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 12/15, source diversity 8/10, price consistency 7/10. Current inputs: 11 included priced sample(s), 2 in the last 90 days, 5 in the last 180 days, latest sample 32d ago, 2 source type(s), price CV 0.14." aria-label="Liquidity/confidence score: 84/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 12/15, source diversity 8/10, price consistency 7/10. Current inputs: 11 included priced sample(s), 2 in the last 90 days, 5 in the last 180 days, latest sample 32d ago, 2 source type(s), price CV 0.14." tabindex="0">High (84/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">11 included sample(s), latest 32d ago.</span></div>
+    
+    <div class="stat"><b>Market vs MSRP</b><br><span id="stat-market-vs-msrp">N/A</span><br><span id="stat-market-vs-msrp-detail" class="small"></span></div>
     
     <div class="stat"><b>Average</b><br><span id="stat-average">$N/A</span></div>
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
@@ -193,7 +195,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
         <div class="chart-panel">
             <h3>Secondary Value vs Original MSRP</h3>
             
-            <p class="muted">Original MSRP is not available for this IEM yet, so MSRP-retention cannot be calculated.</p>
+            <p class="muted">Dots show individual listings. The line is a smoothed retention curve based on available samples. Hover over the line to see the secondary value as a percentage above or below original MSRP at that time.</p>
+            <canvas id="msrpChart"></canvas>
             
         </div>
     </div>
@@ -385,7 +388,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </table>
 <script>
 const allRows = [{"row_id": 0, "title": "Sold: CrinEar Daybreak - sale pending", "url": "https://www.head-fi.org/classifieds/crinear-daybreak-sale-pending.109177/", "price_num": 85.0, "date_ms": 1778976000000, "listing_status": "closed", "condition_text": "excellent", "platform": "headfi"}, {"row_id": 1, "title": "Traded: Crinear Daybreak", "url": "https://www.head-fi.org/classifieds/crinear-daybreak.106420/", "price_num": 125.0, "date_ms": 1774828800000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 2, "title": "Crinear Daybreak IEM", "url": "https://old.reddit.com/r/AVexchange/comments/1rzw9wt/wtsusmdh_crinear_daybreak_iem_w_100_paypal_gs/#item-1", "price_num": null, "date_ms": 1774111583000, "listing_status": "active", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 3, "title": "Crinear Daybreak", "url": "https://old.reddit.com/r/AVexchange/comments/1rwa988/wts_usnyc_h_crinear_daybreak_ziigaat_arcanis_w/#item-1", "price_num": 100.0, "date_ms": 1773762431000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 4, "title": "Crinear Daybreak bought from Bloom a bit ago I like it but I never use it. Great condition.", "url": "https://old.reddit.com/r/AVexchange/comments/1rmyj1t/wtsuscah_trn_whale_shark_crinear_daybreak_juzear/#item-1", "price_num": 120.0, "date_ms": 1772852458000, "listing_status": "closed", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 5, "title": "Sold: CrinEar Daybreak Triplicate-Hybrid in-Ear Headphones", "url": "https://www.head-fi.org/classifieds/crinear-daybreak-triplicate-hybrid-in-ear-headphones.100923/", "price_num": 120.0, "date_ms": 1766880000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 6, "title": "Crinear DayBreak (Updated version with coffee tips)", "url": "https://old.reddit.com/r/AVexchange/comments/1pcmdc5/wtsusmah_crinear_daybreak_simgot_supermix4_w/#item-2", "price_num": 110.0, "date_ms": 1764713845000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 7, "title": "Traded: *PD* CrinEar Daybreak", "url": "https://www.head-fi.org/classifieds/pd-crinear-daybreak.97761/", "price_num": 115.0, "date_ms": 1761955200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 8, "title": "Closed: CrinEar Daybreak", "url": "https://www.head-fi.org/classifieds/crinear-daybreak.96954/", "price_num": 140.0, "date_ms": 1760659200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 9, "title": "Sold: [Pending] Crinear Daybreak", "url": "https://www.head-fi.org/classifieds/pending-crinear-daybreak.95407/", "price_num": 135.0, "date_ms": 1758412800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 10, "title": "Sold: PD. Crinear DayBreak Mint less than 10 hours", "url": "https://www.head-fi.org/classifieds/pd-crinear-daybreak-mint-less-than-10-hours.93903/", "price_num": 140.0, "date_ms": 1756080000000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 11, "title": "Sold: CrinEar Daybreak", "url": "https://www.head-fi.org/classifieds/crinear-daybreak.93569/", "price_num": 130.0, "date_ms": 1755475200000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}];
-const originalMsrpUsd = null;
+const originalMsrpUsd = 170.0;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
 function moneyRound(value) { return money(value); }
