@@ -180,7 +180,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </div>
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
-    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 95/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 15/15, source diversity 8/10, price consistency 10/10. Current inputs: 27 included priced sample(s), 5 in the last 90 days, 17 in the last 180 days, latest sample 29d ago, 2 source type(s), price CV 0.07." aria-label="Liquidity/confidence score: 95/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 15/15, source diversity 8/10, price consistency 10/10. Current inputs: 27 included priced sample(s), 5 in the last 90 days, 17 in the last 180 days, latest sample 29d ago, 2 source type(s), price CV 0.07." tabindex="0">High (95/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">27 included sample(s), latest 29d ago.</span></div>
+    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 98/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 30/30, recent sample depth 15/15, source diversity 8/10, price consistency 10/10. Current inputs: 28 included priced sample(s), 6 in the last 90 days, 18 in the last 180 days, latest sample 1d ago, 2 source type(s), price CV 0.07." aria-label="Liquidity/confidence score: 98/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 30/30, recent sample depth 15/15, source diversity 8/10, price consistency 10/10. Current inputs: 28 included priced sample(s), 6 in the last 90 days, 18 in the last 180 days, latest sample 1d ago, 2 source type(s), price CV 0.07." tabindex="0">High (98/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">28 included sample(s), latest 1d ago.</span></div>
     
     <div class="stat"><b>Market vs MSRP</b><br><span id="stat-market-vs-msrp">N/A</span><br><span id="stat-market-vs-msrp-detail" class="small"></span></div>
     
@@ -188,7 +188,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>35</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>36</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -213,8 +213,23 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<tr id="row-0" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<td>2026-06-18</td>
+<td>$875</td>
+<td><span class="pill">closed</span></td>
+<td>like new, excellent, used</td>
+<td>0</td>
+<td>headfi</td>
+<td>drummguy26</td>
+<td>0</td>
+<td>0</td>
+<td>Closed: Fair (0.8% above market)</td>
+<td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.110900/" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
 <td>2026-06-17</td>
 <td>$900</td>
 <td><span class="pill">active</span></td>
@@ -224,12 +239,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Heavy_Connection_997</td>
 <td>0</td>
 <td>1</td>
-<td>Fair (3.8% above market)</td>
+<td>Fair (3.6% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1u8izbg/wtsusnch_thieaudio_monarch_mk4mkiv_wpaypal/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2026-05-20</td>
 <td>$900</td>
 <td><span class="pill">closed</span></td>
@@ -239,12 +254,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>SuperShaestings</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.8% above market)</td>
+<td>Closed: Fair (3.6% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1tj1w5a/wtsusnch_thieaudio_monarch_mkiv_mk4_butterfly_w/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
+<tr id="row-3" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
 <td>2026-05-19</td>
 <td>$800</td>
 <td><span class="pill">closed</span></td>
@@ -254,11 +269,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>salman91</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (7.7% below market)</td>
+<td>Closed: Fair (7.9% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.109310/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-3" class="excluded">
+<tr id="row-4" class="excluded">
 <td></td>
 <td>2026-05-12</td>
 <td></td>
@@ -273,8 +288,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1tao1cs/wts_usaca_h_thie_audio_monarch_mk_iv_w_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-4" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="4" checked></td>
+<tr id="row-5" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
 <td>2026-05-11</td>
 <td>$800</td>
 <td><span class="pill">closed</span></td>
@@ -284,12 +299,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Vessago</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (7.7% below market)</td>
+<td>Closed: Fair (7.9% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.108859/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-5" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
+<tr id="row-6" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="6" checked></td>
 <td>2026-05-08</td>
 <td>$875</td>
 <td><span class="pill">closed</span></td>
@@ -299,12 +314,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>PrayforAF</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (0.9% above market)</td>
+<td>Closed: Fair (0.8% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1t7nmm6/wts_bnbn_h_thieaudio_valhalla_thieaudio_monarch/#item-2" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-6" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="6" ></td>
+<tr id="row-7" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="7" ></td>
 <td>2026-05-04</td>
 <td>$875</td>
 <td><span class="pill">active</span></td>
@@ -314,11 +329,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>PrayforAF</td>
 <td>1</td>
 <td>0</td>
-<td>Fair (0.9% above market)</td>
+<td>Fair (0.8% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1t33v2f/wts_bwnbn_h_thieaudio_valhalla_thieaudio_monarch/#item-2" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-7" class="excluded">
+<tr id="row-8" class="excluded">
 <td></td>
 <td>2026-05-03</td>
 <td></td>
@@ -327,14 +342,14 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>0</td>
 <td>headfi</td>
 <td>drummguy26</td>
-<td>0</td>
+<td>1</td>
 <td>0</td>
 <td>N/A</td>
 <td><a href="https://www.head-fi.org/classifieds/monarch-mk4-for-night-oblivion-uranium.108470/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-8" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="8" ></td>
+<tr id="row-9" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="9" ></td>
 <td>2026-05-01</td>
 <td>$925</td>
 <td><span class="pill">closed</span></td>
@@ -344,12 +359,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Heavy_Connection_997</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: Fair (6.7% above market)</td>
+<td>Closed: Fair (6.5% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1t0v0r8/wtsusnch_monarch_mk4_mint_w_925_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-9" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="9" checked></td>
+<tr id="row-10" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="10" checked></td>
 <td>2026-04-04</td>
 <td>$960</td>
 <td><span class="pill">closed</span></td>
@@ -359,12 +374,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Kevintj604</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (10.7% above market)</td>
+<td>Closed: High (10.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.106737/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-10" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="10" ></td>
+<tr id="row-11" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="11" ></td>
 <td>2026-04-02</td>
 <td>$150</td>
 <td><span class="pill">closed</span></td>
@@ -378,8 +393,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/monarch-mk3-for-monarch-mk4.106649/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-11" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="11" checked></td>
+<tr id="row-12" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="12" checked></td>
 <td>2026-03-16</td>
 <td>$850</td>
 <td><span class="pill">closed</span></td>
@@ -389,12 +404,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>JoshG1217</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (2.0% below market)</td>
+<td>Closed: Fair (2.1% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.105559/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-12" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="12" checked></td>
+<tr id="row-13" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="13" checked></td>
 <td>2026-03-14</td>
 <td>$975</td>
 <td><span class="pill">closed</span></td>
@@ -404,12 +419,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Blackshear</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (12.5% above market)</td>
+<td>Closed: High (12.3% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.105385/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-13" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="13" checked></td>
+<tr id="row-14" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="14" checked></td>
 <td>2026-03-06</td>
 <td>$880</td>
 <td><span class="pill">closed</span></td>
@@ -419,12 +434,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>abelmade8476</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.5% above market)</td>
+<td>Closed: Fair (1.3% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/%EF%BC%88sold%EF%BC%89thieaudio-monarch-mkiv.104957/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-14" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="14" checked></td>
+<tr id="row-15" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="15" checked></td>
 <td>2026-02-22</td>
 <td>$900</td>
 <td><span class="pill">closed</span></td>
@@ -434,12 +449,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>acaldejon</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.8% above market)</td>
+<td>Closed: Fair (3.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-butterfly-faceplate.104281/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-15" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="15" checked></td>
+<tr id="row-16" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="16" checked></td>
 <td>2026-02-11</td>
 <td>$875</td>
 <td><span class="pill">closed</span></td>
@@ -449,12 +464,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>drewbadour</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (0.9% above market)</td>
+<td>Closed: Fair (0.8% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mkiv-stellashot.103585/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-16" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="16" checked></td>
+<tr id="row-17" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="17" checked></td>
 <td>2026-02-10</td>
 <td>$825</td>
 <td><span class="pill">closed</span></td>
@@ -464,12 +479,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Yodamanjaro</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (4.8% below market)</td>
+<td>Closed: Fair (5.0% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.103537/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-17" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="17" checked></td>
+<tr id="row-18" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="18" checked></td>
 <td>2026-02-02</td>
 <td>$850</td>
 <td><span class="pill">closed</span></td>
@@ -479,12 +494,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>LakeOfTheWyles</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (2.0% below market)</td>
+<td>Closed: Fair (2.1% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.103090/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-18" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="18" checked></td>
+<tr id="row-19" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="19" checked></td>
 <td>2026-02-01</td>
 <td>$875</td>
 <td><span class="pill">closed</span></td>
@@ -494,11 +509,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>AlexBPM</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (0.9% above market)</td>
+<td>Closed: Fair (0.8% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/sold-thieaudio-monarch-mkiv.103018/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-19" class="excluded">
+<tr id="row-20" class="excluded">
 <td></td>
 <td>2026-01-26</td>
 <td></td>
@@ -513,8 +528,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/pd-thieaudio-monarch-mkiv-4.102695/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-20" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="20" checked></td>
+<tr id="row-21" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="21" checked></td>
 <td>2026-01-25</td>
 <td>$850</td>
 <td><span class="pill">closed</span></td>
@@ -524,12 +539,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>gwompki</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (2.0% below market)</td>
+<td>Closed: Fair (2.1% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.102627/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-21" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="21" checked></td>
+<tr id="row-22" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="22" checked></td>
 <td>2026-01-24</td>
 <td>$960</td>
 <td><span class="pill">closed</span></td>
@@ -539,12 +554,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>mjagger77</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (10.7% above market)</td>
+<td>Closed: High (10.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/monarch-mkiv.102565/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-22" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="22" ></td>
+<tr id="row-23" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="23" ></td>
 <td>2026-01-20</td>
 <td>$960</td>
 <td><span class="pill">closed</span></td>
@@ -554,12 +569,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>sToneQuest</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (10.7% above market)</td>
+<td>Closed: High (10.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-w-elite-noire-cable.102341/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-23" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="23" checked></td>
+<tr id="row-24" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="24" checked></td>
 <td>2026-01-04</td>
 <td>$829</td>
 <td><span class="pill">closed</span></td>
@@ -569,12 +584,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>AudioSep</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (4.4% below market)</td>
+<td>Closed: Fair (4.5% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/pending-thieaudio-monarch-mk4.101332/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-24" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="24" checked></td>
+<tr id="row-25" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="25" checked></td>
 <td>2025-12-23</td>
 <td>$900</td>
 <td><span class="pill">closed</span></td>
@@ -584,12 +599,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>jfleysh</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.8% above market)</td>
+<td>Closed: Fair (3.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.100697/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-25" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="25" checked></td>
+<tr id="row-26" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="26" checked></td>
 <td>2025-12-17</td>
 <td>$900</td>
 <td><span class="pill">closed</span></td>
@@ -599,12 +614,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>clerkpalmer</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.8% above market)</td>
+<td>Closed: Fair (3.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.100390/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-26" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="26" checked></td>
+<tr id="row-27" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="27" checked></td>
 <td>2025-12-05</td>
 <td>$925</td>
 <td><span class="pill">closed</span></td>
@@ -614,12 +629,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>stormwrx</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (6.7% above market)</td>
+<td>Closed: Fair (6.5% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-tribrid-iems.99735/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-27" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="27" checked></td>
+<tr id="row-28" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="28" checked></td>
 <td>2025-11-29</td>
 <td>$880</td>
 <td><span class="pill">closed</span></td>
@@ -629,12 +644,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>musiclover2932</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.5% above market)</td>
+<td>Closed: Fair (1.3% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.99327/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-28" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="28" checked></td>
+<tr id="row-29" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="29" checked></td>
 <td>2025-11-18</td>
 <td>$940</td>
 <td><span class="pill">closed</span></td>
@@ -644,11 +659,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>kofun</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (8.4% above market)</td>
+<td>Closed: Fair (8.3% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mkiv.98695/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-29" class="excluded">
+<tr id="row-30" class="excluded">
 <td></td>
 <td>2025-11-11</td>
 <td></td>
@@ -663,8 +678,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/sold-thieaudio-monarch-mk-iv-4-stellarshot-faceplate.98351/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-30" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="30" checked></td>
+<tr id="row-31" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="31" checked></td>
 <td>2025-10-10</td>
 <td>$925</td>
 <td><span class="pill">closed</span></td>
@@ -674,12 +689,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>luvandp3ace</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (6.7% above market)</td>
+<td>Closed: Fair (6.5% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.96551/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-31" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="31" checked></td>
+<tr id="row-32" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="32" checked></td>
 <td>2025-09-22</td>
 <td>$950</td>
 <td><span class="pill">closed</span></td>
@@ -689,12 +704,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>DenverFi</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (9.6% above market)</td>
+<td>Closed: Fair (9.4% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.95508/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-32" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="32" ></td>
+<tr id="row-33" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="33" ></td>
 <td>2025-09-12</td>
 <td>$950</td>
 <td><span class="pill">closed</span></td>
@@ -704,11 +719,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>luvandp3ace</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: Fair (9.6% above market)</td>
+<td>Closed: Fair (9.4% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.94869/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-33" class="excluded">
+<tr id="row-34" class="excluded">
 <td></td>
 <td>2025-09-12</td>
 <td></td>
@@ -723,8 +738,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.94923/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-34" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="34" checked></td>
+<tr id="row-35" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="35" checked></td>
 <td>2025-08-19</td>
 <td>$1,100</td>
 <td><span class="pill">closed</span></td>
@@ -734,12 +749,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>shaunbr15</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (26.9% above market)</td>
+<td>Closed: Overpriced (26.7% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.93615/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-35" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="35" checked></td>
+<tr id="row-36" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="36" checked></td>
 <td>2025-08-18</td>
 <td>$950</td>
 <td><span class="pill">closed</span></td>
@@ -749,12 +764,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>BDalton</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (9.6% above market)</td>
+<td>Closed: Fair (9.4% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.93552/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-36" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="36" checked></td>
+<tr id="row-37" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="37" checked></td>
 <td>2025-08-18</td>
 <td>$999</td>
 <td><span class="pill">closed</span></td>
@@ -764,12 +779,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>elnineteenth</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (15.2% above market)</td>
+<td>Closed: High (15.0% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.93555/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-37" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="37" checked></td>
+<tr id="row-38" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="38" checked></td>
 <td>2025-07-15</td>
 <td>$920</td>
 <td><span class="pill">closed</span></td>
@@ -779,11 +794,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>PassionForMusic</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (6.1% above market)</td>
+<td>Closed: Fair (6.0% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.91706/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-38" class="excluded">
+<tr id="row-39" class="excluded">
 <td></td>
 <td>2025-07-14</td>
 <td></td>
@@ -798,8 +813,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/new-monarch-mk4-mkiv-new-sealed-box.91678/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-39" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="39" ></td>
+<tr id="row-40" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="40" ></td>
 <td>2025-07-07</td>
 <td>$920</td>
 <td><span class="pill">closed</span></td>
@@ -809,12 +824,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>PassionForMusic</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: Fair (6.1% above market)</td>
+<td>Closed: Fair (6.0% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.91279/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-40" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="40" ></td>
+<tr id="row-41" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="41" ></td>
 <td>2025-07-04</td>
 <td>$930</td>
 <td><span class="pill">closed</span></td>
@@ -824,13 +839,13 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>PassionForMusic</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: Fair (7.3% above market)</td>
+<td>Closed: Fair (7.1% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-mk4.91125/" target="_blank">source</a></td>
 </tr>
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Thieaudio Monarch Mk4/MKIV", "url": "https://old.reddit.com/r/AVexchange/comments/1u8izbg/wtsusnch_thieaudio_monarch_mk4mkiv_wpaypal/#item-1", "price_num": 900.0, "date_ms": 1781722303000, "listing_status": "active", "condition_text": "like new", "platform": "reddit_rss"}, {"row_id": 1, "title": "ThieAudio Monarch MKIV MK4 Butterfly", "url": "https://old.reddit.com/r/AVexchange/comments/1tj1w5a/wtsusnch_thieaudio_monarch_mkiv_mk4_butterfly_w/#item-1", "price_num": 900.0, "date_ms": 1779317492000, "listing_status": "closed", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 2, "title": "Sold: ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.109310/", "price_num": 800.0, "date_ms": 1779148800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 3, "title": "Thie Audio Monarch Mk. IV", "url": "https://old.reddit.com/r/AVexchange/comments/1tao1cs/wts_usaca_h_thie_audio_monarch_mk_iv_w_paypal/#item-1", "price_num": null, "date_ms": 1778552181000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 4, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.108859/", "price_num": 800.0, "date_ms": 1778457600000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 5, "title": "Thieaudio Monarch Mk IV", "url": "https://old.reddit.com/r/AVexchange/comments/1t7nmm6/wts_bnbn_h_thieaudio_valhalla_thieaudio_monarch/#item-2", "price_num": 875.0, "date_ms": 1778281364000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 6, "title": "Thieaudio Monarch Mk IV", "url": "https://old.reddit.com/r/AVexchange/comments/1t33v2f/wts_bwnbn_h_thieaudio_valhalla_thieaudio_monarch/#item-2", "price_num": 875.0, "date_ms": 1777858648000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 7, "title": "Closed: Monarch MK4 for Night Oblivion Uranium", "url": "https://www.head-fi.org/classifieds/monarch-mk4-for-night-oblivion-uranium.108470/", "price_num": null, "date_ms": 1777766400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 8, "title": "Monarch Mk4 Mint", "url": "https://old.reddit.com/r/AVexchange/comments/1t0v0r8/wtsusnch_monarch_mk4_mint_w_925_paypal/#item-1", "price_num": 925.0, "date_ms": 1777645725000, "listing_status": "closed", "condition_text": "thieaudio monarch mk4 kaleidoscope", "platform": "reddit_rss"}, {"row_id": 9, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.106737/", "price_num": 960.0, "date_ms": 1775260800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 10, "title": "Closed: MONARCH MK3 for MONARCH MK4", "url": "https://www.head-fi.org/classifieds/monarch-mk3-for-monarch-mk4.106649/", "price_num": 150.0, "date_ms": 1775088000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 11, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.105559/", "price_num": 850.0, "date_ms": 1773619200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 12, "title": "Sold: ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.105385/", "price_num": 975.0, "date_ms": 1773446400000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 13, "title": "Sold: \uff08SOLD\uff09Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/%EF%BC%88sold%EF%BC%89thieaudio-monarch-mkiv.104957/", "price_num": 880.0, "date_ms": 1772755200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 14, "title": "Closed: Thieaudio Monarch Mk4 Butterfly Faceplate", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-butterfly-faceplate.104281/", "price_num": 900.0, "date_ms": 1771718400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 15, "title": "Sold: Thieaudio Monarch MK4 / MKIV Stellashot", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mkiv-stellashot.103585/", "price_num": 875.0, "date_ms": 1770768000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 16, "title": "Sold: Thieaudio Monarch Mk. IV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.103537/", "price_num": 825.0, "date_ms": 1770681600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 17, "title": "Traded: Thieaudio Monarch mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.103090/", "price_num": 850.0, "date_ms": 1769990400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 18, "title": "Sold: SOLD ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/sold-thieaudio-monarch-mkiv.103018/", "price_num": 875.0, "date_ms": 1769904000000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 19, "title": "Sold: (PD) ThieAudio Monarch MKIV (4)", "url": "https://www.head-fi.org/classifieds/pd-thieaudio-monarch-mkiv-4.102695/", "price_num": null, "date_ms": 1769385600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 20, "title": "Sold: Thieaudio Monarch Mk IV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.102627/", "price_num": 850.0, "date_ms": 1769299200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 21, "title": "Closed: Monarch MKIV", "url": "https://www.head-fi.org/classifieds/monarch-mkiv.102565/", "price_num": 960.0, "date_ms": 1769212800000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 22, "title": "Sold: Thieaudio Monarch MKIV w/ Elite Noire Cable", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-w-elite-noire-cable.102341/", "price_num": 960.0, "date_ms": 1768867200000, "listing_status": "closed", "condition_text": "used", "platform": "headfi"}, {"row_id": 23, "title": "Sold: (Pending) Thieaudio Monarch mk4", "url": "https://www.head-fi.org/classifieds/pending-thieaudio-monarch-mk4.101332/", "price_num": 829.0, "date_ms": 1767484800000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 24, "title": "Closed: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.100697/", "price_num": 900.0, "date_ms": 1766448000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 25, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.100390/", "price_num": 900.0, "date_ms": 1765929600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 26, "title": "Sold: Thieaudio Monarch MKIV tribrid IEMs", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-tribrid-iems.99735/", "price_num": 925.0, "date_ms": 1764892800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 27, "title": "Sold: Thieaudio Monarch Mk4 - mint", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.99327/", "price_num": 880.0, "date_ms": 1764374400000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 28, "title": "Closed: Thieaudio Monarch MK4 MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mkiv.98695/", "price_num": 940.0, "date_ms": 1763424000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 29, "title": "Sold: ***SOLD*** Thieaudio Monarch Mk IV 4 Stellarshot Faceplate", "url": "https://www.head-fi.org/classifieds/sold-thieaudio-monarch-mk-iv-4-stellarshot-faceplate.98351/", "price_num": null, "date_ms": 1762819200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 30, "title": "Closed: Thieaudio Monarch Mk4 - Mint", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.96551/", "price_num": 925.0, "date_ms": 1760054400000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 31, "title": "Sold: THIEAUDIO Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.95508/", "price_num": 950.0, "date_ms": 1758499200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 32, "title": "Sold: ThieAudio Monarch mk4 - mint", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.94869/", "price_num": 950.0, "date_ms": 1757635200000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 33, "title": "Traded: Thieaudio Monarch MK IV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.94923/", "price_num": null, "date_ms": 1757635200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 34, "title": "Traded: Thieaudio Monarch Mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.93615/", "price_num": 1100.0, "date_ms": 1755561600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 35, "title": "Sold: ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.93552/", "price_num": 950.0, "date_ms": 1755475200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 36, "title": "Sold: ThieAudio Monarch Mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.93555/", "price_num": 999.0, "date_ms": 1755475200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 37, "title": "Sold: Thieaudio Monarch Mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.91706/", "price_num": 920.0, "date_ms": 1752537600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 38, "title": "Closed: NEW: Monarch MK4 / MKIV **NEW SEALED BOX**", "url": "https://www.head-fi.org/classifieds/new-monarch-mk4-mkiv-new-sealed-box.91678/", "price_num": null, "date_ms": 1752451200000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi"}, {"row_id": 39, "title": "Sold: Thieaudio Monarch MK4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.91279/", "price_num": 920.0, "date_ms": 1751846400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 40, "title": "Sold: Thieaudio Monarch MKIV (MK4)", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-mk4.91125/", "price_num": 930.0, "date_ms": 1751587200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Thieaudio Monarch MK4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.110900/", "price_num": 875.0, "date_ms": 1781740800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 1, "title": "Thieaudio Monarch Mk4/MKIV", "url": "https://old.reddit.com/r/AVexchange/comments/1u8izbg/wtsusnch_thieaudio_monarch_mk4mkiv_wpaypal/#item-1", "price_num": 900.0, "date_ms": 1781722303000, "listing_status": "active", "condition_text": "like new", "platform": "reddit_rss"}, {"row_id": 2, "title": "ThieAudio Monarch MKIV MK4 Butterfly", "url": "https://old.reddit.com/r/AVexchange/comments/1tj1w5a/wtsusnch_thieaudio_monarch_mkiv_mk4_butterfly_w/#item-1", "price_num": 900.0, "date_ms": 1779317492000, "listing_status": "closed", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 3, "title": "Sold: ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.109310/", "price_num": 800.0, "date_ms": 1779148800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 4, "title": "Thie Audio Monarch Mk. IV", "url": "https://old.reddit.com/r/AVexchange/comments/1tao1cs/wts_usaca_h_thie_audio_monarch_mk_iv_w_paypal/#item-1", "price_num": null, "date_ms": 1778552181000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 5, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.108859/", "price_num": 800.0, "date_ms": 1778457600000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 6, "title": "Thieaudio Monarch Mk IV", "url": "https://old.reddit.com/r/AVexchange/comments/1t7nmm6/wts_bnbn_h_thieaudio_valhalla_thieaudio_monarch/#item-2", "price_num": 875.0, "date_ms": 1778281364000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 7, "title": "Thieaudio Monarch Mk IV", "url": "https://old.reddit.com/r/AVexchange/comments/1t33v2f/wts_bwnbn_h_thieaudio_valhalla_thieaudio_monarch/#item-2", "price_num": 875.0, "date_ms": 1777858648000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 8, "title": "Closed: Monarch MK4 for Night Oblivion Uranium", "url": "https://www.head-fi.org/classifieds/monarch-mk4-for-night-oblivion-uranium.108470/", "price_num": null, "date_ms": 1777766400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 9, "title": "Monarch Mk4 Mint", "url": "https://old.reddit.com/r/AVexchange/comments/1t0v0r8/wtsusnch_monarch_mk4_mint_w_925_paypal/#item-1", "price_num": 925.0, "date_ms": 1777645725000, "listing_status": "closed", "condition_text": "thieaudio monarch mk4 kaleidoscope", "platform": "reddit_rss"}, {"row_id": 10, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.106737/", "price_num": 960.0, "date_ms": 1775260800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 11, "title": "Closed: MONARCH MK3 for MONARCH MK4", "url": "https://www.head-fi.org/classifieds/monarch-mk3-for-monarch-mk4.106649/", "price_num": 150.0, "date_ms": 1775088000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 12, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.105559/", "price_num": 850.0, "date_ms": 1773619200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 13, "title": "Sold: ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.105385/", "price_num": 975.0, "date_ms": 1773446400000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 14, "title": "Sold: \uff08SOLD\uff09Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/%EF%BC%88sold%EF%BC%89thieaudio-monarch-mkiv.104957/", "price_num": 880.0, "date_ms": 1772755200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 15, "title": "Closed: Thieaudio Monarch Mk4 Butterfly Faceplate", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-butterfly-faceplate.104281/", "price_num": 900.0, "date_ms": 1771718400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 16, "title": "Sold: Thieaudio Monarch MK4 / MKIV Stellashot", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mkiv-stellashot.103585/", "price_num": 875.0, "date_ms": 1770768000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 17, "title": "Sold: Thieaudio Monarch Mk. IV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.103537/", "price_num": 825.0, "date_ms": 1770681600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 18, "title": "Traded: Thieaudio Monarch mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.103090/", "price_num": 850.0, "date_ms": 1769990400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 19, "title": "Sold: SOLD ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/sold-thieaudio-monarch-mkiv.103018/", "price_num": 875.0, "date_ms": 1769904000000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 20, "title": "Sold: (PD) ThieAudio Monarch MKIV (4)", "url": "https://www.head-fi.org/classifieds/pd-thieaudio-monarch-mkiv-4.102695/", "price_num": null, "date_ms": 1769385600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 21, "title": "Sold: Thieaudio Monarch Mk IV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.102627/", "price_num": 850.0, "date_ms": 1769299200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 22, "title": "Closed: Monarch MKIV", "url": "https://www.head-fi.org/classifieds/monarch-mkiv.102565/", "price_num": 960.0, "date_ms": 1769212800000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 23, "title": "Sold: Thieaudio Monarch MKIV w/ Elite Noire Cable", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-w-elite-noire-cable.102341/", "price_num": 960.0, "date_ms": 1768867200000, "listing_status": "closed", "condition_text": "used", "platform": "headfi"}, {"row_id": 24, "title": "Sold: (Pending) Thieaudio Monarch mk4", "url": "https://www.head-fi.org/classifieds/pending-thieaudio-monarch-mk4.101332/", "price_num": 829.0, "date_ms": 1767484800000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 25, "title": "Closed: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.100697/", "price_num": 900.0, "date_ms": 1766448000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 26, "title": "Sold: Thieaudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.100390/", "price_num": 900.0, "date_ms": 1765929600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 27, "title": "Sold: Thieaudio Monarch MKIV tribrid IEMs", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-tribrid-iems.99735/", "price_num": 925.0, "date_ms": 1764892800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 28, "title": "Sold: Thieaudio Monarch Mk4 - mint", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.99327/", "price_num": 880.0, "date_ms": 1764374400000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 29, "title": "Closed: Thieaudio Monarch MK4 MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mkiv.98695/", "price_num": 940.0, "date_ms": 1763424000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 30, "title": "Sold: ***SOLD*** Thieaudio Monarch Mk IV 4 Stellarshot Faceplate", "url": "https://www.head-fi.org/classifieds/sold-thieaudio-monarch-mk-iv-4-stellarshot-faceplate.98351/", "price_num": null, "date_ms": 1762819200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 31, "title": "Closed: Thieaudio Monarch Mk4 - Mint", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.96551/", "price_num": 925.0, "date_ms": 1760054400000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 32, "title": "Sold: THIEAUDIO Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.95508/", "price_num": 950.0, "date_ms": 1758499200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 33, "title": "Sold: ThieAudio Monarch mk4 - mint", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4-mint.94869/", "price_num": 950.0, "date_ms": 1757635200000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 34, "title": "Traded: Thieaudio Monarch MK IV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk-iv.94923/", "price_num": null, "date_ms": 1757635200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 35, "title": "Traded: Thieaudio Monarch Mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.93615/", "price_num": 1100.0, "date_ms": 1755561600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 36, "title": "Sold: ThieAudio Monarch MKIV", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv.93552/", "price_num": 950.0, "date_ms": 1755475200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 37, "title": "Sold: ThieAudio Monarch Mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.93555/", "price_num": 999.0, "date_ms": 1755475200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 38, "title": "Sold: Thieaudio Monarch Mk4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.91706/", "price_num": 920.0, "date_ms": 1752537600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 39, "title": "Closed: NEW: Monarch MK4 / MKIV **NEW SEALED BOX**", "url": "https://www.head-fi.org/classifieds/new-monarch-mk4-mkiv-new-sealed-box.91678/", "price_num": null, "date_ms": 1752451200000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi"}, {"row_id": 40, "title": "Sold: Thieaudio Monarch MK4", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mk4.91279/", "price_num": 920.0, "date_ms": 1751846400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 41, "title": "Sold: Thieaudio Monarch MKIV (MK4)", "url": "https://www.head-fi.org/classifieds/thieaudio-monarch-mkiv-mk4.91125/", "price_num": 930.0, "date_ms": 1751587200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}];
 const originalMsrpUsd = 1150.0;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
