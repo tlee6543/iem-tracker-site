@@ -186,7 +186,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>3</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>4</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -210,8 +210,23 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-19</td>
+<td>$50</td>
+<td><span class="pill">active</span></td>
+<td></td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>Guns_n_gains</td>
+<td>0</td>
+<td>0</td>
+<td>Good Deal (14.8% below market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1uaf14v/wtsusasch_kiwi_ears_punch_thieaudio_hype4/#item-5" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2026-05-19</td>
 <td>$60</td>
 <td><span class="pill">active</span></td>
@@ -225,8 +240,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1thwrrw/wts_usapa_h_simgot_ew300_7hz_x_crinacle_zero2_w/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2026-04-19</td>
 <td>$60</td>
 <td><span class="pill">active</span></td>
@@ -240,8 +255,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1spygfc/wtsusca_h_simgot_ew300_x_hbb_w_60_shipped/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
+<tr id="row-3" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
 <td>2025-10-02</td>
 <td>$45</td>
 <td><span class="pill">closed</span></td>
@@ -255,7 +270,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/simgot-ew300-ew200.96132/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-3" class="excluded">
+<tr id="row-4" class="excluded">
 <td></td>
 <td></td>
 <td></td>
@@ -272,7 +287,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Simgot EW300 + 7Hz x Crinacle Zero2", "url": "https://old.reddit.com/r/AVexchange/comments/1thwrrw/wts_usapa_h_simgot_ew300_7hz_x_crinacle_zero2_w/#item-1", "price_num": 60.0, "date_ms": 1779217348000, "listing_status": "active", "condition_text": "comes with all accessories and box", "platform": "reddit_rss"}, {"row_id": 1, "title": "Simgot EW300 x HBB", "url": "https://old.reddit.com/r/AVexchange/comments/1spygfc/wtsusca_h_simgot_ew300_x_hbb_w_60_shipped/#item-1", "price_num": 60.0, "date_ms": 1776617929000, "listing_status": "active", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 2, "title": "Sold: Simgot EW300 &EW200", "url": "https://www.head-fi.org/classifieds/simgot-ew300-ew200.96132/", "price_num": 45.0, "date_ms": 1759363200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 3, "title": "Closed: COMBO SIMGOT EW300 STANDARD EDITION + Hiby R2 vs IEM/DAC AMP DONGLE", "url": "https://www.head-fi.org/classifieds/combo-simgot-ew300-standard-edition-hiby-r2-vs-iem-dac-amp-dongle.80208/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Simgot EW300 - 3.5mm cable", "url": "https://old.reddit.com/r/AVexchange/comments/1uaf14v/wtsusasch_kiwi_ears_punch_thieaudio_hype4/#item-5", "price_num": 50.0, "date_ms": 1781906366000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Simgot EW300 + 7Hz x Crinacle Zero2", "url": "https://old.reddit.com/r/AVexchange/comments/1thwrrw/wts_usapa_h_simgot_ew300_7hz_x_crinacle_zero2_w/#item-1", "price_num": 60.0, "date_ms": 1779217348000, "listing_status": "active", "condition_text": "comes with all accessories and box", "platform": "reddit_rss"}, {"row_id": 2, "title": "Simgot EW300 x HBB", "url": "https://old.reddit.com/r/AVexchange/comments/1spygfc/wtsusca_h_simgot_ew300_x_hbb_w_60_shipped/#item-1", "price_num": 60.0, "date_ms": 1776617929000, "listing_status": "active", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 3, "title": "Sold: Simgot EW300 &EW200", "url": "https://www.head-fi.org/classifieds/simgot-ew300-ew200.96132/", "price_num": 45.0, "date_ms": 1759363200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 4, "title": "Closed: COMBO SIMGOT EW300 STANDARD EDITION + Hiby R2 vs IEM/DAC AMP DONGLE", "url": "https://www.head-fi.org/classifieds/combo-simgot-ew300-standard-edition-hiby-r2-vs-iem-dac-amp-dongle.80208/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

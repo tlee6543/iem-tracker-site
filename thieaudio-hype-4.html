@@ -186,7 +186,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>4</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>5</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -211,6 +211,21 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
 <tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-19</td>
+<td>$225</td>
+<td><span class="pill">active</span></td>
+<td></td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>Guns_n_gains</td>
+<td>0</td>
+<td>0</td>
+<td>Fair (4.2% below market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1uaf14v/wtsusasch_kiwi_ears_punch_thieaudio_hype4/#item-2" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="excluded">
 <td></td>
 <td>2026-05-26</td>
 <td></td>
@@ -225,8 +240,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1to12l1/wtsusacah_hype_4_mk1_w_paypal_or_trades/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2026-05-06</td>
 <td>$200</td>
 <td><span class="pill">closed</span></td>
@@ -240,7 +255,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1t5njpz/wts_usaca_h_thieaudio_hype_4_w_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="excluded">
+<tr id="row-3" class="excluded">
 <td></td>
 <td>2026-04-06</td>
 <td></td>
@@ -255,8 +270,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1sdp37h/wtsusalahthieaudio_hype_4w_175_ff_or_190_gs_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-3" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
+<tr id="row-4" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="4" checked></td>
 <td>2026-03-22</td>
 <td>$275</td>
 <td><span class="pill">active</span></td>
@@ -270,8 +285,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1s0waqn/wts_ustn_h_thieaudio_hype_4_white_w_original_box/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-4" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="4" checked></td>
+<tr id="row-5" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
 <td>2026-02-15</td>
 <td>$250</td>
 <td><span class="pill">closed</span></td>
@@ -285,8 +300,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1r5kt33/wts_usafl_h_thieaudio_hype_4_w_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-5" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
+<tr id="row-6" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="6" checked></td>
 <td>2025-08-12</td>
 <td>$220</td>
 <td><span class="pill">closed</span></td>
@@ -302,7 +317,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Hype 4 mk1", "url": "https://old.reddit.com/r/AVexchange/comments/1to12l1/wtsusacah_hype_4_mk1_w_paypal_or_trades/#item-1", "price_num": null, "date_ms": 1779785398000, "listing_status": "closed", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 1, "title": "Thieaudio Hype 4", "url": "https://old.reddit.com/r/AVexchange/comments/1t5njpz/wts_usaca_h_thieaudio_hype_4_w_paypal/#item-1", "price_num": 200.0, "date_ms": 1778096519000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "Thieaudio Hype 4", "url": "https://old.reddit.com/r/AVexchange/comments/1sdp37h/wtsusalahthieaudio_hype_4w_175_ff_or_190_gs_paypal/#item-1", "price_num": null, "date_ms": 1775450234000, "listing_status": "closed", "condition_text": "excellent, used", "platform": "reddit_rss"}, {"row_id": 3, "title": "Thieaudio Hype 4 (White) w/ original box, tips, DUNU S&S", "url": "https://old.reddit.com/r/AVexchange/comments/1s0waqn/wts_ustn_h_thieaudio_hype_4_white_w_original_box/#item-1", "price_num": 275.0, "date_ms": 1774211188000, "listing_status": "active", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 4, "title": "Thieaudio Hype 4", "url": "https://old.reddit.com/r/AVexchange/comments/1r5kt33/wts_usafl_h_thieaudio_hype_4_w_paypal/#item-1", "price_num": 250.0, "date_ms": 1771177363000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 5, "title": "Thieaudio Hype 4 (white)", "url": "https://old.reddit.com/r/AVexchange/comments/1mnx2jr/wts_usnj_h_a_bunch_of_iems_blessing_3_hype_4/#item-1", "price_num": 220.0, "date_ms": 1754966617000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
+const allRows = [{"row_id": 0, "title": "Thieaudio Hype 4 (Black/Blue) - 3.5mm cable", "url": "https://old.reddit.com/r/AVexchange/comments/1uaf14v/wtsusasch_kiwi_ears_punch_thieaudio_hype4/#item-2", "price_num": 225.0, "date_ms": 1781906366000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Hype 4 mk1", "url": "https://old.reddit.com/r/AVexchange/comments/1to12l1/wtsusacah_hype_4_mk1_w_paypal_or_trades/#item-1", "price_num": null, "date_ms": 1779785398000, "listing_status": "closed", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 2, "title": "Thieaudio Hype 4", "url": "https://old.reddit.com/r/AVexchange/comments/1t5njpz/wts_usaca_h_thieaudio_hype_4_w_paypal/#item-1", "price_num": 200.0, "date_ms": 1778096519000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 3, "title": "Thieaudio Hype 4", "url": "https://old.reddit.com/r/AVexchange/comments/1sdp37h/wtsusalahthieaudio_hype_4w_175_ff_or_190_gs_paypal/#item-1", "price_num": null, "date_ms": 1775450234000, "listing_status": "closed", "condition_text": "excellent, used", "platform": "reddit_rss"}, {"row_id": 4, "title": "Thieaudio Hype 4 (White) w/ original box, tips, DUNU S&S", "url": "https://old.reddit.com/r/AVexchange/comments/1s0waqn/wts_ustn_h_thieaudio_hype_4_white_w_original_box/#item-1", "price_num": 275.0, "date_ms": 1774211188000, "listing_status": "active", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 5, "title": "Thieaudio Hype 4", "url": "https://old.reddit.com/r/AVexchange/comments/1r5kt33/wts_usafl_h_thieaudio_hype_4_w_paypal/#item-1", "price_num": 250.0, "date_ms": 1771177363000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 6, "title": "Thieaudio Hype 4 (white)", "url": "https://old.reddit.com/r/AVexchange/comments/1mnx2jr/wts_usnj_h_a_bunch_of_iems_blessing_3_hype_4/#item-1", "price_num": 220.0, "date_ms": 1754966617000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

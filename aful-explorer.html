@@ -180,13 +180,13 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </div>
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
-    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-medium" data-tooltip="Liquidity/confidence score: 60/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 26/35, recency 15/30, recent sample depth 4/15, source diversity 8/10, price consistency 7/10. Current inputs: 6 included priced sample(s), 0 in the last 90 days, 0 in the last 180 days, latest sample 180d ago, 2 source type(s), price CV 0.19." aria-label="Liquidity/confidence score: 60/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 26/35, recency 15/30, recent sample depth 4/15, source diversity 8/10, price consistency 7/10. Current inputs: 6 included priced sample(s), 0 in the last 90 days, 0 in the last 180 days, latest sample 180d ago, 2 source type(s), price CV 0.19." tabindex="0">Medium (60/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">6 included sample(s), latest 180d ago.</span></div>
+    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 85/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 30/30, recent sample depth 8/15, source diversity 8/10, price consistency 4/10. Current inputs: 8 included priced sample(s), 1 in the last 90 days, 1 in the last 180 days, latest sample 0d ago, 2 source type(s), price CV 0.29." aria-label="Liquidity/confidence score: 85/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 30/30, recent sample depth 8/15, source diversity 8/10, price consistency 4/10. Current inputs: 8 included priced sample(s), 1 in the last 90 days, 1 in the last 180 days, latest sample 0d ago, 2 source type(s), price CV 0.29." tabindex="0">High (85/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">8 included sample(s), latest 0d ago.</span></div>
     
     <div class="stat"><b>Average</b><br><span id="stat-average">$N/A</span></div>
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>10</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>11</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -210,8 +210,23 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<tr id="row-0" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<td>2026-06-19</td>
+<td>$85</td>
+<td><span class="pill">closed</span></td>
+<td></td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>Guns_n_gains</td>
+<td>0</td>
+<td>0</td>
+<td>Closed: High (12.1% above market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1uaf14v/wtsusasch_kiwi_ears_punch_thieaudio_hype4/#item-4" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
 <td>2026-04-17</td>
 <td>$700</td>
 <td><span class="pill">closed</span></td>
@@ -221,11 +236,11 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Laziske</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (967.9% above market)</td>
+<td>Closed: Overpriced (823.2% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1snkwtw/wtsusailh_mest_mk2_maven_2_ka17_aful_explorer_w/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="excluded">
+<tr id="row-2" class="excluded">
 <td></td>
 <td>2026-02-26</td>
 <td></td>
@@ -240,8 +255,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1rf4z7k/wts_usaca_h_price_drop_6item_bundle_aful_explorer/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="2" ></td>
+<tr id="row-3" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="3" ></td>
 <td>2026-02-18</td>
 <td>$40</td>
 <td><span class="pill">closed</span></td>
@@ -251,12 +266,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Theverdad49</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: Great Deal (39.0% below market)</td>
+<td>Closed: Great Deal (47.2% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1r7x0y5/wts_usaca_h_shure_se215_tin_p1_max_giant_panda/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-3" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
+<tr id="row-4" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="4" checked></td>
 <td>2025-12-20</td>
 <td>$70</td>
 <td><span class="pill">closed</span></td>
@@ -266,12 +281,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>BurnedPopcorn</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (6.8% above market)</td>
+<td>Closed: Fair (7.7% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1prqjy8/wts_usaca_h_nicehck_rockies_softears_volume_s/#item-9" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-4" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="4" checked></td>
+<tr id="row-5" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
 <td>2025-12-16</td>
 <td>$68</td>
 <td><span class="pill">closed</span></td>
@@ -281,12 +296,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>rattlingblanketwoman</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.7% above market)</td>
+<td>Closed: Good Deal (10.3% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/aful-explorer-iems.100357/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-5" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="5" checked></td>
+<tr id="row-6" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="6" checked></td>
 <td>2025-11-15</td>
 <td>$55</td>
 <td><span class="pill">closed</span></td>
@@ -296,12 +311,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>rblack77</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Good Deal (16.1% below market)</td>
+<td>Closed: Great Deal (27.5% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/pd-aful-explorer.98506/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-6" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="6" checked></td>
+<tr id="row-7" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="7" checked></td>
 <td>2025-09-24</td>
 <td>$50</td>
 <td><span class="pill">closed</span></td>
@@ -311,12 +326,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>UnderwaterB0i</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Great Deal (23.7% below market)</td>
+<td>Closed: Great Deal (34.1% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/aful-explorer.95643/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-7" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="7" ></td>
+<tr id="row-8" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="8" ></td>
 <td>2025-09-09</td>
 <td>$50</td>
 <td><span class="pill">closed</span></td>
@@ -326,12 +341,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>wraithpc</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Great Deal (23.7% below market)</td>
+<td>Closed: Great Deal (34.1% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1ncotol/wts_usmn_h_letshuoer_s12_pro_kiwi_ears_aether/#item-7" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-8" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="8" checked></td>
+<tr id="row-9" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="9" checked></td>
 <td>2025-08-14</td>
 <td>$90</td>
 <td><span class="pill">closed</span></td>
@@ -341,12 +356,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>StolenServiceAnimal</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (37.3% above market)</td>
+<td>Closed: High (18.7% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1mpz05y/wts_usanm_h_softears_volume_s_aful_performer_52/#item-4" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-9" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="9" ></td>
+<tr id="row-10" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="10" checked></td>
 <td>2025-01-27</td>
 <td>$125</td>
 <td><span class="pill">closed</span></td>
@@ -356,12 +371,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Nick76</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (90.7% above market)</td>
+<td>Closed: Overpriced (64.9% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/aful-magicone-and-explorer-combo.82326/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-10" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="10" checked></td>
+<tr id="row-11" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="11" checked></td>
 <td>2024-10-01</td>
 <td>$74</td>
 <td><span class="pill">closed</span></td>
@@ -371,13 +386,13 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>J808</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (12.9% above market)</td>
+<td>Closed: Fair (2.4% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/aful-explorer-1dd-2ba-hybrid-in-ear-monitors-4-4mm.75641/" target="_blank">source</a></td>
 </tr>
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Mest MK2, Maven 2, Ka17, Aful Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1snkwtw/wtsusailh_mest_mk2_maven_2_ka17_aful_explorer_w/#item-1", "price_num": 700.0, "date_ms": 1776384364000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "price drop 6-Item Bundle: Aful Explorer, EA500LM, EA500 (Shortbus Mod), Tin P1 Panda, Shure, Iris", "url": "https://old.reddit.com/r/AVexchange/comments/1rf4z7k/wts_usaca_h_price_drop_6item_bundle_aful_explorer/#item-1", "price_num": null, "date_ms": 1772095217000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "Shure SE215, Tin P1 Max (Giant Panda), Simgot EA500 (Shortbus Mod), EA500LM, AFUL Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1r7x0y5/wts_usaca_h_shure_se215_tin_p1_max_giant_panda/#item-1", "price_num": 40.0, "date_ms": 1771401457000, "listing_status": "closed", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 3, "title": "AFUL Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1prqjy8/wts_usaca_h_nicehck_rockies_softears_volume_s/#item-9", "price_num": 70.0, "date_ms": 1766269747000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 4, "title": "Sold: AFUL Explorer IEMs", "url": "https://www.head-fi.org/classifieds/aful-explorer-iems.100357/", "price_num": 68.0, "date_ms": 1765843200000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 5, "title": "Sold: PD AFUL Explorer", "url": "https://www.head-fi.org/classifieds/pd-aful-explorer.98506/", "price_num": 55.0, "date_ms": 1763164800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 6, "title": "Closed: Aful Explorer", "url": "https://www.head-fi.org/classifieds/aful-explorer.95643/", "price_num": 50.0, "date_ms": 1758672000000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 7, "title": "Aful Explorer with Blu Tripowin upgrade cable", "url": "https://old.reddit.com/r/AVexchange/comments/1ncotol/wts_usmn_h_letshuoer_s12_pro_kiwi_ears_aether/#item-7", "price_num": 50.0, "date_ms": 1757438019000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 8, "title": "Aful Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1mpz05y/wts_usanm_h_softears_volume_s_aful_performer_52/#item-4", "price_num": 90.0, "date_ms": 1755173837000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 9, "title": "Closed: Aful Magicone and Explorer Combo", "url": "https://www.head-fi.org/classifieds/aful-magicone-and-explorer-combo.82326/", "price_num": 125.0, "date_ms": 1737936000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 10, "title": "Sold: AFUL Explorer 1DD+2BA Hybrid In-Ear Monitors (4.4mm)", "url": "https://www.head-fi.org/classifieds/aful-explorer-1dd-2ba-hybrid-in-ear-monitors-4-4mm.75641/", "price_num": 74.0, "date_ms": 1727740800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Aful Explorer - 3.5mm cable", "url": "https://old.reddit.com/r/AVexchange/comments/1uaf14v/wtsusasch_kiwi_ears_punch_thieaudio_hype4/#item-4", "price_num": 85.0, "date_ms": 1781906366000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Mest MK2, Maven 2, Ka17, Aful Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1snkwtw/wtsusailh_mest_mk2_maven_2_ka17_aful_explorer_w/#item-1", "price_num": 700.0, "date_ms": 1776384364000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "price drop 6-Item Bundle: Aful Explorer, EA500LM, EA500 (Shortbus Mod), Tin P1 Panda, Shure, Iris", "url": "https://old.reddit.com/r/AVexchange/comments/1rf4z7k/wts_usaca_h_price_drop_6item_bundle_aful_explorer/#item-1", "price_num": null, "date_ms": 1772095217000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 3, "title": "Shure SE215, Tin P1 Max (Giant Panda), Simgot EA500 (Shortbus Mod), EA500LM, AFUL Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1r7x0y5/wts_usaca_h_shure_se215_tin_p1_max_giant_panda/#item-1", "price_num": 40.0, "date_ms": 1771401457000, "listing_status": "closed", "condition_text": "excellent", "platform": "reddit_rss"}, {"row_id": 4, "title": "AFUL Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1prqjy8/wts_usaca_h_nicehck_rockies_softears_volume_s/#item-9", "price_num": 70.0, "date_ms": 1766269747000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 5, "title": "Sold: AFUL Explorer IEMs", "url": "https://www.head-fi.org/classifieds/aful-explorer-iems.100357/", "price_num": 68.0, "date_ms": 1765843200000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 6, "title": "Sold: PD AFUL Explorer", "url": "https://www.head-fi.org/classifieds/pd-aful-explorer.98506/", "price_num": 55.0, "date_ms": 1763164800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 7, "title": "Closed: Aful Explorer", "url": "https://www.head-fi.org/classifieds/aful-explorer.95643/", "price_num": 50.0, "date_ms": 1758672000000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 8, "title": "Aful Explorer with Blu Tripowin upgrade cable", "url": "https://old.reddit.com/r/AVexchange/comments/1ncotol/wts_usmn_h_letshuoer_s12_pro_kiwi_ears_aether/#item-7", "price_num": 50.0, "date_ms": 1757438019000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 9, "title": "Aful Explorer", "url": "https://old.reddit.com/r/AVexchange/comments/1mpz05y/wts_usanm_h_softears_volume_s_aful_performer_52/#item-4", "price_num": 90.0, "date_ms": 1755173837000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 10, "title": "Closed: Aful Magicone and Explorer Combo", "url": "https://www.head-fi.org/classifieds/aful-magicone-and-explorer-combo.82326/", "price_num": 125.0, "date_ms": 1737936000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 11, "title": "Sold: AFUL Explorer 1DD+2BA Hybrid In-Ear Monitors (4.4mm)", "url": "https://www.head-fi.org/classifieds/aful-explorer-1dd-2ba-hybrid-in-ear-monitors-4-4mm.75641/", "price_num": 74.0, "date_ms": 1727740800000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
