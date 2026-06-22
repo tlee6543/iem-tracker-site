@@ -1,0 +1,797 @@
+
+<html>
+<head><title>NICEHCK NX8Ti - IEM Market Tracker</title><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>
+body { font-family: Arial; margin: 40px; background: #f7f7f7; color: #111; }
+table { width: 100%; border-collapse: collapse; background: white; font-size: 14px; }
+.main-table .iem-col { width: 28%; max-width: 320px; }
+.main-table td:first-child { max-width: 320px; }
+th, td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+th { background: #111; color: white; }
+.card { background: white; padding: 20px; border: 1px solid #ddd; margin-bottom: 20px; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #666; }
+.small { font-size: 13px; color: #666; }
+.top-credit { background: white; border: 1px solid #ddd; padding: 10px 14px; margin-bottom: 20px; font-size: 14px; color: #555; }
+.top-credit a { font-weight: bold; color: #0066cc; }
+.site-topbar { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-bottom: 12px; }
+.support-tool-link { display: inline-block; background: #111; color: #fff; border: 1px solid #111; border-radius: 999px; padding: 9px 14px; font-size: 14px; font-weight: bold; }
+.support-tool-link:hover { color: #fff; text-decoration: none; }
+.site-footer { margin-top: 34px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 14px; color: #555; }
+.site-footer a { font-weight: bold; color: #0066cc; }
+.stats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.stat { background: white; border: 1px solid #ddd; padding: 16px; min-width: 150px; }
+.excluded { background: #f3f3f3; color: #666; }
+.included { background: #fff; }
+.pill { display: inline-block; padding: 2px 6px; border: 1px solid #ccc; border-radius: 10px; font-size: 12px; }
+.controls { margin: 10px 0 20px 0; display: flex; gap: 10px; align-items: center; }
+button { padding: 8px 12px; cursor: pointer; }
+input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
+.search-box { width: 100%; max-width: 520px; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; margin-top: 8px; }
+.search-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.clear-btn { padding: 10px 12px; cursor: pointer; border: 1px solid #ccc; background: white; border-radius: 6px; }
+.hidden-row { display: none; }
+.result-count { margin-top: 10px; color: #666; font-size: 13px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.product-field { border: 1px solid #eee; padding: 10px; background: #fafafa; }
+.product-label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: .02em; }
+.product-value { margin-top: 4px; font-weight: bold; }
+.chart-scroll { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; }
+.chart-panel { flex: 0 0 min(100%, 960px); scroll-snap-align: start; border: 1px solid #eee; background: #fff; padding: 14px; box-sizing: border-box; }
+.chart-panel h3 { margin-top: 0; }
+.chart-panel canvas { width: 100% !important; min-height: 360px; }
+.chart-hint { margin-top: 8px; }
+.quick-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.quick-link { display: inline-block; padding: 10px 14px; border: 1px solid #ddd; background: #fafafa; border-radius: 6px; font-weight: bold; }
+.rank-col { width: 64px; text-align: right; }
+.metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.metric-card { background: white; border: 1px solid #ddd; padding: 16px; min-width: 190px; }
+.metric-card .metric-value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+.how-to-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+.how-to-card { border: 1px solid #eee; background: #fafafa; padding: 12px; border-radius: 8px; }
+.how-to-card h3 { margin: 0 0 6px 0; font-size: 16px; }
+.caveat-list { margin: 10px 0 0 18px; padding: 0; color: #555; }
+.caveat-list li { margin-bottom: 6px; }
+.notice-card { border-left: 4px solid #111; }
+.confidence-mini { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.confidence-mini span { display: inline-block; }
+
+.filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.filter-btn { padding: 9px 12px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; }
+.filter-btn.active { background: #111; color: #fff; border-color: #111; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 999px; border: 1px solid #ccc; background: #fafafa; font-size: 12px; white-space: nowrap; }
+.badge-high { background: #ecfdf3; border-color: #b7e4c7; }
+.badge-medium { background: #fff8e1; border-color: #ead88a; }
+.badge-low { background: #f5f5f5; border-color: #ccc; }
+.badge-deal { background: #ecfdf3; border-color: #b7e4c7; font-weight: bold; }
+.badge-score { font-weight: bold; cursor: help; position: relative; }
+.badge-score[data-tooltip]:hover::after, .badge-score[data-tooltip]:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 130%;
+    width: min(520px, 78vw);
+    white-space: normal;
+    line-height: 1.35;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: normal;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.badge-score[data-tooltip]:hover::before, .badge-score[data-tooltip]:focus::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 108%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+    z-index: 10000;
+}
+.badge-stale { background: #f3f3f3; color: #666; }
+.source-breakdown { font-size: 12px; color: #555; }
+.nowrap { white-space: nowrap; }
+.compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.compare-select { width: 100%; padding: 10px; font-size: 14px; }
+.deal-positive { font-weight: bold; }
+.sponsor-shell { display: grid; grid-template-columns: minmax(260px, 1.6fr) minmax(240px, 1fr); gap: 14px; margin-bottom: 20px; }
+.sponsor-card, .supporter-card { background: white; border: 1px solid #ddd; padding: 14px 16px; border-radius: 8px; }
+.sponsor-label, .supporter-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #777; margin-bottom: 6px; font-weight: bold; }
+.sponsor-body { display: flex; align-items: center; gap: 12px; }
+.sponsor-logo { width: 56px; height: 56px; object-fit: contain; border: 1px solid #eee; border-radius: 8px; background: #fafafa; }
+.sponsor-name { font-size: 18px; font-weight: bold; margin-bottom: 3px; }
+.sponsor-tagline { color: #555; font-size: 13px; }
+.sponsor-cta { font-size: 13px; color: #666; }
+.supporter-list { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.supporter-chip { display: inline-block; border: 1px solid #ddd; background: #fafafa; border-radius: 999px; padding: 4px 9px; font-size: 12px; color: #333; }
+.supporter-chip a { color: #333; }
+.dev-badge { display: inline-block; margin-left: 6px; padding: 2px 6px; border-radius: 999px; border: 1px solid #ead88a; background: #fff8e1; color: #111; font-size: 11px; font-weight: bold; line-height: 1.2; cursor: help; position: relative; vertical-align: middle; }
+.dev-badge[data-tooltip]:hover::after, .dev-badge[data-tooltip]:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 0;
+    top: 135%;
+    width: min(440px, 78vw);
+    white-space: normal;
+    line-height: 1.35;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.dev-badge[data-tooltip]:hover::before, .dev-badge[data-tooltip]:focus::before {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 112%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+    z-index: 10000;
+}
+@media (max-width: 760px) { .sponsor-shell { grid-template-columns: 1fr; } }
+
+</style></head>
+<body>
+
+    <div class="site-topbar">
+        <a class="support-tool-link" href="https://www.patreon.com/c/precogvision/membership" target="_blank" rel="noopener">Support the tracker + get shouted out</a>
+    </div>
+    
+    <div class="sponsor-shell">
+        
+        <div class="sponsor-card">
+            <div class="sponsor-label">Sponsor</div>
+            <div class="sponsor-name">Sponsor this space</div>
+            <div class="sponsor-cta">Top banner placement available. Contact <a href="https://www.youtube.com/@Precogvision" target="_blank">Precogvision</a> to support the tracker.</div>
+        </div>
+        
+        <div class="supporter-card">
+            <div class="supporter-label">Supporters</div>
+            <div class="small">Thanks to the people helping keep this tool alive.</div>
+            <div class="supporter-list"><span class="supporter-chip">Supporter shoutouts coming soon</span></div>
+        </div>
+    </div>
+    
+<p><a href="index.html">← Back</a></p>
+<h1>NICEHCK NX8Ti</h1>
+<p><a href="brand-nicehck.html">NICEHCK</a></p>
+<div class="card">
+<h2>Product Info</h2>
+<div class="product-grid">
+    <div class="product-field"><div class="product-label">Original MSRP</div><div class="product-value">N/A</div></div>
+    <div class="product-field"><div class="product-label">Release Year</div><div class="product-value">Unknown</div></div>
+    <div class="product-field"><div class="product-label">Driver Config</div><div class="product-value">Unknown</div></div>
+    <div class="product-field"><div class="product-label">Status</div><div class="product-value">Unknown</div></div>
+</div>
+
+
+</div>
+<div class="stats">
+    <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
+    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-low" data-tooltip="Liquidity/confidence score: 0/100. No included clean priced samples are available yet." aria-label="Liquidity/confidence score: 0/100. No included clean priced samples are available yet." tabindex="0">Low (0/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">No included priced samples.</span></div>
+    
+    <div class="stat"><b>Average</b><br><span id="stat-average">$N/A</span></div>
+    <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
+    <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
+    <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
+</div>
+<div class="card">
+    <h2>Price Over Time</h2>
+    <p class="muted">Checked rows are included in chart and market-value metrics. Click a dot to open the source listing.</p>
+    <div class="controls"><button onclick="setAllCheckboxes(true)">Select all priced rows</button><button onclick="setAllCheckboxes(false)">Clear all</button></div>
+    <p class="small chart-hint">Scroll horizontally to view the MSRP-retention chart.</p>
+    <div class="chart-scroll">
+        <div class="chart-panel">
+            <h3>Secondary Price USD</h3>
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="chart-panel">
+            <h3>Secondary Value vs Original MSRP</h3>
+            
+            <p class="muted">Original MSRP is not available for this IEM yet, so MSRP-retention cannot be calculated.</p>
+            
+        </div>
+    </div>
+</div>
+<h2>Listings</h2>
+<table>
+<tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
+
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-19</td>
+<td>$300</td>
+<td><span class="pill">active</span></td>
+<td>like new, excellent, used</td>
+<td>0</td>
+<td>headfi</td>
+<td>ToobinTobes</td>
+<td>0</td>
+<td>0</td>
+<td>N/A</td>
+<td><a href="https://www.head-fi.org/classifieds/nicehck-nx8ti-1pzt-6ba-1dd.110909/" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
+<td>2026-06-07</td>
+<td>$259</td>
+<td><span class="pill">active</span></td>
+<td>mint, like new, excellent</td>
+<td>0</td>
+<td>headfi</td>
+<td>jwilliamhurst</td>
+<td>0</td>
+<td>0</td>
+<td>N/A</td>
+<td><a href="https://www.head-fi.org/classifieds/nicehck-nx8ti.110373/" target="_blank">source</a></td>
+</tr>
+
+</table>
+<script>
+const allRows = [{"row_id": 0, "title": "NiceHCK NX8Ti | 1PZT + 6BA + 1DD", "url": "https://www.head-fi.org/classifieds/nicehck-nx8ti-1pzt-6ba-1dd.110909/", "price_num": 300.0, "date_ms": 1781827200000, "listing_status": "active", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 1, "title": "NiceHCK NX8Ti", "url": "https://www.head-fi.org/classifieds/nicehck-nx8ti.110373/", "price_num": 259.0, "date_ms": 1780790400000, "listing_status": "active", "condition_text": "mint, like new, excellent", "platform": "headfi"}];
+const originalMsrpUsd = null;
+const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
+function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
+function moneyRound(value) { return money(value); }
+function dateLabel(value) { if (value === null || value === undefined || Number.isNaN(value)) return ""; return new Date(value).toLocaleDateString(); }
+function pct(value) { if (value === null || value === undefined || Number.isNaN(value)) return "N/A"; return Number(value).toLocaleString(undefined, {maximumFractionDigits: 1}) + "%"; }
+function median(values) { if (!values.length) return null; const sorted = [...values].sort((a,b)=>a-b); const mid = Math.floor(sorted.length/2); return sorted.length % 2 === 0 ? (sorted[mid-1] + sorted[mid]) / 2 : sorted[mid]; }
+function average(values) { if (!values.length) return null; return values.reduce((a,b)=>a+b, 0) / values.length; }
+function calculateMarketValueFromRows(rows) {
+    const pricedRows = rows.filter(row => row.price_num !== null && !Number.isNaN(row.price_num) && row.price_num > 0);
+    if (!pricedRows.length) return {value: null, basis: "no selected samples"};
+
+    const now = Date.now();
+    const dayMs = 24 * 60 * 60 * 1000;
+
+    // 1. Best case: enough true recent samples.
+    const cutoff90 = now - 90 * dayMs;
+    const recent90 = pricedRows.filter(row => row.date_ms !== null && row.date_ms >= cutoff90);
+
+    if (recent90.length >= 3) {
+        return {
+            value: average(recent90.map(r => r.price_num)),
+            basis: "90d avg, " + recent90.length + " samples"
+        };
+    }
+
+    // 2. Recency-weighted fallback when recent data is sparse.
+    const datedRows = pricedRows
+        .filter(row => row.date_ms !== null)
+        .sort((a, b) => b.date_ms - a.date_ms);
+
+    if (datedRows.length >= 2) {
+        const latestDate = datedRows[0].date_ms;
+        const cutoff365 = latestDate - 365 * dayMs;
+        const last365 = datedRows.filter(row => row.date_ms >= cutoff365);
+
+        let weightedRows;
+        let halfLifeDays;
+        let basisWindow;
+
+        if (last365.length >= 2) {
+            weightedRows = last365;
+            halfLifeDays = 90;
+            basisWindow = "365d";
+        } else {
+            weightedRows = datedRows;
+            halfLifeDays = 180;
+            basisWindow = "all dated";
+        }
+
+        weightedRows = weightedRows
+            .sort((a, b) => b.date_ms - a.date_ms)
+            .slice(0, 12);
+
+        let weightedTotal = 0;
+        let weightTotal = 0;
+
+        weightedRows.forEach(function(row) {
+            const ageDays = (latestDate - row.date_ms) / dayMs;
+            const weight = Math.pow(0.5, ageDays / halfLifeDays);
+            weightedTotal += row.price_num * weight;
+            weightTotal += weight;
+        });
+
+        return {
+            value: weightTotal ? weightedTotal / weightTotal : null,
+            basis: "recency-weighted " + basisWindow + ", " + weightedRows.length + " samples, " + halfLifeDays + "d half-life"
+        };
+    }
+
+    // 3. Fallback when dates are missing or only one sample exists.
+    const prices = pricedRows.map(r => r.price_num);
+
+    if (prices.length >= 2) {
+        return {
+            value: median(prices),
+            basis: "all-time median, " + prices.length + " samples"
+        };
+    }
+
+    if (prices.length === 1) {
+        return {
+            value: prices[0],
+            basis: "single clean sample"
+        };
+    }
+
+    return {value: null, basis: "no fallback samples"};
+}
+
+function normalizePlatformForScore(platform) {
+    const text = String(platform || "").toLowerCase().trim();
+    if (["reddit", "reddit_rss", "avexchange", "r/avexchange"].includes(text)) return "Reddit";
+    if (["headfi", "head-fi", "head-fi classifieds"].includes(text)) return "Head-Fi";
+    if (["manual", "manual_csv", "manual input"].includes(text)) return "Manual";
+    return text ? text : "Unknown";
+}
+function calculateLiquidityConfidenceFromRows(rows) {
+    const pricedRows = rows.filter(row => row.price_num !== null && !Number.isNaN(row.price_num) && row.price_num > 0);
+    if (!pricedRows.length) {
+        return {
+            score: 0,
+            bucket: "Low",
+            cssClass: "badge-low",
+            display: "Low (0/100)",
+            detail: "No included priced samples.",
+            tooltip: "Liquidity/confidence score: 0/100. No included clean priced samples are available yet."
+        };
+    }
+
+    const now = Date.now();
+    const dayMs = 24 * 60 * 60 * 1000;
+    const datedRows = pricedRows.filter(row => row.date_ms !== null && !Number.isNaN(row.date_ms));
+    const sampleCount = pricedRows.length;
+    const latestMs = datedRows.length ? Math.max(...datedRows.map(row => row.date_ms)) : null;
+    const latestDays = latestMs === null ? null : Math.max(0, Math.floor((now - latestMs) / dayMs));
+    const recent90 = datedRows.filter(row => row.date_ms >= now - 90 * dayMs);
+    const recent180 = datedRows.filter(row => row.date_ms >= now - 180 * dayMs);
+    const recent365 = datedRows.filter(row => row.date_ms >= now - 365 * dayMs);
+
+    const sampleScore = Math.min(sampleCount / 8, 1) * 35;
+
+    let recencyScore = 0;
+    if (latestDays === null) recencyScore = 0;
+    else if (latestDays <= 14) recencyScore = 30;
+    else if (latestDays <= 30) recencyScore = 27;
+    else if (latestDays <= 90) recencyScore = 22;
+    else if (latestDays <= 180) recencyScore = 15;
+    else if (latestDays <= 365) recencyScore = 8;
+    else recencyScore = 3;
+
+    let recentDepthScore = 0;
+    if (recent90.length >= 3) recentDepthScore = 15;
+    else if (recent90.length === 2) recentDepthScore = 12;
+    else if (recent90.length === 1) recentDepthScore = 8;
+    else if (recent180.length >= 2) recentDepthScore = 7;
+    else if (recent365.length >= 2) recentDepthScore = 4;
+
+    const sourceSet = new Set(
+        pricedRows
+            .map(row => normalizePlatformForScore(row.platform))
+            .filter(label => label && label !== "Unknown")
+    );
+    const sourceCount = sourceSet.size;
+    let sourceScore = 0;
+    if (sourceCount >= 3) sourceScore = 10;
+    else if (sourceCount === 2) sourceScore = 8;
+    else if (sourceCount === 1) sourceScore = 5;
+
+    const prices = pricedRows.map(row => Number(row.price_num)).filter(v => !Number.isNaN(v));
+    let consistencyScore = 2;
+    let volatilityNote = "single sample; no volatility read";
+    if (prices.length >= 3) {
+        const mean = average(prices);
+        const variance = prices.reduce((acc, val) => acc + Math.pow(val - mean, 2), 0) / prices.length;
+        const std = Math.sqrt(variance);
+        const cv = mean > 0 ? std / mean : null;
+        if (cv !== null && cv <= 0.12) consistencyScore = 10;
+        else if (cv !== null && cv <= 0.22) consistencyScore = 7;
+        else if (cv !== null && cv <= 0.35) consistencyScore = 4;
+        else consistencyScore = 1;
+        volatilityNote = cv === null ? "price consistency unavailable" : "price CV " + cv.toFixed(2);
+    } else if (prices.length === 2) {
+        consistencyScore = 4;
+        volatilityNote = "two samples; limited volatility read";
+    }
+
+    let score = Math.round(sampleScore + recencyScore + recentDepthScore + sourceScore + consistencyScore);
+    score = Math.max(0, Math.min(100, score));
+
+    let bucket = "Low";
+    let cssClass = "badge-low";
+    if (score >= 75) { bucket = "High"; cssClass = "badge-high"; }
+    else if (score >= 45) { bucket = "Medium"; cssClass = "badge-medium"; }
+
+    const latestText = latestDays === null ? "unknown" : latestDays + "d ago";
+    const tooltip = "Liquidity/confidence score: " + score + "/100. " +
+        "This estimates how trustworthy and liquid the current secondary-market read is. " +
+        "Formula: sample count " + Math.round(sampleScore) + "/35, recency " + Math.round(recencyScore) + "/30, " +
+        "recent sample depth " + Math.round(recentDepthScore) + "/15, source diversity " + Math.round(sourceScore) + "/10, " +
+        "price consistency " + Math.round(consistencyScore) + "/10. " +
+        "Current inputs: " + sampleCount + " included priced sample(s), " + recent90.length + " in the last 90 days, " +
+        recent180.length + " in the last 180 days, latest sample " + latestText + ", " +
+        sourceCount + " source type(s), " + volatilityNote + ".";
+
+    return {
+        score: score,
+        bucket: bucket,
+        cssClass: cssClass,
+        display: bucket + " (" + score + "/100)",
+        detail: sampleCount + " included sample(s), latest " + latestText + ".",
+        tooltip: tooltip
+    };
+}
+function getSelectedRows() {
+    const selectedIds = new Set();
+    document.querySelectorAll(".row-toggle").forEach(function(cb) {
+        const rowId = Number(cb.dataset.rowId);
+        if (cb.checked) { selectedIds.add(rowId); document.getElementById("row-" + rowId).className = "included"; }
+        else { document.getElementById("row-" + rowId).className = "excluded"; }
+    });
+    return allRows.filter(row => selectedIds.has(row.row_id) && row.price_num !== null);
+}
+function getSmoothingConfig(sampleCount) {
+    // More samples can support a wider smoothing window and a denser curve.
+    // Thin datasets stay close to the actual points.
+    if (sampleCount < 4) return {windowSize: 1, segmentsPerGap: 1, tension: 0.15};
+    if (sampleCount < 8) return {windowSize: 3, segmentsPerGap: 3, tension: 0.25};
+    if (sampleCount < 16) return {windowSize: 5, segmentsPerGap: 5, tension: 0.35};
+    if (sampleCount < 30) return {windowSize: 7, segmentsPerGap: 7, tension: 0.40};
+    return {windowSize: 9, segmentsPerGap: 9, tension: 0.45};
+}
+
+function weightedMovingAverageAt(points, index, windowSize, valueKey) {
+    if (windowSize <= 1) return points[index][valueKey];
+
+    const halfWindow = Math.floor(windowSize / 2);
+    const start = Math.max(0, index - halfWindow);
+    const end = Math.min(points.length - 1, index + halfWindow);
+    let total = 0;
+    let weightTotal = 0;
+
+    for (let i = start; i <= end; i++) {
+        const distance = Math.abs(i - index);
+        const weight = 1 / (1 + distance);
+        total += points[i][valueKey] * weight;
+        weightTotal += weight;
+    }
+
+    return total / weightTotal;
+}
+
+function buildSmoothedLine(rows, valueFn, extraMetaFn) {
+    const basePoints = rows
+        .filter(row => row.date_ms !== null && row.price_num !== null)
+        .map(function(row) {
+            const value = valueFn(row);
+            const extra = extraMetaFn ? extraMetaFn(row, value) : {};
+            return Object.assign({
+                x: row.date_ms,
+                y_raw: value
+            }, extra);
+        })
+        .filter(point => point.y_raw !== null && !Number.isNaN(point.y_raw))
+        .sort((a, b) => a.x - b.x);
+
+    if (basePoints.length === 0) return [];
+
+    if (basePoints.length === 1) {
+        return [Object.assign({}, basePoints[0], {
+            y: basePoints[0].y_raw,
+            sample_count: 1,
+            smoothing_window: 1
+        })];
+    }
+
+    const config = getSmoothingConfig(basePoints.length);
+
+    const smoothedAnchors = basePoints.map(function(point, index) {
+        const y = weightedMovingAverageAt(basePoints, index, config.windowSize, "y_raw");
+        return Object.assign({}, point, {
+            y: y,
+            sample_count: basePoints.length,
+            smoothing_window: config.windowSize
+        });
+    });
+
+    const granular = [];
+
+    for (let i = 0; i < smoothedAnchors.length - 1; i++) {
+        const a = smoothedAnchors[i];
+        const b = smoothedAnchors[i + 1];
+
+        if (i === 0) granular.push(a);
+
+        for (let step = 1; step <= config.segmentsPerGap; step++) {
+            const t = step / config.segmentsPerGap;
+            const x = a.x + (b.x - a.x) * t;
+            const y = a.y + (b.y - a.y) * t;
+            granular.push(Object.assign({}, a, {
+                x: x,
+                y: y,
+                sample_count: basePoints.length,
+                smoothing_window: config.windowSize
+            }));
+        }
+    }
+
+    return granular;
+}
+
+function calculateSmoothedPriceLine(rows) {
+    return buildSmoothedLine(
+        rows,
+        row => row.price_num,
+        function(row, value) {
+            return {
+                price_usd: value
+            };
+        }
+    );
+}
+
+function calculateSmoothedRetentionLine(rows) {
+    if (!hasOriginalMsrp) return [];
+
+    return buildSmoothedLine(
+        rows,
+        row => (row.price_num / originalMsrpUsd) * 100,
+        function(row, value) {
+            return {
+                retention_pct: value,
+                delta_pct: value - 100,
+                price_usd: row.price_num
+            };
+        }
+    ).map(function(point) {
+        const retention = point.y;
+        return Object.assign({}, point, {
+            retention_pct: retention,
+            delta_pct: retention - 100,
+            price_usd: (retention / 100) * originalMsrpUsd
+        });
+    });
+}
+
+function updateStatsAndChart() {
+    const selectedRows = getSelectedRows();
+    const prices = selectedRows.map(r => r.price_num).filter(v => v !== null && !Number.isNaN(v));
+    const marketValueResult = calculateMarketValueFromRows(selectedRows);
+    document.getElementById("stat-market-value").textContent = money(marketValueResult.value);
+    document.getElementById("stat-market-basis").textContent = marketValueResult.basis;
+    if (hasOriginalMsrp && document.getElementById("stat-market-vs-msrp")) {
+        if (marketValueResult.value !== null && !Number.isNaN(marketValueResult.value)) {
+            const mvRetention = (marketValueResult.value / originalMsrpUsd) * 100;
+            const mvDelta = mvRetention - 100;
+            const direction = mvDelta >= 0 ? "above" : "below";
+            document.getElementById("stat-market-vs-msrp").textContent = pct(mvRetention) + " of MSRP";
+            document.getElementById("stat-market-vs-msrp-detail").textContent = Math.abs(mvDelta).toLocaleString(undefined, {maximumFractionDigits: 1}) + "% " + direction;
+        } else {
+            document.getElementById("stat-market-vs-msrp").textContent = "N/A";
+            document.getElementById("stat-market-vs-msrp-detail").textContent = "";
+        }
+    }
+    document.getElementById("stat-average").textContent = money(average(prices));
+    document.getElementById("stat-low").textContent = money(prices.length ? Math.min(...prices) : null);
+    document.getElementById("stat-high").textContent = money(prices.length ? Math.max(...prices) : null);
+    document.getElementById("stat-samples").textContent = prices.length;
+    const liquidityConfidence = calculateLiquidityConfidenceFromRows(selectedRows);
+    const liquidityBadge = document.getElementById("stat-liquidity-confidence");
+    const liquidityDetail = document.getElementById("stat-liquidity-confidence-detail");
+    if (liquidityBadge) {
+        liquidityBadge.textContent = liquidityConfidence.display;
+        liquidityBadge.className = "badge badge-score " + liquidityConfidence.cssClass;
+        liquidityBadge.setAttribute("data-tooltip", liquidityConfidence.tooltip);
+        liquidityBadge.setAttribute("aria-label", liquidityConfidence.tooltip);
+        liquidityBadge.removeAttribute("title");
+    }
+    if (liquidityDetail) liquidityDetail.textContent = liquidityConfidence.detail;
+    const priceScatter = selectedRows.filter(r => r.date_ms !== null && r.price_num !== null).map(row => ({x: row.date_ms, y: row.price_num, url: row.url, title: row.title, status: row.listing_status, condition: row.condition_text, platform: row.platform}));
+    chart.data.datasets[0].data = priceScatter;
+    chart.data.datasets[1].data = calculateSmoothedPriceLine(selectedRows);
+    chart.update();
+    if (hasOriginalMsrp && msrpChart) {
+        msrpChart.data.datasets[0].data = selectedRows
+            .filter(r => r.date_ms !== null && r.price_num !== null)
+            .map(row => ({
+                x: row.date_ms,
+                y: (row.price_num / originalMsrpUsd) * 100,
+                price_usd: row.price_num,
+                url: row.url,
+                title: row.title,
+                status: row.listing_status,
+                condition: row.condition_text,
+                platform: row.platform
+            }));
+        msrpChart.data.datasets[1].data = calculateSmoothedRetentionLine(selectedRows);
+        msrpChart.update();
+    }
+}
+function setAllCheckboxes(checked) { document.querySelectorAll(".row-toggle").forEach(cb => cb.checked = checked); updateStatsAndChart(); }
+const chart = new Chart(document.getElementById("chart"), {
+    type: "scatter",
+    data: {
+        datasets: [
+            {
+                label: "Selected Listing Price",
+                data: []
+            },
+            {
+                label: "Smoothed Secondary Price Curve",
+                data: [],
+                type: "line",
+                showLine: true,
+                pointRadius: 0,
+                pointHitRadius: 12,
+                borderWidth: 2,
+                tension: 0.35
+            }
+        ]
+    },
+    options: {
+        interaction: {
+            mode: "nearest",
+            intersect: false
+        },
+        onClick: function(event, elements) {
+            if (elements.length > 0) {
+                const element = elements[0];
+                if (element.datasetIndex === 0) {
+                    const point = this.data.datasets[0].data[element.index];
+                    if (point.url) window.open(point.url, "_blank");
+                }
+            }
+        },
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    title: function(context) {
+                        if (!context.length) return "";
+                        return dateLabel(context[0].raw.x);
+                    },
+                    label: function(context) {
+                        const p = context.raw;
+
+                        if (context.datasetIndex === 1) {
+                            return [
+                                "Smoothed secondary value: " + moneyRound(p.y),
+                                "Smoothing window: " + p.smoothing_window + " sample(s)",
+                                "Based on selected samples: " + p.sample_count
+                            ];
+                        }
+
+                        return [
+                            "Price: " + moneyRound(p.y),
+                            p.status ? "Status: " + p.status : "",
+                            p.condition ? "Condition: " + p.condition : "",
+                            p.platform ? "Platform: " + p.platform : "",
+                            p.title || "",
+                            p.url ? "Click dot to open listing" : ""
+                        ].filter(Boolean);
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                type: "linear",
+                title: {display: true, text: "Date"},
+                ticks: {callback: value => new Date(value).toLocaleDateString()}
+            },
+            y: {
+                title: {display: true, text: "Price USD"},
+                ticks: {callback: value => moneyRound(value)}
+            }
+        }
+    }
+});
+const msrpCanvas = document.getElementById("msrpChart");
+const msrpChart = hasOriginalMsrp && msrpCanvas ? new Chart(msrpCanvas, {
+    type: "scatter",
+    data: {
+        datasets: [
+            {
+                label: "Listing Retention Points",
+                data: []
+            },
+            {
+                label: "Smoothed Retention Curve",
+                data: [],
+                type: "line",
+                showLine: true,
+                pointRadius: 0,
+                pointHitRadius: 12,
+                borderWidth: 2,
+                tension: 0.35
+            }
+        ]
+    },
+    options: {
+        interaction: {
+            mode: "nearest",
+            intersect: false
+        },
+        onClick: function(event, elements) {
+            if (elements.length > 0) {
+                const element = elements[0];
+                if (element.datasetIndex === 0) {
+                    const point = this.data.datasets[0].data[element.index];
+                    if (point.url) window.open(point.url, "_blank");
+                }
+            }
+        },
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    title: function(context) {
+                        if (!context.length) return "";
+                        return dateLabel(context[0].raw.x);
+                    },
+                    label: function(context) {
+                        const p = context.raw;
+
+                        if (context.datasetIndex === 1) {
+                            const direction = p.delta_pct >= 0 ? "above" : "below";
+                            return [
+                                "Smoothed retention: " + pct(p.retention_pct),
+                                Math.abs(p.delta_pct).toLocaleString(undefined, {maximumFractionDigits: 1}) + "% " + direction + " original MSRP",
+                                "Estimated secondary value: " + moneyRound(p.price_usd),
+                                "MSRP: " + moneyRound(originalMsrpUsd),
+                                "Smoothing window: " + p.smoothing_window + " sample(s)",
+                                "Based on selected samples: " + p.sample_count
+                            ];
+                        }
+
+                        const delta = p.y - 100;
+                        const direction = delta >= 0 ? "above" : "below";
+
+                        return [
+                            pct(p.y) + " of original MSRP",
+                            Math.abs(delta).toLocaleString(undefined, {maximumFractionDigits: 1}) + "% " + direction + " original MSRP",
+                            "Price: " + moneyRound(p.price_usd),
+                            "MSRP: " + moneyRound(originalMsrpUsd),
+                            p.status ? "Status: " + p.status : "",
+                            p.condition ? "Condition: " + p.condition : "",
+                            p.platform ? "Platform: " + p.platform : "",
+                            p.title || "",
+                            p.url ? "Click dot to open listing" : ""
+                        ].filter(Boolean);
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                type: "linear",
+                title: {display: true, text: "Date"},
+                ticks: {callback: value => new Date(value).toLocaleDateString()}
+            },
+            y: {
+                title: {display: true, text: "Secondary Value / MSRP (%)"},
+                ticks: {callback: value => value + "%"}
+            }
+        }
+    }
+}) : null;
+document.querySelectorAll(".row-toggle").forEach(cb => cb.addEventListener("change", updateStatsAndChart));
+updateStatsAndChart();
+</script>
+<div class="site-footer">Developed by <a href="https://www.youtube.com/@Precogvision" target="_blank">Precogvision</a></div>
+</body>
+</html>
