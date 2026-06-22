@@ -186,7 +186,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>3</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -210,8 +210,23 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-22</td>
+<td>$170</td>
+<td><span class="pill">active</span></td>
+<td></td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>frcmes</td>
+<td>0</td>
+<td>0</td>
+<td>Overpriced (70.0% above market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1ucjx6i/wts_usama_h_airpods_pro_3_w_paypal/#item-1" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2026-01-24</td>
 <td>$100</td>
 <td><span class="pill">closed</span></td>
@@ -225,8 +240,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1qlacb2/wts_usaca_h_etymotic_er2xr_ikko_obsidian_oh10/#item-3" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
+<tr id="row-2" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" ></td>
 <td>2025-12-12</td>
 <td>$175</td>
 <td><span class="pill">active</span></td>
@@ -242,7 +257,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Airpods Pro 2 : https://imgur.com/a/4cLmyif .", "url": "https://old.reddit.com/r/AVexchange/comments/1qlacb2/wts_usaca_h_etymotic_er2xr_ikko_obsidian_oh10/#item-3", "price_num": 100.0, "date_ms": 1769220704000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Apple Airpods Pro 3 - with blue protective case", "url": "https://old.reddit.com/r/AVexchange/comments/1pl6miz/wts_usanc_h_moondrop_aria_2_supermix_4_apple/#item-3", "price_num": 175.0, "date_ms": 1765582496000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}];
+const allRows = [{"row_id": 0, "title": "AirPods Pro 3", "url": "https://old.reddit.com/r/AVexchange/comments/1ucjx6i/wts_usama_h_airpods_pro_3_w_paypal/#item-1", "price_num": 170.0, "date_ms": 1782133197000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Airpods Pro 2 : https://imgur.com/a/4cLmyif .", "url": "https://old.reddit.com/r/AVexchange/comments/1qlacb2/wts_usaca_h_etymotic_er2xr_ikko_obsidian_oh10/#item-3", "price_num": 100.0, "date_ms": 1769220704000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "Apple Airpods Pro 3 - with blue protective case", "url": "https://old.reddit.com/r/AVexchange/comments/1pl6miz/wts_usanc_h_moondrop_aria_2_supermix_4_apple/#item-3", "price_num": 175.0, "date_ms": 1765582496000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
