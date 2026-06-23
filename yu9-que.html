@@ -181,7 +181,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </div>
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
-    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 87/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 15/15, source diversity 5/10, price consistency 10/10. Current inputs: 10 included priced sample(s), 3 in the last 90 days, 4 in the last 180 days, latest sample 48d ago, 1 source type(s), price CV 0.06." aria-label="Liquidity/confidence score: 87/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 15/15, source diversity 5/10, price consistency 10/10. Current inputs: 10 included priced sample(s), 3 in the last 90 days, 4 in the last 180 days, latest sample 48d ago, 1 source type(s), price CV 0.06." tabindex="0">High (87/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">10 included sample(s), latest 48d ago.</span></div>
+    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 95/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 15/15, source diversity 8/10, price consistency 10/10. Current inputs: 11 included priced sample(s), 4 in the last 90 days, 5 in the last 180 days, latest sample 21d ago, 2 source type(s), price CV 0.07." aria-label="Liquidity/confidence score: 95/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 15/15, source diversity 8/10, price consistency 10/10. Current inputs: 11 included priced sample(s), 4 in the last 90 days, 5 in the last 180 days, latest sample 21d ago, 2 source type(s), price CV 0.07." tabindex="0">High (95/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">11 included sample(s), latest 21d ago.</span></div>
     
     <div class="stat"><b>Market vs MSRP</b><br><span id="stat-market-vs-msrp">N/A</span><br><span id="stat-market-vs-msrp-detail" class="small"></span></div>
     
@@ -218,8 +218,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td></td>
 <td>2026-06-08</td>
 <td></td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>used</td>
 <td>0</td>
 <td>reddit_rss</td>
@@ -234,8 +234,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td></td>
 <td>2026-06-03</td>
 <td></td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td></td>
 <td>0</td>
 <td>reddit_rss</td>
@@ -246,19 +246,19 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1tvuuz9/wtsusatxh_yu9_que_w_paypal_local_cash/#item-1" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="2" ></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2026-06-01</td>
 <td>$375</td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>great condition</td>
 <td>0</td>
 <td>reddit_rss</td>
 <td>JoshBiv</td>
 <td>0</td>
 <td>0</td>
-<td>Fair (7.4% below market)</td>
+<td>Closed: Fair (5.7% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1tu9guf/wts_auknz_h_yu9_que_w_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -266,15 +266,15 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><input type="checkbox" class="row-toggle" data-row-id="3" ></td>
 <td>2026-05-28</td>
 <td>$399</td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>mint</td>
 <td>0</td>
 <td>reddit_rss</td>
 <td>TheMatticusFits</td>
 <td>1</td>
 <td>0</td>
-<td>Fair (1.5% below market)</td>
+<td>Closed: Fair (0.4% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1tq5k7p/wtsusatxh_yu9_que_w_paypal_local_cash/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -290,7 +290,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>notverriegod49</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (4.9% below market)</td>
+<td>Closed: Fair (3.1% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-silver-4-4mm.109356/" target="_blank">source</a></td>
 </tr>
 
@@ -338,7 +338,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Heavy_Connection_997</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (4.9% above market)</td>
+<td>Closed: Fair (6.9% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1t4iayn/wtsusnch_yu9_que_w_paypal/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -354,7 +354,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>MJSable</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (4.9% above market)</td>
+<td>Closed: Fair (6.9% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-mint.108547/" target="_blank">source</a></td>
 </tr>
 
@@ -386,7 +386,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>LimpBaker1967</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Great Deal (72.8% below market)</td>
+<td>Closed: Great Deal (72.3% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1sgum6e/wtsusacahyu9_que_dx180_bundle_w_780_paypal_ff/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -402,7 +402,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>qzwdnmd</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (6.2% below market)</td>
+<td>Closed: Fair (4.4% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1sfeet2/wtsus_gahyu9_que_repost_with_pdwpaypal/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -434,7 +434,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>daijobudes</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.7% below market)</td>
+<td>Closed: Fair (1.9% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que.106825/" target="_blank">source</a></td>
 </tr>
 
@@ -450,7 +450,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>qzwdnmd</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: Fair (1.2% below market)</td>
+<td>Closed: Fair (0.6% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1sbuo9e/wtsus_gahyu9_quewpaypal/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -466,7 +466,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>higherdotedu</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.2% below market)</td>
+<td>Closed: Fair (0.6% above market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1s9xe0l/wts_ustx_h_yu9_que_w_paypal_or_local/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -482,7 +482,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>7Lions</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.2% below market)</td>
+<td>Closed: Fair (0.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que.106580/" target="_blank">source</a></td>
 </tr>
 
@@ -498,7 +498,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>ToobinTobes</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.2% below market)</td>
+<td>Closed: Fair (0.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-w-verus-upgrade-cable.106149/" target="_blank">source</a></td>
 </tr>
 
@@ -530,7 +530,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>GiullianSN</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (21.0% above market)</td>
+<td>Closed: High (23.3% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/pd-yu9-que-upgrade-cable.101226/" target="_blank">source</a></td>
 </tr>
 
@@ -546,7 +546,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>ekman321</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (11.1% above market)</td>
+<td>Closed: High (13.2% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que.101066/" target="_blank">source</a></td>
 </tr>
 
@@ -562,7 +562,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>buenahora</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.2% below market)</td>
+<td>Closed: Fair (0.6% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-mint.99514/" target="_blank">source</a></td>
 </tr>
 
@@ -578,7 +578,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>7Lions</td>
 <td>1</td>
 <td>0</td>
-<td>Closed: High (11.1% above market)</td>
+<td>Closed: High (13.2% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-gunmetal-catch-and-release-of-a-beautiful-set.99115/" target="_blank">source</a></td>
 </tr>
 
@@ -594,7 +594,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>mmmwafflerunoff</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (3.7% above market)</td>
+<td>Closed: Fair (5.7% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-pending.98858/" target="_blank">source</a></td>
 </tr>
 
@@ -610,7 +610,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>kofun</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: High (17.3% above market)</td>
+<td>Closed: High (19.5% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que.98711/" target="_blank">source</a></td>
 </tr>
 
@@ -642,7 +642,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>jwilliamhurst</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (42.0% above market)</td>
+<td>Closed: Overpriced (44.7% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-w-nympheas-upgrade-cable.97898/" target="_blank">source</a></td>
 </tr>
 
@@ -658,7 +658,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>DenverFi</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (1.2% above market)</td>
+<td>Closed: Fair (3.1% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-gunmetal.97558/" target="_blank">source</a></td>
 </tr>
 
@@ -674,7 +674,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Markmurd</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Fair (4.9% above market)</td>
+<td>Closed: Fair (6.9% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/yu9-que-mint-condition-complete.97243/" target="_blank">source</a></td>
 </tr>
 
@@ -696,7 +696,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "yu9 que", "url": "https://old.reddit.com/r/AVexchange/comments/1tzt0a2/wttusacah_yu9_quew_rsv_mk1_7th_supernova_list/#item-1", "price_num": null, "date_ms": 1780879214000, "listing_status": "active", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 1, "title": "Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1tvuuz9/wtsusatxh_yu9_que_w_paypal_local_cash/#item-1", "price_num": null, "date_ms": 1780504673000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "YU9 QUE", "url": "https://old.reddit.com/r/AVexchange/comments/1tu9guf/wts_auknz_h_yu9_que_w_paypal/#item-1", "price_num": 375.0, "date_ms": 1780356233000, "listing_status": "active", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 3, "title": "Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1tq5k7p/wtsusatxh_yu9_que_w_paypal_local_cash/#item-1", "price_num": 399.0, "date_ms": 1779979122000, "listing_status": "active", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 4, "title": "Yu9 Que Silver 4.4mm", "url": "https://www.head-fi.org/classifieds/yu9-que-silver-4-4mm.109356/", "price_num": 385.0, "date_ms": 1779235200000, "listing_status": "closed", "condition_text": "like new, excellent, good condition", "platform": "headfi"}, {"row_id": 5, "title": "My Elysian Pilgrims for Yu9 Que", "url": "https://www.head-fi.org/classifieds/my-elysian-pilgrims-for-yu9-que.109202/", "price_num": null, "date_ms": 1778976000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 6, "title": "Thieaudio Origin, Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1t5gy3a/wtsusawah_thieaudio_origin_yu9_que_w_paypal_local/#item-1", "price_num": null, "date_ms": 1778082825000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 7, "title": "YU9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1t4iayn/wtsusnch_yu9_que_w_paypal/#item-1", "price_num": 425.0, "date_ms": 1777993875000, "listing_status": "closed", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 8, "title": "Closed: YU9 Que (Mint)", "url": "https://www.head-fi.org/classifieds/yu9-que-mint.108547/", "price_num": 425.0, "date_ms": 1777939200000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 9, "title": "YU9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1sl1ln1/wtseugerh_yu9_que_w_400_paypal_ff/#item-1", "price_num": null, "date_ms": 1776151606000, "listing_status": "closed", "condition_text": "is accordingly near mint", "platform": "reddit_rss"}, {"row_id": 10, "title": "Yu9 Que +dx180 bundle", "url": "https://old.reddit.com/r/AVexchange/comments/1sgum6e/wtsusacahyu9_que_dx180_bundle_w_780_paypal_ff/#item-1", "price_num": 110.0, "date_ms": 1775752263000, "listing_status": "closed", "condition_text": "+ mint condition yu9 que as a bundle", "platform": "reddit_rss"}, {"row_id": 11, "title": "Yu9 Que Repost with PD", "url": "https://old.reddit.com/r/AVexchange/comments/1sfeet2/wtsus_gahyu9_que_repost_with_pdwpaypal/#item-1", "price_num": 380.0, "date_ms": 1775609998000, "listing_status": "closed", "condition_text": "with some signs of usage", "platform": "reddit_rss"}, {"row_id": 12, "title": "Closed: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.106950/", "price_num": null, "date_ms": 1775520000000, "listing_status": "closed", "condition_text": "good condition", "platform": "headfi"}, {"row_id": 13, "title": "Traded: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.106825/", "price_num": 390.0, "date_ms": 1775347200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 14, "title": "Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1sbuo9e/wtsus_gahyu9_quewpaypal/#item-1", "price_num": 400.0, "date_ms": 1775262509000, "listing_status": "closed", "condition_text": "with some signs of usage", "platform": "reddit_rss"}, {"row_id": 15, "title": "YU9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1s9xe0l/wts_ustx_h_yu9_que_w_paypal_or_local/#item-1", "price_num": 400.0, "date_ms": 1775077457000, "listing_status": "closed", "condition_text": "like new condition", "platform": "reddit_rss"}, {"row_id": 16, "title": "Sold: YU9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.106580/", "price_num": 400.0, "date_ms": 1775001600000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 17, "title": "Sold: Yu9 Que w/ Verus Upgrade Cable", "url": "https://www.head-fi.org/classifieds/yu9-que-w-verus-upgrade-cable.106149/", "price_num": 400.0, "date_ms": 1774483200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 18, "title": "Sold: WTT Yu9 Que + cash for higher-end IEM", "url": "https://www.head-fi.org/classifieds/wtt-yu9-que-cash-for-higher-end-iem.104458/", "price_num": null, "date_ms": 1772064000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 19, "title": "Sold: (PD) Yu9 Que + Upgrade Cable", "url": "https://www.head-fi.org/classifieds/pd-yu9-que-upgrade-cable.101226/", "price_num": 490.0, "date_ms": 1767312000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 20, "title": "Closed: Yu9 QUE", "url": "https://www.head-fi.org/classifieds/yu9-que.101066/", "price_num": 450.0, "date_ms": 1767139200000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 21, "title": "Sold: Yu9 Que (MINT)", "url": "https://www.head-fi.org/classifieds/yu9-que-mint.99514/", "price_num": 400.0, "date_ms": 1764633600000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 22, "title": "Closed: Yu9 Que (Gunmetal) Catch and Release of a beautiful set", "url": "https://www.head-fi.org/classifieds/yu9-que-gunmetal-catch-and-release-of-a-beautiful-set.99115/", "price_num": 450.0, "date_ms": 1764028800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 23, "title": "Sold: YU9 QUE *Pending", "url": "https://www.head-fi.org/classifieds/yu9-que-pending.98858/", "price_num": 420.0, "date_ms": 1763683200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 24, "title": "Sold: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.98711/", "price_num": 475.0, "date_ms": 1763510400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 25, "title": "Sold: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.98701/", "price_num": null, "date_ms": 1763424000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 26, "title": "Sold: Yu9 Que w/ Nympheas upgrade cable", "url": "https://www.head-fi.org/classifieds/yu9-que-w-nympheas-upgrade-cable.97898/", "price_num": 575.0, "date_ms": 1762128000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 27, "title": "Sold: Yu9 Que (Gunmetal)", "url": "https://www.head-fi.org/classifieds/yu9-que-gunmetal.97558/", "price_num": 410.0, "date_ms": 1761609600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 28, "title": "Closed: Yu9 Que - Mint Condition/Complete", "url": "https://www.head-fi.org/classifieds/yu9-que-mint-condition-complete.97243/", "price_num": 425.0, "date_ms": 1761091200000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 29, "title": "Traded: Yu9 Que Nympheas Upgrade Cable 4.4mm 2-pin", "url": "https://www.head-fi.org/classifieds/yu9-que-nympheas-upgrade-cable-4-4mm-2-pin.107567/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "yu9 que", "url": "https://old.reddit.com/r/AVexchange/comments/1tzt0a2/wttusacah_yu9_quew_rsv_mk1_7th_supernova_list/#item-1", "price_num": null, "date_ms": 1780879214000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 1, "title": "Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1tvuuz9/wtsusatxh_yu9_que_w_paypal_local_cash/#item-1", "price_num": null, "date_ms": 1780504673000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 2, "title": "YU9 QUE", "url": "https://old.reddit.com/r/AVexchange/comments/1tu9guf/wts_auknz_h_yu9_que_w_paypal/#item-1", "price_num": 375.0, "date_ms": 1780356233000, "listing_status": "closed", "condition_text": "great condition", "platform": "reddit_rss"}, {"row_id": 3, "title": "Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1tq5k7p/wtsusatxh_yu9_que_w_paypal_local_cash/#item-1", "price_num": 399.0, "date_ms": 1779979122000, "listing_status": "closed", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 4, "title": "Yu9 Que Silver 4.4mm", "url": "https://www.head-fi.org/classifieds/yu9-que-silver-4-4mm.109356/", "price_num": 385.0, "date_ms": 1779235200000, "listing_status": "closed", "condition_text": "like new, excellent, good condition", "platform": "headfi"}, {"row_id": 5, "title": "My Elysian Pilgrims for Yu9 Que", "url": "https://www.head-fi.org/classifieds/my-elysian-pilgrims-for-yu9-que.109202/", "price_num": null, "date_ms": 1778976000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 6, "title": "Thieaudio Origin, Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1t5gy3a/wtsusawah_thieaudio_origin_yu9_que_w_paypal_local/#item-1", "price_num": null, "date_ms": 1778082825000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 7, "title": "YU9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1t4iayn/wtsusnch_yu9_que_w_paypal/#item-1", "price_num": 425.0, "date_ms": 1777993875000, "listing_status": "closed", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 8, "title": "Closed: YU9 Que (Mint)", "url": "https://www.head-fi.org/classifieds/yu9-que-mint.108547/", "price_num": 425.0, "date_ms": 1777939200000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 9, "title": "YU9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1sl1ln1/wtseugerh_yu9_que_w_400_paypal_ff/#item-1", "price_num": null, "date_ms": 1776151606000, "listing_status": "closed", "condition_text": "is accordingly near mint", "platform": "reddit_rss"}, {"row_id": 10, "title": "Yu9 Que +dx180 bundle", "url": "https://old.reddit.com/r/AVexchange/comments/1sgum6e/wtsusacahyu9_que_dx180_bundle_w_780_paypal_ff/#item-1", "price_num": 110.0, "date_ms": 1775752263000, "listing_status": "closed", "condition_text": "+ mint condition yu9 que as a bundle", "platform": "reddit_rss"}, {"row_id": 11, "title": "Yu9 Que Repost with PD", "url": "https://old.reddit.com/r/AVexchange/comments/1sfeet2/wtsus_gahyu9_que_repost_with_pdwpaypal/#item-1", "price_num": 380.0, "date_ms": 1775609998000, "listing_status": "closed", "condition_text": "with some signs of usage", "platform": "reddit_rss"}, {"row_id": 12, "title": "Closed: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.106950/", "price_num": null, "date_ms": 1775520000000, "listing_status": "closed", "condition_text": "good condition", "platform": "headfi"}, {"row_id": 13, "title": "Traded: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.106825/", "price_num": 390.0, "date_ms": 1775347200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 14, "title": "Yu9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1sbuo9e/wtsus_gahyu9_quewpaypal/#item-1", "price_num": 400.0, "date_ms": 1775262509000, "listing_status": "closed", "condition_text": "with some signs of usage", "platform": "reddit_rss"}, {"row_id": 15, "title": "YU9 Que", "url": "https://old.reddit.com/r/AVexchange/comments/1s9xe0l/wts_ustx_h_yu9_que_w_paypal_or_local/#item-1", "price_num": 400.0, "date_ms": 1775077457000, "listing_status": "closed", "condition_text": "like new condition", "platform": "reddit_rss"}, {"row_id": 16, "title": "Sold: YU9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.106580/", "price_num": 400.0, "date_ms": 1775001600000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 17, "title": "Sold: Yu9 Que w/ Verus Upgrade Cable", "url": "https://www.head-fi.org/classifieds/yu9-que-w-verus-upgrade-cable.106149/", "price_num": 400.0, "date_ms": 1774483200000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 18, "title": "Sold: WTT Yu9 Que + cash for higher-end IEM", "url": "https://www.head-fi.org/classifieds/wtt-yu9-que-cash-for-higher-end-iem.104458/", "price_num": null, "date_ms": 1772064000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 19, "title": "Sold: (PD) Yu9 Que + Upgrade Cable", "url": "https://www.head-fi.org/classifieds/pd-yu9-que-upgrade-cable.101226/", "price_num": 490.0, "date_ms": 1767312000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 20, "title": "Closed: Yu9 QUE", "url": "https://www.head-fi.org/classifieds/yu9-que.101066/", "price_num": 450.0, "date_ms": 1767139200000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 21, "title": "Sold: Yu9 Que (MINT)", "url": "https://www.head-fi.org/classifieds/yu9-que-mint.99514/", "price_num": 400.0, "date_ms": 1764633600000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 22, "title": "Closed: Yu9 Que (Gunmetal) Catch and Release of a beautiful set", "url": "https://www.head-fi.org/classifieds/yu9-que-gunmetal-catch-and-release-of-a-beautiful-set.99115/", "price_num": 450.0, "date_ms": 1764028800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 23, "title": "Sold: YU9 QUE *Pending", "url": "https://www.head-fi.org/classifieds/yu9-que-pending.98858/", "price_num": 420.0, "date_ms": 1763683200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 24, "title": "Sold: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.98711/", "price_num": 475.0, "date_ms": 1763510400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 25, "title": "Sold: Yu9 Que", "url": "https://www.head-fi.org/classifieds/yu9-que.98701/", "price_num": null, "date_ms": 1763424000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 26, "title": "Sold: Yu9 Que w/ Nympheas upgrade cable", "url": "https://www.head-fi.org/classifieds/yu9-que-w-nympheas-upgrade-cable.97898/", "price_num": 575.0, "date_ms": 1762128000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 27, "title": "Sold: Yu9 Que (Gunmetal)", "url": "https://www.head-fi.org/classifieds/yu9-que-gunmetal.97558/", "price_num": 410.0, "date_ms": 1761609600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 28, "title": "Closed: Yu9 Que - Mint Condition/Complete", "url": "https://www.head-fi.org/classifieds/yu9-que-mint-condition-complete.97243/", "price_num": 425.0, "date_ms": 1761091200000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 29, "title": "Traded: Yu9 Que Nympheas Upgrade Cable 4.4mm 2-pin", "url": "https://www.head-fi.org/classifieds/yu9-que-nympheas-upgrade-cable-4-4mm-2-pin.107567/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
 const originalMsrpUsd = 400.0;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

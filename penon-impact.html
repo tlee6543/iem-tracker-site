@@ -216,7 +216,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>2026-06-22</td>
 <td></td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td class="status-reason">confirmed sold from source check</td>
 <td></td>
 <td>0</td>
 <td>reddit_rss</td>
@@ -231,8 +231,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
 <td>2026-06-19</td>
 <td>$900</td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>used</td>
 <td>0</td>
 <td>reddit_rss</td>
@@ -261,7 +261,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Penon Impact", "url": "https://old.reddit.com/r/AVexchange/comments/1ucrp9z/wtsusacah_penon_impact_wpaypal/#item-1", "price_num": null, "date_ms": 1782150728000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Penon Impact", "url": "https://old.reddit.com/r/AVexchange/comments/1uabwhi/wtsusacah_penon_impact_wpaypal/#item-1", "price_num": 900.0, "date_ms": 1781898698000, "listing_status": "active", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 2, "title": "Penon Impact", "url": "https://www.head-fi.org/classifieds/penon-impact.110662/", "price_num": 950.0, "date_ms": 1781308800000, "listing_status": "active", "condition_text": "used", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Penon Impact", "url": "https://old.reddit.com/r/AVexchange/comments/1ucrp9z/wtsusacah_penon_impact_wpaypal/#item-1", "price_num": null, "date_ms": 1782150728000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Penon Impact", "url": "https://old.reddit.com/r/AVexchange/comments/1uabwhi/wtsusacah_penon_impact_wpaypal/#item-1", "price_num": 900.0, "date_ms": 1781898698000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 2, "title": "Penon Impact", "url": "https://www.head-fi.org/classifieds/penon-impact.110662/", "price_num": 950.0, "date_ms": 1781308800000, "listing_status": "active", "condition_text": "used", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

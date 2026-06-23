@@ -181,7 +181,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 </div>
 <div class="stats">
     <div class="stat"><b>Market Value</b><br><span id="stat-market-value">$N/A</span><br><span id="stat-market-basis" class="small"></span></div>
-    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-medium" data-tooltip="Liquidity/confidence score: 71/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 8/15, source diversity 5/10, price consistency 1/10. Current inputs: 8 included priced sample(s), 1 in the last 90 days, 1 in the last 180 days, latest sample 37d ago, 1 source type(s), price CV 0.36." aria-label="Liquidity/confidence score: 71/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 22/30, recent sample depth 8/15, source diversity 5/10, price consistency 1/10. Current inputs: 8 included priced sample(s), 1 in the last 90 days, 1 in the last 180 days, latest sample 37d ago, 1 source type(s), price CV 0.36." tabindex="0">Medium (71/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">8 included sample(s), latest 37d ago.</span></div>
+    <div class="stat"><b>Liquidity / Confidence</b><br><span id="stat-liquidity-confidence" class="badge badge-score badge-high" data-tooltip="Liquidity/confidence score: 86/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 12/15, source diversity 8/10, price consistency 4/10. Current inputs: 8 included priced sample(s), 2 in the last 90 days, 2 in the last 180 days, latest sample 28d ago, 2 source type(s), price CV 0.33." aria-label="Liquidity/confidence score: 86/100. This estimates how trustworthy and liquid the current secondary-market read is. Formula: sample count 35/35, recency 27/30, recent sample depth 12/15, source diversity 8/10, price consistency 4/10. Current inputs: 8 included priced sample(s), 2 in the last 90 days, 2 in the last 180 days, latest sample 28d ago, 2 source type(s), price CV 0.33." tabindex="0">High (86/100)</span><br><span id="stat-liquidity-confidence-detail" class="small">8 included sample(s), latest 28d ago.</span></div>
     
     <div class="stat"><b>Market vs MSRP</b><br><span id="stat-market-vs-msrp">N/A</span><br><span id="stat-market-vs-msrp-detail" class="small"></span></div>
     
@@ -214,19 +214,19 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Reason</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<tr id="row-0" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
 <td>2026-05-25</td>
 <td>$900</td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td></td>
 <td>0</td>
 <td>reddit_rss</td>
 <td>emperorlitus</td>
 <td>0</td>
 <td>0</td>
-<td>Good Deal (12.1% below market)</td>
+<td>Closed: Fair (7.0% below market)</td>
 <td><a href="https://old.reddit.com/r/AVexchange/comments/1tnm1zf/wtsusaohh_qdc_anole_v14_w_paypal_trades/#item-1" target="_blank">source</a></td>
 </tr>
 
@@ -242,7 +242,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>emperorlitus</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Good Deal (14.5% below market)</td>
+<td>Closed: Fair (9.6% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14.109085/" target="_blank">source</a></td>
 </tr>
 
@@ -258,7 +258,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Herzog</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (46.5% above market)</td>
+<td>Closed: Overpriced (55.0% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14-universal-iem.100320/" target="_blank">source</a></td>
 </tr>
 
@@ -274,7 +274,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Damz87</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Good Deal (12.1% below market)</td>
+<td>Closed: Fair (7.0% below market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14.86584/" target="_blank">source</a></td>
 </tr>
 
@@ -290,7 +290,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>Tsunzo</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (31.9% above market)</td>
+<td>Closed: Overpriced (39.5% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14.63682/" target="_blank">source</a></td>
 </tr>
 
@@ -322,12 +322,12 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>daijobudes</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (85.6% above market)</td>
+<td>Closed: Overpriced (96.3% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14.55379/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-7" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="7" checked></td>
+<tr id="row-7" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="7" ></td>
 <td>2022-10-23</td>
 <td>$2,738</td>
 <td><span class="pill">closed</span></td>
@@ -338,7 +338,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>jwbrent</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (167.4% above market)</td>
+<td>Closed: Overpriced (182.9% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14-mint.35068/" target="_blank">source</a></td>
 </tr>
 
@@ -354,7 +354,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>PcChip</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (70.9% above market)</td>
+<td>Closed: Overpriced (80.8% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-anole-v14.17198/" target="_blank">source</a></td>
 </tr>
 
@@ -386,7 +386,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>rcoleman1</td>
 <td>0</td>
 <td>0</td>
-<td>Closed: Overpriced (114.8% above market)</td>
+<td>Closed: Overpriced (127.2% above market)</td>
 <td><a href="https://www.head-fi.org/classifieds/qdc-universal-anole-v14-in-ear-monitors-like-new%F4%8F%B0%A5%F4%8F%B0%92%F4%8F%B0%82%F4%8F%B0%8B%F4%8F%B0%87-in-box.7592/" target="_blank">source</a></td>
 </tr>
 
@@ -424,7 +424,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "QDC Anole V14", "url": "https://old.reddit.com/r/AVexchange/comments/1tnm1zf/wtsusaohh_qdc_anole_v14_w_paypal_trades/#item-1", "price_num": 900.0, "date_ms": 1779743481000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Closed: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.109085/", "price_num": 875.0, "date_ms": 1778889600000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 2, "title": "Sold: QDC Anole V14 Universal IEM", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-universal-iem.100320/", "price_num": 1500.0, "date_ms": 1765843200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 3, "title": "Closed: qdc Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.86584/", "price_num": 900.0, "date_ms": 1744588800000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 4, "title": "Sold: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.63682/", "price_num": 1350.0, "date_ms": 1709424000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 5, "title": "Sold: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.58363/", "price_num": null, "date_ms": 1701302400000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 6, "title": "Closed: QDC ANOLE V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.55379/", "price_num": 1900.0, "date_ms": 1696291200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 7, "title": "Sold: qdc Anole V14 - Mint", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-mint.35068/", "price_num": 2738.0, "date_ms": 1666483200000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 8, "title": "Closed: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.17198/", "price_num": 1750.0, "date_ms": 1640822400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 9, "title": "Sold: *PRICE DROP* qdc Anole V14", "url": "https://www.head-fi.org/classifieds/price-drop-qdc-anole-v14.8803/", "price_num": null, "date_ms": 1627948800000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 10, "title": "Sold: qdc Universal Anole V14 In-Ear Monitors LIKE NEW\udbff\udc25\udbff\udc12\udbff\udc02\udbff\udc0b\udbff\udc07 IN BOX", "url": "https://www.head-fi.org/classifieds/qdc-universal-anole-v14-in-ear-monitors-like-new%F4%8F%B0%A5%F4%8F%B0%92%F4%8F%B0%82%F4%8F%B0%8B%F4%8F%B0%87-in-box.7592/", "price_num": 2199.0, "date_ms": 1626048000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 11, "title": "Sold: qdc Anole V14 Cable w/Interchangeable Connectors", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-cable-w-interchangeable-connectors.12713/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 12, "title": "Sold: qdc Anole V14 Cable w/Interchangeable Connectors", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-cable-w-interchangeable-connectors.6191/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "QDC Anole V14", "url": "https://old.reddit.com/r/AVexchange/comments/1tnm1zf/wtsusaohh_qdc_anole_v14_w_paypal_trades/#item-1", "price_num": 900.0, "date_ms": 1779743481000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}, {"row_id": 1, "title": "Closed: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.109085/", "price_num": 875.0, "date_ms": 1778889600000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 2, "title": "Sold: QDC Anole V14 Universal IEM", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-universal-iem.100320/", "price_num": 1500.0, "date_ms": 1765843200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 3, "title": "Closed: qdc Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.86584/", "price_num": 900.0, "date_ms": 1744588800000, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 4, "title": "Sold: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.63682/", "price_num": 1350.0, "date_ms": 1709424000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 5, "title": "Sold: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.58363/", "price_num": null, "date_ms": 1701302400000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 6, "title": "Closed: QDC ANOLE V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.55379/", "price_num": 1900.0, "date_ms": 1696291200000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 7, "title": "Sold: qdc Anole V14 - Mint", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-mint.35068/", "price_num": 2738.0, "date_ms": 1666483200000, "listing_status": "closed", "condition_text": "mint, like new, excellent", "platform": "headfi"}, {"row_id": 8, "title": "Closed: QDC Anole V14", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14.17198/", "price_num": 1750.0, "date_ms": 1640822400000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 9, "title": "Sold: *PRICE DROP* qdc Anole V14", "url": "https://www.head-fi.org/classifieds/price-drop-qdc-anole-v14.8803/", "price_num": null, "date_ms": 1627948800000, "listing_status": "closed", "condition_text": "mint, like new, excellent, used", "platform": "headfi"}, {"row_id": 10, "title": "Sold: qdc Universal Anole V14 In-Ear Monitors LIKE NEW\udbff\udc25\udbff\udc12\udbff\udc02\udbff\udc0b\udbff\udc07 IN BOX", "url": "https://www.head-fi.org/classifieds/qdc-universal-anole-v14-in-ear-monitors-like-new%F4%8F%B0%A5%F4%8F%B0%92%F4%8F%B0%82%F4%8F%B0%8B%F4%8F%B0%87-in-box.7592/", "price_num": 2199.0, "date_ms": 1626048000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 11, "title": "Sold: qdc Anole V14 Cable w/Interchangeable Connectors", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-cable-w-interchangeable-connectors.12713/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}, {"row_id": 12, "title": "Sold: qdc Anole V14 Cable w/Interchangeable Connectors", "url": "https://www.head-fi.org/classifieds/qdc-anole-v14-cable-w-interchangeable-connectors.6191/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
 const originalMsrpUsd = 3000.0;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

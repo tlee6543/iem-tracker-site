@@ -216,7 +216,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td>2026-06-22</td>
 <td></td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>mint</td>
 <td>1</td>
 <td>reddit_rss</td>
@@ -231,8 +231,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td></td>
 <td>2026-06-20</td>
 <td></td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>mint</td>
 <td>1</td>
 <td>reddit_rss</td>
@@ -261,7 +261,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Acoustune HS1900X Shinogi - Mint Condition", "url": "https://old.reddit.com/r/AVexchange/comments/1ucugrx/wtsustxhacoustune_hs1900x_shinogi_mint_condition/#item-1", "price_num": null, "date_ms": 1782156772000, "listing_status": "active", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 1, "title": "Acoustune HS1900X Shinogi - Mint Condition", "url": "https://old.reddit.com/r/AVexchange/comments/1uak8b1/wtsustxh_acoustune_hs1900x_shinogi_mint_condition/#item-1", "price_num": null, "date_ms": 1781920910000, "listing_status": "active", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 2, "title": "Acoustune HS1900X Shinogi - Mint", "url": "https://www.head-fi.org/classifieds/acoustune-hs1900x-shinogi-mint.110957/", "price_num": 775.0, "date_ms": 1781827200000, "listing_status": "active", "condition_text": "mint, like new, excellent", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Acoustune HS1900X Shinogi - Mint Condition", "url": "https://old.reddit.com/r/AVexchange/comments/1ucugrx/wtsustxhacoustune_hs1900x_shinogi_mint_condition/#item-1", "price_num": null, "date_ms": 1782156772000, "listing_status": "active", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 1, "title": "Acoustune HS1900X Shinogi - Mint Condition", "url": "https://old.reddit.com/r/AVexchange/comments/1uak8b1/wtsustxh_acoustune_hs1900x_shinogi_mint_condition/#item-1", "price_num": null, "date_ms": 1781920910000, "listing_status": "closed", "condition_text": "mint", "platform": "reddit_rss"}, {"row_id": 2, "title": "Acoustune HS1900X Shinogi - Mint", "url": "https://www.head-fi.org/classifieds/acoustune-hs1900x-shinogi-mint.110957/", "price_num": 775.0, "date_ms": 1781827200000, "listing_status": "active", "condition_text": "mint, like new, excellent", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

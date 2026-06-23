@@ -215,8 +215,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
 <td>2026-06-02</td>
 <td>$70</td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">reddit_no_confirmed_sale_signal</td>
+<td><span class="pill">closed</span></td>
+<td class="status-reason">confirmed sold from source check</td>
 <td>https</td>
 <td>0</td>
 <td>reddit_rss</td>
@@ -261,7 +261,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Moondrop Aria Snow, AOC Q27G3XMN", "url": "https://old.reddit.com/r/AVexchange/comments/1tucf16/wts_usapa_h_moondrop_aria_snow_aoc_q27g3xmn_w/#item-1", "price_num": 70.0, "date_ms": 1780363856000, "listing_status": "active", "condition_text": "https", "platform": "reddit_rss"}, {"row_id": 1, "title": "Lightly used Moondrop Aria Snow Edition", "url": "https://old.reddit.com/r/AVexchange/comments/1kls306/wts_caon_h_moondrop_aria_snow_iem_w_paypal/#item-1", "price_num": 40.0, "date_ms": 1747157720000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 2, "title": "Closed: Moondrop Aria Snow Edition Brand New", "url": "https://www.head-fi.org/classifieds/moondrop-aria-snow-edition-brand-new.37768/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Moondrop Aria Snow, AOC Q27G3XMN", "url": "https://old.reddit.com/r/AVexchange/comments/1tucf16/wts_usapa_h_moondrop_aria_snow_aoc_q27g3xmn_w/#item-1", "price_num": 70.0, "date_ms": 1780363856000, "listing_status": "closed", "condition_text": "https", "platform": "reddit_rss"}, {"row_id": 1, "title": "Lightly used Moondrop Aria Snow Edition", "url": "https://old.reddit.com/r/AVexchange/comments/1kls306/wts_caon_h_moondrop_aria_snow_iem_w_paypal/#item-1", "price_num": 40.0, "date_ms": 1747157720000, "listing_status": "closed", "condition_text": "used", "platform": "reddit_rss"}, {"row_id": 2, "title": "Closed: Moondrop Aria Snow Edition Brand New", "url": "https://www.head-fi.org/classifieds/moondrop-aria-snow-edition-brand-new.37768/", "price_num": null, "date_ms": null, "listing_status": "closed", "condition_text": "", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
