@@ -187,7 +187,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>3</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -211,8 +211,24 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th>Reason</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-23</td>
+<td>$550</td>
+<td><span class="pill">active</span></td>
+<td class="status-reason"></td>
+<td>good condition</td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>joelmats3</td>
+<td>0</td>
+<td>0</td>
+<td>High (24.2% above market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1udlou0/wts_usca_h_thieaudio_origin_w_paypal/#item-1" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2026-01-30</td>
 <td>$500</td>
 <td><span class="pill">closed</span></td>
@@ -227,8 +243,8 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 <td><a href="https://www.head-fi.org/classifieds/sony-ier-m9-tanchjim-origin-penon-vortex-syrnarn-upgrade-cable.102889/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2024-12-01</td>
 <td>$150</td>
 <td><span class="pill">closed</span></td>
@@ -245,7 +261,7 @@ input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Closed: Sony IER-M9, Tanchjim Origin, Penon Vortex, Syrnarn Upgrade cable", "url": "https://www.head-fi.org/classifieds/sony-ier-m9-tanchjim-origin-penon-vortex-syrnarn-upgrade-cable.102889/", "price_num": 500.0, "date_ms": 1769731200000, "listing_status": "closed", "condition_text": "good condition, fair, used", "platform": "headfi"}, {"row_id": 1, "title": "Tanchjim Origin", "url": "https://old.reddit.com/r/AVexchange/comments/1h4cybx/wts_usca_h_focal_clear_mg_edition_xs_moondrop_s8/#item-6", "price_num": 150.0, "date_ms": 1733085665000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
+const allRows = [{"row_id": 0, "title": "Thieaudio Origin", "url": "https://old.reddit.com/r/AVexchange/comments/1udlou0/wts_usca_h_thieaudio_origin_w_paypal/#item-1", "price_num": 550.0, "date_ms": 1782231493000, "listing_status": "active", "condition_text": "good condition", "platform": "reddit_rss"}, {"row_id": 1, "title": "Closed: Sony IER-M9, Tanchjim Origin, Penon Vortex, Syrnarn Upgrade cable", "url": "https://www.head-fi.org/classifieds/sony-ier-m9-tanchjim-origin-penon-vortex-syrnarn-upgrade-cable.102889/", "price_num": 500.0, "date_ms": 1769731200000, "listing_status": "closed", "condition_text": "good condition, fair, used", "platform": "headfi"}, {"row_id": 2, "title": "Tanchjim Origin", "url": "https://old.reddit.com/r/AVexchange/comments/1h4cybx/wts_usca_h_focal_clear_mg_edition_xs_moondrop_s8/#item-6", "price_num": 150.0, "date_ms": 1733085665000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
