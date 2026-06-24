@@ -199,7 +199,7 @@ td.status-reason { overflow: hidden; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>3</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>4</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -223,8 +223,24 @@ td.status-reason { overflow: hidden; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th class="reason-col">Reason</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-24</td>
+<td>$105</td>
+<td><span class="pill">active</span></td>
+<td class="status-reason"></td>
+<td>like new</td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>ProjectPatuuh</td>
+<td>0</td>
+<td>0</td>
+<td>Good Deal (19.1% below market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1ueelu8/wtsusaapoh_punchaudio_portazo_w_paypal/#item-1" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2026-04-07</td>
 <td>$125</td>
 <td><span class="pill">closed</span></td>
@@ -239,8 +255,8 @@ td.status-reason { overflow: hidden; }
 <td><a href="https://www.head-fi.org/classifieds/punch-audio-portazo.106940/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
+<tr id="row-2" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
 <td>2026-03-23</td>
 <td>$140</td>
 <td><span class="pill">closed</span></td>
@@ -255,8 +271,8 @@ td.status-reason { overflow: hidden; }
 <td><a href="https://www.head-fi.org/classifieds/punch-audio-portazo.105984/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-2" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="2" checked></td>
+<tr id="row-3" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="3" checked></td>
 <td>2025-12-27</td>
 <td>$120</td>
 <td><span class="pill">closed</span></td>
@@ -273,7 +289,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Sold: Punch Audio Portazo", "url": "https://www.head-fi.org/classifieds/punch-audio-portazo.106940/", "price_num": 125.0, "date_ms": 1775520000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 1, "title": "Traded: Punch Audio Portazo", "url": "https://www.head-fi.org/classifieds/punch-audio-portazo.105984/", "price_num": 140.0, "date_ms": 1774224000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 2, "title": "Sold: Punch Audio Portazo", "url": "https://www.head-fi.org/classifieds/punch-audio-portazo.100839/", "price_num": 120.0, "date_ms": 1766793600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "PunchAudio Portazo", "url": "https://old.reddit.com/r/AVexchange/comments/1ueelu8/wtsusaapoh_punchaudio_portazo_w_paypal/#item-1", "price_num": 105.0, "date_ms": 1782310219000, "listing_status": "active", "condition_text": "like new", "platform": "reddit_rss"}, {"row_id": 1, "title": "Sold: Punch Audio Portazo", "url": "https://www.head-fi.org/classifieds/punch-audio-portazo.106940/", "price_num": 125.0, "date_ms": 1775520000000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 2, "title": "Traded: Punch Audio Portazo", "url": "https://www.head-fi.org/classifieds/punch-audio-portazo.105984/", "price_num": 140.0, "date_ms": 1774224000000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi"}, {"row_id": 3, "title": "Sold: Punch Audio Portazo", "url": "https://www.head-fi.org/classifieds/punch-audio-portazo.100839/", "price_num": 120.0, "date_ms": 1766793600000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
