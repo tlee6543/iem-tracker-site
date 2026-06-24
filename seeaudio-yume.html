@@ -173,7 +173,7 @@ td.status-reason { overflow: hidden; }
         <div class="supporter-card">
             <div class="supporter-label">Supporters</div>
             <div class="small">Thanks to the people helping keep this tool alive.</div>
-            <div class="supporter-list"><span class="supporter-chip">tester</span></div>
+            <div class="supporter-list"><span class="supporter-chip">Supporter shoutouts coming soon</span></div>
         </div>
     </div>
     
@@ -203,7 +203,7 @@ td.status-reason { overflow: hidden; }
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
-    <p class="muted">Checked rows are included in chart and market-value metrics. Click a dot to open the source listing.</p>
+    <p class="muted">Checked rows are included in chart and closed-sale metrics. Active/stale asks aged 60+ days can cap Market Value as a discounted unsold ceiling signal without being treated as completed sales. Click a dot to open the source listing.</p>
     <div class="controls"><button onclick="setAllCheckboxes(true)">Select all priced rows</button><button onclick="setAllCheckboxes(false)">Clear all</button></div>
     <p class="small chart-hint">Scroll horizontally to view the MSRP-retention chart.</p>
     <div class="chart-scroll">
@@ -241,7 +241,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Hiby Yume", "url": "https://old.reddit.com/r/AVexchange/comments/1tnx4nk/wts_usca_h_13_iems_27_cables_snowsky_melody_dac_w/#item-4", "price_num": 100.0, "date_ms": 1779772529000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss"}];
+const allRows = [{"row_id": 0, "title": "Hiby Yume", "url": "https://old.reddit.com/r/AVexchange/comments/1tnx4nk/wts_usca_h_13_iems_27_cables_snowsky_melody_dac_w/#item-4", "price_num": 100.0, "date_ms": 1779772529000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | reddit_title_or_description_sold_closed | comments_checked_rss_and_html | confirmed_priced_nonbundle_included | reddit_search_rss_query=simgot"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
@@ -250,22 +250,79 @@ function dateLabel(value) { if (value === null || value === undefined || Number.
 function pct(value) { if (value === null || value === undefined || Number.isNaN(value)) return "N/A"; return Number(value).toLocaleString(undefined, {maximumFractionDigits: 1}) + "%"; }
 function median(values) { if (!values.length) return null; const sorted = [...values].sort((a,b)=>a-b); const mid = Math.floor(sorted.length/2); return sorted.length % 2 === 0 ? (sorted[mid-1] + sorted[mid]) / 2 : sorted[mid]; }
 function average(values) { if (!values.length) return null; return values.reduce((a,b)=>a+b, 0) / values.length; }
-function calculateMarketValueFromRows(rows) {
+const staleUnsoldMarketDays = 60;
+const staleUnsoldCeilingDiscount = 0.95;
+function rowAgeDays(row) {
+    if (row.date_ms === null || row.date_ms === undefined || Number.isNaN(row.date_ms)) return null;
+    const dayMs = 24 * 60 * 60 * 1000;
+    return Math.max(0, Math.floor((Date.now() - row.date_ms) / dayMs));
+}
+function rowHasManualExclusionMarker(row) {
+    const notes = String(row.notes || "").toLowerCase();
+    const markers = ["manual_excluded", "manually_excluded", "bad_parse", "parse_error", "non_usd", "auto_bundle_excluded", "auto_low_outlier", "auto_high_outlier", "outlier"];
+    return markers.some(marker => notes.indexOf(marker) !== -1);
+}
+function isStaleUnsoldCeilingRow(row) {
+    if (row.price_num === null || row.price_num === undefined || Number.isNaN(row.price_num) || row.price_num <= 0) return false;
+    if (Number(row.is_bundle || 0) === 1) return false;
+    if (Number(row.is_possible_duplicate || 0) === 1) return false;
+    if (rowHasManualExclusionMarker(row)) return false;
+
+    const status = String(row.listing_status || "").toLowerCase().trim();
+    const closedReason = String(row.closed_reason || "").toLowerCase().trim();
+    const statusComment = String(row.status_comment || "").toLowerCase().trim();
+    const staleMarker = status === "stale" || status === "stale_unsold" || closedReason.startsWith("stale_unsold") || closedReason === "stale_active_timeout" || statusComment.includes("stale unsold") || statusComment.includes("lister never updated");
+    if (staleMarker) return true;
+
+    const ageDays = rowAgeDays(row);
+    if (ageDays === null || ageDays < staleUnsoldMarketDays) return false;
+    return ["active", "unknown", ""].includes(status);
+}
+function applyStaleUnsoldCeiling(baseResult, candidateRows) {
+    const ceilingRows = (candidateRows || []).filter(isStaleUnsoldCeilingRow);
+    const stalePrices = ceilingRows
+        .map(row => Number(row.price_num))
+        .filter(value => !Number.isNaN(value) && value > 0);
+
+    if (!stalePrices.length) return baseResult;
+
+    const medianStaleAsk = median(stalePrices);
+    const ceilingValue = medianStaleAsk * staleUnsoldCeilingDiscount;
+    const discountPct = Math.round((1 - staleUnsoldCeilingDiscount) * 100);
+    const ceilingNote = "stale unsold ask ceiling: " + stalePrices.length + " ask(s) ≥" + staleUnsoldMarketDays + "d, median ask " + moneyRound(medianStaleAsk) + ", " + discountPct + "% discount";
+
+    if (baseResult.value === null || baseResult.value === undefined || Number.isNaN(baseResult.value) || baseResult.value <= 0) {
+        return {value: ceilingValue, basis: ceilingNote + "; no closed-sale market value available"};
+    }
+
+    if (ceilingValue < baseResult.value) {
+        return {value: ceilingValue, basis: baseResult.basis + "; capped by " + ceilingNote};
+    }
+
+    return {value: baseResult.value, basis: baseResult.basis + "; " + ceilingNote + " did not cap"};
+}
+function calculateMarketValueFromRows(rows, allCandidateRows) {
     const pricedRows = rows.filter(row => row.price_num !== null && !Number.isNaN(row.price_num) && row.price_num > 0);
-    if (!pricedRows.length) return {value: null, basis: "no selected samples"};
+    let baseResult;
+
+    if (!pricedRows.length) {
+        baseResult = {value: null, basis: "no selected closed-sale samples"};
+        return applyStaleUnsoldCeiling(baseResult, allCandidateRows || rows);
+    }
 
     const now = Date.now();
     const dayMs = 24 * 60 * 60 * 1000;
 
-    // 1. Best case: enough true recent samples.
+    // 1. Best case: enough true recent closed-sale samples.
     const cutoff90 = now - 90 * dayMs;
     const recent90 = pricedRows.filter(row => row.date_ms !== null && row.date_ms >= cutoff90);
 
     if (recent90.length >= 3) {
-        return {
+        baseResult = {
             value: average(recent90.map(r => r.price_num)),
-            basis: "90d avg, " + recent90.length + " samples"
+            basis: "90d closed-sale avg, " + recent90.length + " samples"
         };
+        return applyStaleUnsoldCeiling(baseResult, allCandidateRows || rows);
     }
 
     // 2. Recency-weighted fallback when recent data is sparse.
@@ -306,30 +363,34 @@ function calculateMarketValueFromRows(rows) {
             weightTotal += weight;
         });
 
-        return {
+        baseResult = {
             value: weightTotal ? weightedTotal / weightTotal : null,
-            basis: "recency-weighted " + basisWindow + ", " + weightedRows.length + " samples, " + halfLifeDays + "d half-life"
+            basis: "recency-weighted " + basisWindow + " closed sales, " + weightedRows.length + " samples, " + halfLifeDays + "d half-life"
         };
+        return applyStaleUnsoldCeiling(baseResult, allCandidateRows || rows);
     }
 
     // 3. Fallback when dates are missing or only one sample exists.
     const prices = pricedRows.map(r => r.price_num);
 
     if (prices.length >= 2) {
-        return {
+        baseResult = {
             value: median(prices),
-            basis: "all-time median, " + prices.length + " samples"
+            basis: "all-time closed-sale median, " + prices.length + " samples"
         };
+        return applyStaleUnsoldCeiling(baseResult, allCandidateRows || rows);
     }
 
     if (prices.length === 1) {
-        return {
+        baseResult = {
             value: prices[0],
-            basis: "single clean sample"
+            basis: "single clean closed-sale sample"
         };
+        return applyStaleUnsoldCeiling(baseResult, allCandidateRows || rows);
     }
 
-    return {value: null, basis: "no fallback samples"};
+    baseResult = {value: null, basis: "no fallback closed-sale samples"};
+    return applyStaleUnsoldCeiling(baseResult, allCandidateRows || rows);
 }
 
 function normalizePlatformForScore(platform) {
@@ -571,7 +632,7 @@ function calculateSmoothedRetentionLine(rows) {
 function updateStatsAndChart() {
     const selectedRows = getSelectedRows();
     const prices = selectedRows.map(r => r.price_num).filter(v => v !== null && !Number.isNaN(v));
-    const marketValueResult = calculateMarketValueFromRows(selectedRows);
+    const marketValueResult = calculateMarketValueFromRows(selectedRows, allRows);
     document.getElementById("stat-market-value").textContent = money(marketValueResult.value);
     document.getElementById("stat-market-basis").textContent = marketValueResult.basis;
     if (hasOriginalMsrp && document.getElementById("stat-market-vs-msrp")) {
