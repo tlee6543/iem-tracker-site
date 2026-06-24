@@ -199,7 +199,7 @@ td.status-reason { overflow: hidden; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>3</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -225,6 +225,22 @@ td.status-reason { overflow: hidden; }
 
 <tr id="row-0" class="excluded">
 <td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-23</td>
+<td>$530</td>
+<td><span class="pill">active</span></td>
+<td class="status-reason"></td>
+<td>night oblivion longinus</td>
+<td>1</td>
+<td>reddit_rss</td>
+<td>Stinkstink3</td>
+<td>0</td>
+<td>0</td>
+<td>N/A</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1udvb25/wttncushnight_oblivion_longinuswthieaudio/#item-1" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
 <td>2026-06-18</td>
 <td>$525</td>
 <td><span class="pill">closed</span></td>
@@ -239,8 +255,8 @@ td.status-reason { overflow: hidden; }
 <td><a href="https://www.head-fi.org/classifieds/night-oblivion-longinus.110901/" target="_blank">source</a></td>
 </tr>
 
-<tr id="row-1" class="excluded">
-<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
+<tr id="row-2" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" ></td>
 <td>2026-06-18</td>
 <td>$580</td>
 <td><span class="pill">closed</span></td>
@@ -257,7 +273,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Night Oblivion Longinus", "url": "https://www.head-fi.org/classifieds/night-oblivion-longinus.110901/", "price_num": 525.0, "date_ms": 1781740800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 1, "title": "*PD* Night Oblivion Longinus & Finale Bundle", "url": "https://www.head-fi.org/classifieds/pd-night-oblivion-longinus-finale-bundle.110901/", "price_num": 580.0, "date_ms": 1781740800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}];
+const allRows = [{"row_id": 0, "title": "Night Oblivion Longinus", "url": "https://old.reddit.com/r/AVexchange/comments/1udvb25/wttncushnight_oblivion_longinuswthieaudio/#item-1", "price_num": 530.0, "date_ms": 1782252974000, "listing_status": "active", "condition_text": "night oblivion longinus", "platform": "reddit_rss"}, {"row_id": 1, "title": "Night Oblivion Longinus", "url": "https://www.head-fi.org/classifieds/night-oblivion-longinus.110901/", "price_num": 525.0, "date_ms": 1781740800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}, {"row_id": 2, "title": "*PD* Night Oblivion Longinus & Finale Bundle", "url": "https://www.head-fi.org/classifieds/pd-night-oblivion-longinus-finale-bundle.110901/", "price_num": 580.0, "date_ms": 1781740800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
