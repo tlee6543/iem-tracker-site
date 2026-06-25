@@ -199,7 +199,7 @@ td.status-reason { overflow: hidden; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>1</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -223,8 +223,24 @@ td.status-reason { overflow: hidden; }
 <table>
 <tr><th>Use?</th><th>Date</th><th>Price</th><th>Status</th><th class="reason-col">Reason</th><th>Condition</th><th>Bundle?</th><th>Platform</th><th>Seller</th><th>Duplicate?</th><th>Price Drop?</th><th>Deal Score</th><th>Link</th></tr>
 
-<tr id="row-0" class="included">
-<td><input type="checkbox" class="row-toggle" data-row-id="0" checked></td>
+<tr id="row-0" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-25</td>
+<td>$40</td>
+<td><span class="pill">active</span></td>
+<td class="status-reason"></td>
+<td></td>
+<td>0</td>
+<td>reddit_rss</td>
+<td>thaslaya</td>
+<td>0</td>
+<td>0</td>
+<td>Fair (0.0% above market)</td>
+<td><a href="https://old.reddit.com/r/AVexchange/comments/1ufcs8k/wtsuscah_iems_and_cables_w_paypalvenmo/#item-1" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="included">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" checked></td>
 <td>2025-08-12</td>
 <td>$40</td>
 <td><span class="pill">closed</span></td>
@@ -241,7 +257,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Moondrop May", "url": "https://old.reddit.com/r/AVexchange/comments/1mnx2jr/wts_usnj_h_a_bunch_of_iems_blessing_3_hype_4/#item-20", "price_num": 40.0, "date_ms": 1754966617000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | reddit_comments_avexchangebot_added_trade | comments_checked_rss_and_html | confirmed_priced_nonbundle_included | reddit_search_rss_query=kiwiears"}];
+const allRows = [{"row_id": 0, "title": "\u25cf Moondrop May - Box and accessories.", "url": "https://old.reddit.com/r/AVexchange/comments/1ufcs8k/wtsuscah_iems_and_cables_w_paypalvenmo/#item-1", "price_num": 40.0, "date_ms": 1782400245000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v11_title_price_fallback_preserve_existing_price | comments_checked_rss_and_html | reddit_unconfirmed_sale_unchecked"}, {"row_id": 1, "title": "Moondrop May", "url": "https://old.reddit.com/r/AVexchange/comments/1mnx2jr/wts_usnj_h_a_bunch_of_iems_blessing_3_hype_4/#item-20", "price_num": 40.0, "date_ms": 1754966617000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | reddit_comments_avexchangebot_added_trade | comments_checked_rss_and_html | confirmed_priced_nonbundle_included | reddit_search_rss_query=kiwiears"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
