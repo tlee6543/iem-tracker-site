@@ -199,7 +199,7 @@ td.status-reason { overflow: hidden; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>3</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -242,6 +242,22 @@ td.status-reason { overflow: hidden; }
 <tr id="row-1" class="excluded">
 <td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
 <td>2026-05-05</td>
+<td>$225</td>
+<td><span class="pill">active</span></td>
+<td class="status-reason"></td>
+<td>mint, like new, excellent, used</td>
+<td>0</td>
+<td>headfi</td>
+<td>rcoleman1</td>
+<td>1</td>
+<td>0</td>
+<td>Good Deal (13.9% below market)</td>
+<td><a href="https://www.head-fi.org/classifieds/pd-ziigaat-luna-balanced-armature-iems-mint-in-box.108531/" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-2" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="2" ></td>
+<td>2026-05-05</td>
 <td>$275</td>
 <td><span class="pill">active</span></td>
 <td class="status-reason">headfi_skipped_after_429_rate_limit_this_run</td>
@@ -257,7 +273,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Ziigaat Luna", "url": "https://www.head-fi.org/classifieds/ziigaat-luna.111092/", "price_num": 175.0, "date_ms": 1782086400000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}, {"row_id": 1, "title": "ZiiGaat Luna Balanced Armature IEMs MINT IN BOX", "url": "https://www.head-fi.org/classifieds/ziigaat-luna-balanced-armature-iems-mint-in-box.108531/", "price_num": 275.0, "date_ms": 1777939200000, "listing_status": "active", "condition_text": "mint, like new, excellent, used", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "stale_active_timeout", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_status_unclear_left_unchanged | active_status_checker_headfi_live_check_skipped"}];
+const allRows = [{"row_id": 0, "title": "Ziigaat Luna", "url": "https://www.head-fi.org/classifieds/ziigaat-luna.111092/", "price_num": 175.0, "date_ms": 1782086400000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}, {"row_id": 1, "title": "PD: ZiiGaat Luna Balanced Armature IEMs MINT IN BOX", "url": "https://www.head-fi.org/classifieds/pd-ziigaat-luna-balanced-armature-iems-mint-in-box.108531/", "price_num": 225.0, "date_ms": 1777939200000, "listing_status": "active", "condition_text": "mint, like new, excellent, used", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 1, "closed_reason": "", "status_comment": "", "notes": "category_listing_id_text_fallback_v8 | auto_repost_duplicate_excluded_keep_latest_120d"}, {"row_id": 2, "title": "ZiiGaat Luna Balanced Armature IEMs MINT IN BOX", "url": "https://www.head-fi.org/classifieds/ziigaat-luna-balanced-armature-iems-mint-in-box.108531/", "price_num": 275.0, "date_ms": 1777939200000, "listing_status": "active", "condition_text": "mint, like new, excellent, used", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "stale_active_timeout", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_status_unclear_left_unchanged | active_status_checker_headfi_live_check_skipped"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

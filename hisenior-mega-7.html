@@ -199,7 +199,7 @@ td.status-reason { overflow: hidden; }
     <div class="stat"><b>Low</b><br><span id="stat-low">$N/A</span></div>
     <div class="stat"><b>High</b><br><span id="stat-high">$N/A</span></div>
     <div class="stat"><b>Selected Samples</b><br><span id="stat-samples">0</span></div>
-    <div class="stat"><b>Total Priced Rows</b><br><span>1</span></div>
+    <div class="stat"><b>Total Priced Rows</b><br><span>2</span></div>
 </div>
 <div class="card">
     <h2>Price Over Time</h2>
@@ -225,6 +225,22 @@ td.status-reason { overflow: hidden; }
 
 <tr id="row-0" class="excluded">
 <td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
+<td>2026-06-29</td>
+<td>$360</td>
+<td><span class="pill">active</span></td>
+<td class="status-reason"></td>
+<td>mint, like new, excellent</td>
+<td>0</td>
+<td>headfi</td>
+<td>moonbst1</td>
+<td>0</td>
+<td>0</td>
+<td>N/A</td>
+<td><a href="https://www.head-fi.org/classifieds/hisenior-mega7-iem.111434/" target="_blank">source</a></td>
+</tr>
+
+<tr id="row-1" class="excluded">
+<td><input type="checkbox" class="row-toggle" data-row-id="1" ></td>
 <td>2026-06-07</td>
 <td>$385</td>
 <td><span class="pill">closed</span></td>
@@ -241,7 +257,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "DUNU SA6 EST, Hisenior Mega 7", "url": "https://old.reddit.com/r/AVexchange/comments/1tzp9qa/wtseupt_hdunu_sa6_est_hisenior_mega_7_w_paypal/#item-1", "price_num": 385.0, "date_ms": 1780869311000, "listing_status": "closed", "condition_text": "like new", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "confirmed_sold", "status_comment": "confirmed sold from source check", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | comments_checked_rss_and_html | reddit_unconfirmed_sale_unchecked | no_price_unchecked | active_status_checker_verified_or_left_active | active_status_checker_confirmed_sold_from_stored_reddit_importer_notes"}];
+const allRows = [{"row_id": 0, "title": "Hisenior Mega7 IEM", "url": "https://www.head-fi.org/classifieds/hisenior-mega7-iem.111434/", "price_num": 360.0, "date_ms": 1782691200000, "listing_status": "active", "condition_text": "mint, like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 1, "title": "DUNU SA6 EST, Hisenior Mega 7", "url": "https://old.reddit.com/r/AVexchange/comments/1tzp9qa/wtseupt_hdunu_sa6_est_hisenior_mega_7_w_paypal/#item-1", "price_num": 385.0, "date_ms": 1780869311000, "listing_status": "closed", "condition_text": "like new", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "confirmed_sold", "status_comment": "confirmed sold from source check", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | comments_checked_rss_and_html | reddit_unconfirmed_sale_unchecked | no_price_unchecked | active_status_checker_verified_or_left_active | active_status_checker_confirmed_sold_from_stored_reddit_importer_notes"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
