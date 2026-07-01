@@ -228,7 +228,7 @@ td.status-reason { overflow: hidden; }
 <td>2026-06-18</td>
 <td>$100</td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">headfi_page_loaded_unclear_status</td>
+<td class="status-reason">headfi_skipped_after_429_rate_limit_this_run</td>
 <td>new in box</td>
 <td>0</td>
 <td>headfi</td>
@@ -257,7 +257,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Canpur Deep Blue Brand New Factory Sealed", "url": "https://www.head-fi.org/classifieds/canpur-deep-blue-brand-new-factory-sealed.110887/", "price_num": 100.0, "date_ms": 1781740800000, "listing_status": "active", "condition_text": "new in box", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 1, "closed_reason": "", "status_comment": "headfi_page_loaded_unclear_status", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 1, "title": "Sold: Canpur Deep Blue DD", "url": "https://www.head-fi.org/classifieds/canpur-deep-blue-dd.96104/", "price_num": 100.0, "date_ms": 1759363200000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "visible_card_collect_with_price_title_match_v6"}];
+const allRows = [{"row_id": 0, "title": "Canpur Deep Blue Brand New Factory Sealed", "url": "https://www.head-fi.org/classifieds/canpur-deep-blue-brand-new-factory-sealed.110887/", "price_num": 100.0, "date_ms": 1781740800000, "listing_status": "active", "condition_text": "new in box", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 1, "closed_reason": "", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}, {"row_id": 1, "title": "Sold: Canpur Deep Blue DD", "url": "https://www.head-fi.org/classifieds/canpur-deep-blue-dd.96104/", "price_num": 100.0, "date_ms": 1759363200000, "listing_status": "closed", "condition_text": "new in box", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "visible_card_collect_with_price_title_match_v6"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

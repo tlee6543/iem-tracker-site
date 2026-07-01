@@ -228,7 +228,7 @@ td.status-reason { overflow: hidden; }
 <td>2026-06-29</td>
 <td>$90</td>
 <td><span class="pill">active</span></td>
-<td class="status-reason"></td>
+<td class="status-reason">reddit_no_confirmed_sale_signal_rss=429:len0_page=200:len114350_json=403:len189908</td>
 <td></td>
 <td>0</td>
 <td>reddit_rss</td>
@@ -244,7 +244,7 @@ td.status-reason { overflow: hidden; }
 <td>2026-06-21</td>
 <td>$100</td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">headfi_page_loaded_unclear_status</td>
+<td class="status-reason">headfi_skipped_after_429_rate_limit_this_run</td>
 <td>like new, excellent, used</td>
 <td>1</td>
 <td>headfi</td>
@@ -273,7 +273,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "hidizs mp143", "url": "https://old.reddit.com/r/AVexchange/comments/1uig1x0/wtsusaca_h_hifiman_xv_hidizs_mp143_isn_h60_punch/#item-2", "price_num": 90.0, "date_ms": 1782700438000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v12_price_first_and_price_label_fix | comments_checked_rss_and_html | reddit_unconfirmed_sale_unchecked"}, {"row_id": 1, "title": "Bundle Hidiz MP143, Celest Pandamon 2.0, 7Hz Elua Ultra", "url": "https://www.head-fi.org/classifieds/bundle-hidiz-mp143-celest-pandamon-2-0-7hz-elua-ultra.111048/", "price_num": 100.0, "date_ms": 1782000000000, "listing_status": "active", "condition_text": "like new, excellent, used", "platform": "headfi", "is_bundle": 1, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_page_loaded_unclear_status", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 2, "title": "Hidizs MP143", "url": "https://old.reddit.com/r/AVexchange/comments/1tnx4nk/wts_usca_h_13_iems_27_cables_snowsky_melody_dac_w/#item-2", "price_num": 50.0, "date_ms": 1779772529000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | reddit_title_or_description_sold_closed | comments_checked_rss_and_html | confirmed_priced_nonbundle_included | reddit_search_rss_query=simgot"}];
+const allRows = [{"row_id": 0, "title": "hidizs mp143", "url": "https://old.reddit.com/r/AVexchange/comments/1uig1x0/wtsusaca_h_hifiman_xv_hidizs_mp143_isn_h60_punch/#item-2", "price_num": 90.0, "date_ms": 1782700438000, "listing_status": "active", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "reddit_no_confirmed_sale_signal_rss=429:len0_page=200:len114350_json=403:len189908", "notes": "reddit_rss_parser_v12_price_first_and_price_label_fix | comments_checked_rss_and_html | reddit_unconfirmed_sale_unchecked | active_status_checker_verified_or_left_active"}, {"row_id": 1, "title": "Bundle Hidiz MP143, Celest Pandamon 2.0, 7Hz Elua Ultra", "url": "https://www.head-fi.org/classifieds/bundle-hidiz-mp143-celest-pandamon-2-0-7hz-elua-ultra.111048/", "price_num": 100.0, "date_ms": 1782000000000, "listing_status": "active", "condition_text": "like new, excellent, used", "platform": "headfi", "is_bundle": 1, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}, {"row_id": 2, "title": "Hidizs MP143", "url": "https://old.reddit.com/r/AVexchange/comments/1tnx4nk/wts_usca_h_13_iems_27_cables_snowsky_melody_dac_w/#item-2", "price_num": 50.0, "date_ms": 1779772529000, "listing_status": "closed", "condition_text": "", "platform": "reddit_rss", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "reddit_rss_parser_v8_raw_comment_confirmation | reddit_title_or_description_sold_closed | comments_checked_rss_and_html | confirmed_priced_nonbundle_included | reddit_search_rss_query=simgot"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

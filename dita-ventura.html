@@ -228,7 +228,7 @@ td.status-reason { overflow: hidden; }
 <td>2026-06-15</td>
 <td>$3,700</td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">headfi_page_loaded_unclear_status</td>
+<td class="status-reason">headfi_skipped_after_429_rate_limit_this_run</td>
 <td>like new, excellent</td>
 <td>0</td>
 <td>headfi</td>
@@ -244,7 +244,7 @@ td.status-reason { overflow: hidden; }
 <td>2026-06-13</td>
 <td>$3,400</td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">headfi_page_loaded_unclear_status</td>
+<td class="status-reason">headfi_skipped_after_429_rate_limit_this_run</td>
 <td>like new, excellent</td>
 <td>0</td>
 <td>headfi</td>
@@ -276,7 +276,7 @@ td.status-reason { overflow: hidden; }
 <td>2026-05-21</td>
 <td>$3,700</td>
 <td><span class="pill">active</span></td>
-<td class="status-reason">lister never updated</td>
+<td class="status-reason">headfi_skipped_after_429_rate_limit_this_run</td>
 <td>mint, like new, excellent</td>
 <td>0</td>
 <td>headfi</td>
@@ -289,7 +289,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Dita Ventura", "url": "https://www.head-fi.org/classifieds/dita-ventura.110756/", "price_num": 3700.0, "date_ms": 1781481600000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_page_loaded_unclear_status", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 1, "title": "Dita Ventura", "url": "https://www.head-fi.org/classifieds/dita-ventura.110665/", "price_num": 3400.0, "date_ms": 1781308800000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_page_loaded_unclear_status", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 2, "title": "Dita Ventura", "url": "https://www.head-fi.org/classifieds/dita-ventura.110389/", "price_num": 3600.0, "date_ms": 1780876800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 3, "title": "Dita Ventura, mint", "url": "https://www.head-fi.org/classifieds/dita-ventura-mint.109379/", "price_num": 3700.0, "date_ms": 1779321600000, "listing_status": "active", "condition_text": "mint, like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "stale_active_timeout", "status_comment": "lister never updated", "notes": "category_listing_id_text_fallback_v8"}];
+const allRows = [{"row_id": 0, "title": "Dita Ventura", "url": "https://www.head-fi.org/classifieds/dita-ventura.110756/", "price_num": 3700.0, "date_ms": 1781481600000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}, {"row_id": 1, "title": "Dita Ventura", "url": "https://www.head-fi.org/classifieds/dita-ventura.110665/", "price_num": 3400.0, "date_ms": 1781308800000, "listing_status": "active", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}, {"row_id": 2, "title": "Dita Ventura", "url": "https://www.head-fi.org/classifieds/dita-ventura.110389/", "price_num": 3600.0, "date_ms": 1780876800000, "listing_status": "closed", "condition_text": "like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 3, "title": "Dita Ventura, mint", "url": "https://www.head-fi.org/classifieds/dita-ventura-mint.109379/", "price_num": 3700.0, "date_ms": 1779321600000, "listing_status": "active", "condition_text": "mint, like new, excellent", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "stale_active_timeout", "status_comment": "headfi_skipped_after_429_rate_limit_this_run", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_headfi_live_check_skipped"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }

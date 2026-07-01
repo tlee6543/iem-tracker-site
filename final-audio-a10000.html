@@ -227,8 +227,8 @@ td.status-reason { overflow: hidden; }
 <td><input type="checkbox" class="row-toggle" data-row-id="0" ></td>
 <td>2026-03-13</td>
 <td>$3,099</td>
-<td><span class="pill">active</span></td>
-<td class="status-reason">lister never updated</td>
+<td><span class="pill">stale</span></td>
+<td class="status-reason">stale unsold after 60d; not counted as a sale</td>
 <td>new in box</td>
 <td>0</td>
 <td>headfi</td>
@@ -257,7 +257,7 @@ td.status-reason { overflow: hidden; }
 
 </table>
 <script>
-const allRows = [{"row_id": 0, "title": "Final Audio A10000 Collector's Edition", "url": "https://www.head-fi.org/classifieds/final-audio-a10000-collectors-edition.105330/", "price_num": 3099.0, "date_ms": 1773360000000, "listing_status": "active", "condition_text": "new in box", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "stale_active_timeout", "status_comment": "lister never updated", "notes": "category_listing_id_text_fallback_v8"}, {"row_id": 1, "title": "Closed: WTT Final Audio A10K for Moses", "url": "https://www.head-fi.org/classifieds/wtt-final-audio-a10k-for-moses.105004/", "price_num": 100.0, "date_ms": 1772841600000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "visible_card_collect_with_price_title_match_v6"}];
+const allRows = [{"row_id": 0, "title": "Final Audio A10000 Collector's Edition", "url": "https://www.head-fi.org/classifieds/final-audio-a10000-collectors-edition.105330/", "price_num": 3099.0, "date_ms": 1773360000000, "listing_status": "stale", "condition_text": "new in box", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "stale_unsold_60d", "status_comment": "stale unsold after 60d; not counted as a sale", "notes": "category_listing_id_text_fallback_v8 | active_status_checker_stale_unsold_60d_lister_never_updated"}, {"row_id": 1, "title": "Closed: WTT Final Audio A10K for Moses", "url": "https://www.head-fi.org/classifieds/wtt-final-audio-a10k-for-moses.105004/", "price_num": 100.0, "date_ms": 1772841600000, "listing_status": "closed", "condition_text": "like new, excellent, used", "platform": "headfi", "is_bundle": 0, "is_possible_duplicate": 0, "closed_reason": "", "status_comment": "", "notes": "visible_card_collect_with_price_title_match_v6"}];
 const originalMsrpUsd = null;
 const hasOriginalMsrp = originalMsrpUsd !== null && originalMsrpUsd > 0;
 function money(value) { if (value === null || value === undefined || Number.isNaN(value)) return "$N/A"; return "$" + Math.round(Number(value)).toLocaleString(); }
